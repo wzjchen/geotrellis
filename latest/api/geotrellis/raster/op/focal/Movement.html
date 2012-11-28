@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.op.focal.Circle2</title>
+          <title>geotrellis.raster.op.focal.Movement</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
@@ -14,24 +14,24 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <img src="../../../../lib/class_big.png" />
+        <a title="Go to companion" href="Movement$.html"><img src="../../../../lib/trait_to_object_big.png" /></a>
         <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a>.<a name="geotrellis.raster.op.focal" class="extype" href="package.html">focal</a></p>
-        <h1>Circle2</h1>
+        <h1><a title="Go to companion" href="Movement$.html">Movement</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Circle2</span><span class="params">(<span name="radius">radius: <span name="scala.Double" class="extype">Double</span></span>)</span><span class="result"> extends <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a> with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="name">Movement</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -45,7 +45,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="geotrellis.raster.op.focal.Circle2" class="in"><span>Circle2</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="geotrellis.raster.op.focal.Neighborhood" class="in"><span>Neighborhood</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="geotrellis.raster.op.focal.Movement" class="in"><span>Movement</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -55,29 +55,29 @@
 
       <div id="template">
         <div id="allMembers">
-        <div class="members" id="constructors">
-              <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#this" data-isabs="false">
-      <a id="this:Circle2"></a>
+        
+
+        
+
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Movement#isVertical" data-isabs="true">
+      <a id="isVertical:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Circle2</span><span class="params">(<span name="radius">radius: <span name="scala.Double" class="extype">Double</span></span>)</span>
+        <span class="name">isVertical</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       
     </li></ol>
             </div>
 
-        
-
-        
-
         <div class="values members" id="values">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -150,18 +150,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#canEqual" data-isabs="false">
-      <a id="canEqual(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">canEqual</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → Equals</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -189,7 +177,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#equals" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -200,19 +188,7 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → Equals → AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#extent" data-isabs="false">
-      <a id="extent:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">extent</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -240,19 +216,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#hasMask" data-isabs="false">
-      <a id="hasMask:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hasMask</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#hashCode" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -263,7 +227,7 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -276,18 +240,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#mask" data-isabs="false">
-      <a id="mask(Int,Int):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mask</span><span class="params">(<span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -324,66 +276,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#productArity" data-isabs="false">
-      <a id="productArity:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#productElement" data-isabs="false">
-      <a id="productElement(Int):Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">productElement</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
-      <a id="productIterator:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">productIterator</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#productPrefix" data-isabs="false">
-      <a id="productPrefix:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">productPrefix</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#radius" data-isabs="false">
-      <a id="radius:Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">radius</span><span class="result">: <span name="scala.Double" class="extype">Double</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -396,7 +288,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2#toString" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -404,10 +296,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: String</span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.Circle2" class="extype" href="">Circle2</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -456,39 +348,11 @@
     </li></ol>
             </div>
 
-        <div class="values members" id="values">
-              <h3>Deprecated Value Members</h3>
-              <ol><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
-      <a id="productElements:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 2.8.0) use productIterator instead">productElements</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.8.0)</i> use productIterator instead</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
-        <div name="scala.Serializable" class="parent">
-              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="java.io.Serializable" class="parent">
-              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="scala.Product" class="parent">
-              <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>
-            </div><div name="scala.Equals" class="parent">
-              <h3>Inherited from <span name="scala.Equals" class="extype">Equals</span></h3>
-            </div><div name="geotrellis.raster.op.focal.Neighborhood" class="parent">
-              <h3>Inherited from <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></h3>
-            </div><div name="scala.AnyRef" class="parent">
+        <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

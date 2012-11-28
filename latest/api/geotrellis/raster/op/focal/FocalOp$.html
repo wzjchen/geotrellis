@@ -202,14 +202,14 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp#getResult" data-isabs="false">
-      <a id="getResult(Raster,FocalStrategyType,NeighborhoodType,FocalOpDefinition):Result[Raster]"></a>
+      <a id="getResult(Raster,FocalStrategyType,Neighborhood,FocalOpDefinition):Result[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getResult</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="s">s: <a name="geotrellis.raster.op.focal.FocalStrategyType" class="extype" href="FocalStrategyType.html">FocalStrategyType</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.NeighborhoodType" class="extype" href="NeighborhoodType.html">NeighborhoodType</a></span>, <span name="dfn">dfn: <a name="geotrellis.raster.op.focal.FocalOpDefinition" class="extype" href="FocalOpDefinition.html">FocalOpDefinition</a></span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>
+        <span class="name">getResult</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="s">s: <a name="geotrellis.raster.op.focal.FocalStrategyType" class="extype" href="FocalStrategyType.html">FocalStrategyType</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></span>, <span name="dfn">dfn: <a name="geotrellis.raster.op.focal.FocalOpDefinition" class="extype" href="FocalOpDefinition.html">FocalOpDefinition</a></span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Allows for easy definition of focal operations using the op syntax.</p><div class="fullcomment"><div class="comment cmt"><p>Allows for easy definition of focal operations using the op syntax. See
@@ -218,27 +218,27 @@ geotrellis.raster.op.focal.Sum for an example.
            for this operation.
 </p></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp#getResultDouble" data-isabs="false">
-      <a id="getResultDouble(Raster,FocalStrategyType,NeighborhoodType,() ⇒ FocalCalculation[Double]):Result[Raster]"></a>
+      <a id="getResultDouble(Raster,FocalStrategyType,Neighborhood,() ⇒ FocalCalculation[Double]):Result[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getResultDouble</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="s">s: <a name="geotrellis.raster.op.focal.FocalStrategyType" class="extype" href="FocalStrategyType.html">FocalStrategyType</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.NeighborhoodType" class="extype" href="NeighborhoodType.html">NeighborhoodType</a></span>, <span name="newCalcFunc">newCalcFunc: () ⇒ <a name="geotrellis.raster.op.focal.FocalCalculation" class="extype" href="FocalCalculation.html">FocalCalculation</a>[<span name="scala.Double" class="extype">Double</span>]</span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>
+        <span class="name">getResultDouble</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="s">s: <a name="geotrellis.raster.op.focal.FocalStrategyType" class="extype" href="FocalStrategyType.html">FocalStrategyType</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></span>, <span name="newCalcFunc">newCalcFunc: () ⇒ <a name="geotrellis.raster.op.focal.FocalCalculation" class="extype" href="FocalCalculation.html">FocalCalculation</a>[<span name="scala.Double" class="extype">Double</span>]</span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Convienence function that allows you to just supply a function that supplies
  a new FocalCalculation[Double]</p>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp#getResultInt" data-isabs="false">
-      <a id="getResultInt(Raster,FocalStrategyType,NeighborhoodType,() ⇒ FocalCalculation[Int]):Result[Raster]"></a>
+      <a id="getResultInt(Raster,FocalStrategyType,Neighborhood,() ⇒ FocalCalculation[Int]):Result[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getResultInt</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="s">s: <a name="geotrellis.raster.op.focal.FocalStrategyType" class="extype" href="FocalStrategyType.html">FocalStrategyType</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.NeighborhoodType" class="extype" href="NeighborhoodType.html">NeighborhoodType</a></span>, <span name="newCalcFunc">newCalcFunc: () ⇒ <a name="geotrellis.raster.op.focal.FocalCalculation" class="extype" href="FocalCalculation.html">FocalCalculation</a>[<span name="scala.Int" class="extype">Int</span>]</span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>
+        <span class="name">getResultInt</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="s">s: <a name="geotrellis.raster.op.focal.FocalStrategyType" class="extype" href="FocalStrategyType.html">FocalStrategyType</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></span>, <span name="newCalcFunc">newCalcFunc: () ⇒ <a name="geotrellis.raster.op.focal.FocalCalculation" class="extype" href="FocalCalculation.html">FocalCalculation</a>[<span name="scala.Int" class="extype">Int</span>]</span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Convienence function that allows you to just supply a function that supplies

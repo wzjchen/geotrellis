@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.op.focal.ExtendableNeighborhoodType</title>
+          <title>geotrellis.raster.op.focal.CellSet</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
@@ -16,16 +16,16 @@
       <div id="definition">
         <img src="../../../../lib/trait_big.png" />
         <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a>.<a name="geotrellis.raster.op.focal" class="extype" href="package.html">focal</a></p>
-        <h1>ExtendableNeighborhoodType</h1>
+        <h1>CellSet</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
-        <span class="modifier">sealed </span>
+        <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">ExtendableNeighborhoodType</span><span class="result"> extends AnyRef</span>
+        <span class="name">CellSet</span><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -45,7 +45,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="geotrellis.raster.op.focal.ExtendableNeighborhoodType" class="in"><span>ExtendableNeighborhoodType</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="geotrellis.raster.op.focal.CellSet" class="in"><span>CellSet</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -61,18 +61,18 @@
 
         <div class="values members" id="values">
               <h3>Abstract Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.ExtendableNeighborhoodType#extent" data-isabs="true">
-      <a id="extent:Int"></a>
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.CellSet#foreach" data-isabs="true">
+      <a id="foreach((D) ⇒ Unit):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">extent</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+        <span class="name">foreach</span><span class="params">(<span name="f">f: (D) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A one dimensional description of the size of the neighborhood</p>
+      
     </li></ol>
             </div>
 

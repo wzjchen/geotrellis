@@ -48,7 +48,19 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Aspect" data-isabs="false">
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Annulus" data-isabs="false">
+      <a id="Annulus:Annulus"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Annulus.html"><span class="name">Annulus</span></a><span class="params">(<span name="innerRadius">innerRadius: Double</span>, <span name="outerRadius">outerRadius: Double</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Annulus neighborhood.</p>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.Aspect" data-isabs="false">
       <a id="Aspect:Aspect"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -109,6 +121,18 @@ specified minimum and maximum value range.</p>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellSet" data-isabs="true">
+      <a id="CellSet:CellSet[D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CellSet.html"><span class="name">CellSet</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator" data-isabs="true">
       <a id="CellwiseCalculator:CellwiseCalculator[D]"></a>
       <h4 class="signature">
@@ -141,19 +165,7 @@ specified minimum and maximum value range.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Circle.html"><span class="name">Circle</span></a><span class="params">(<span name="extent">extent: Int</span>)</span><span class="result"> extends NeighborhoodType with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Defines a circular neighborhood</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Circle2" data-isabs="false">
-      <a id="Circle2:Circle2"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Circle2.html"><span class="name">Circle2</span></a><span class="params">(<span name="radius">radius: Double</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
+        <a href="Circle.html"><span class="name">Circle</span></a><span class="params">(<span name="radius">radius: Double</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
       </span>
       </h4>
       
@@ -216,7 +228,8 @@ specified minimum and maximum value range.</p>
         <a href="Cursor.html"><span class="name">Cursor</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Represents a cursor that can be used to iterate over cells within a focal
+neighborhood.</p>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.CursorFocalOp1" data-isabs="true">
       <a id="CursorFocalOp1:CursorFocalOp1[D]"></a>
       <h4 class="signature">
@@ -226,6 +239,30 @@ specified minimum and maximum value range.</p>
       </span>
       <span class="symbol">
         <a href="CursorFocalOp1.html"><span class="name">CursorFocalOp1</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends FocalOp1</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CursorMask" data-isabs="false">
+      <a id="CursorMask:CursorMask"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorMask.html"><span class="name">CursorMask</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CursorMean" data-isabs="false">
+      <a id="CursorMean:CursorMean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorMean.html"><span class="name">CursorMean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends DoubleCursorFocalOp1 with Product with Serializable</span>
       </span>
       </h4>
       
@@ -325,18 +362,6 @@ specified minimum and maximum value range.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.ExtendableNeighborhoodType" data-isabs="true">
-      <a id="ExtendableNeighborhoodType:ExtendableNeighborhoodType"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="ExtendableNeighborhoodType.html"><span class="name">ExtendableNeighborhoodType</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FloatFocalOpData" data-isabs="false">
       <a id="FloatFocalOpData:FloatFocalOpData"></a>
       <h4 class="signature">
@@ -616,7 +641,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Max.html"><span class="name">Max</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: NeighborhoodType</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Max.html"><span class="name">Max</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -640,7 +665,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Median.html"><span class="name">Median</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: NeighborhoodType</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Median.html"><span class="name">Median</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -664,7 +689,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Min.html"><span class="name">Min</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: NeighborhoodType</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Min.html"><span class="name">Min</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -688,7 +713,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Mode.html"><span class="name">Mode</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: NeighborhoodType</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Mode.html"><span class="name">Mode</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -716,6 +741,18 @@ strategy in mind to maximize caching.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.Movement" data-isabs="true">
+      <a id="Movement:Movement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Movement.html"><span class="name">Movement</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.MultiTypeFocalOpDefinition" data-isabs="true">
       <a id="MultiTypeFocalOpDefinition:MultiTypeFocalOpDefinition"></a>
       <h4 class="signature">
@@ -741,18 +778,6 @@ strategy in mind to maximize caching.</p>
       </h4>
       <p class="comment cmt">Allows users of focal operations specify the shape and size
 of the neighborhood the focal operation should use.</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.NeighborhoodType" data-isabs="true">
-      <a id="NeighborhoodType:NeighborhoodType"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="NeighborhoodType.html"><span class="name">NeighborhoodType</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Nesw" data-isabs="false">
       <a id="Nesw:Nesw"></a>
       <h4 class="signature">
@@ -761,10 +786,12 @@ of the neighborhood the focal operation should use.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Nesw.html"><span class="name">Nesw</span></a><span class="params">()</span><span class="result"> extends NeighborhoodType with Product with Serializable</span>
+        <a href="Nesw.html"><span class="name">Nesw</span></a><span class="params">(<span name="extent">extent: Int</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
       </span>
       </h4>
-      <p class="comment cmt">Defines a neighborhood consisting of only horizontal and vertical neighbors</p>
+      <p class="comment cmt">Simple neighborhood that goes through the center of the focus
+along the x any y axis of the raster
+</p>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.NeswStrategy" data-isabs="false">
       <a id="NeswStrategy:NeswStrategy[D]"></a>
       <h4 class="signature">
@@ -797,7 +824,7 @@ of the neighborhood the focal operation should use.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RasterMoransI.html"><span class="name">RasterMoransI</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: NeighborhoodType</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="RasterMoransI.html"><span class="name">RasterMoransI</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -857,19 +884,7 @@ of the neighborhood the focal operation should use.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Square.html"><span class="name">Square</span></a><span class="params">(<span name="extent">extent: Int</span>)</span><span class="result"> extends NeighborhoodType with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Defines a square neighborhood</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Square2" data-isabs="false">
-      <a id="Square2:Square2"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Square2.html"><span class="name">Square2</span></a><span class="params">(<span name="extent">extent: Int</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
+        <a href="Square.html"><span class="name">Square</span></a><span class="params">(<span name="extent">extent: Int</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
       </span>
       </h4>
       
@@ -893,10 +908,22 @@ of the neighborhood the focal operation should use.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Sum.html"><span class="name">Sum</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: NeighborhoodType</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Sum.html"><span class="name">Sum</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.Wedge" data-isabs="false">
+      <a id="Wedge:Wedge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Wedge.html"><span class="name">Wedge</span></a><span class="params">(<span name="radius">radius: Double</span>, <span name="startAngle">startAngle: Double</span>, <span name="endAngle">endAngle: Double</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Wedge neighborhood.</p>
     </li></ol>
             </div>
 
@@ -1097,6 +1124,18 @@ of the neighborhood the focal operation should use.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.Movement" data-isabs="false">
+      <a id="Movement:Movement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Movement$.html"><span class="name">Movement</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Normalize" data-isabs="false">
       <a id="Normalize:Normalize"></a>
       <h4 class="signature">
