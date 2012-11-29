@@ -124,93 +124,129 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
-      <a id="apply[D](Array[Array[Array[Double]]],D):Polygon[D] with Dim2"></a>
+      <a id="apply[D](Geometry,D):Polygon[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="scala.Double" class="extype">Double</span>]]]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D] with <a name="geotrellis.feature.Dim2" class="extype" href="Dim2.html">Dim2</a></span>
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: <span name="com.vividsolutions.jts.geom.Geometry" class="extype">Geometry</span></span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a polgyon feature from a JTS Geometry object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polgyon feature from a JTS Geometry object.</p><p>Beware: Only use when you are certain the Geometry object
+is a polygon.
+</p></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>JTS Geometry</p></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
+      <a id="apply[D](List[List[List[Double]]],D)(DI,DI):Polygon[D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: List[List[List[<span name="scala.Double" class="extype">Double</span>]]]</span>, <span name="data">data: D</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: DI</span>, <span name="dummy2">dummy2: DI</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a polygon using an array of rings, the first being the exterior ring.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polygon using an array of rings, the first being the exterior ring.</p><p>Each ring array is an array of two element coordinate arrays, e.g. Array(1.0, 2.0)</p><p>The top level list is the list of rings, the first inner list is a list of coordinates,
+and each inner list has two elements, x and y.
+</p></div><dl class="paramcmts block"><dt class="param">coords</dt><dd class="cmt"><p>A list of polygon rings, represented as a list of two element lists.</p></dd><dt class="param">data</dt><dd class="cmt"><p>The data for this feature.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
+      <a id="apply[D](Array[Array[Array[Double]]],D):Polygon[D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="scala.Double" class="extype">Double</span>]]]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a polygon using an array of rings, the first being the exterior ring.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polygon using an array of rings, the first being the exterior ring.</p><p>Each ring array is an array of two element coordinate arrays, e.g. Array(x,y)
 </p></div></div>
     </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
-      <a id="apply[D](Array[Coordinate],D):Polygon[D] with Dim2"></a>
+      <a id="apply[D](Array[Coordinate],Array[Array[Coordinate]],D):Polygon[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: <span name="scala.Array" class="extype">Array</span>[<span name="com.vividsolutions.jts.geom.Coordinate" class="extype">Coordinate</span>]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D] with <a name="geotrellis.feature.Dim2" class="extype" href="Dim2.html">Dim2</a></span>
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="exterior">exterior: <span name="scala.Array" class="extype">Array</span>[<span name="com.vividsolutions.jts.geom.Coordinate" class="extype">Coordinate</span>]</span>, <span name="holes">holes: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="com.vividsolutions.jts.geom.Coordinate" class="extype">Coordinate</span>]]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a polygon with an array of JTS Coordinate objects.</p>
+      <p class="shortcomment cmt">Create a polygon with arrays of JTS coordinate objects.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polygon with arrays of JTS coordinate objects.
+</p></div><dl class="paramcmts block"><dt class="param">exterior</dt><dd class="cmt"><p>Coordinates of the exterior shell</p></dd><dt class="param">holes</dt><dd class="cmt"><p>Interior holes represented by array of coordinate arrays</p></dd><dt class="param">data</dt><dd class="cmt"><p>The data of this feature
+</p></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
-      <a id="apply[D](Array[Double],D):Polygon[D] with Dim2"></a>
+      <a id="apply[D](Array[Coordinate],D):Polygon[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Double" class="extype">Double</span>]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D] with <a name="geotrellis.feature.Dim2" class="extype" href="Dim2.html">Dim2</a></span>
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: <span name="scala.Array" class="extype">Array</span>[<span name="com.vividsolutions.jts.geom.Coordinate" class="extype">Coordinate</span>]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a polygon using a one-dimensional array with alternating x and y values.</p>
+      <p class="shortcomment cmt">Create a polygon with an array of JTS Coordinate objects.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polygon with an array of JTS Coordinate objects.
+</p></div><dl class="paramcmts block"><dt class="param">coords</dt><dd class="cmt"><p>Coordinates of the polygon exterior</p></dd><dt class="param">data</dt><dd class="cmt"><p>The data of this feature
+</p></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
-      <a id="apply[D](List[(Int, Int)],D)(DummyImplicit):Polygon[D] with Dim2"></a>
+      <a id="apply[D](Array[Double],D):Polygon[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="tpls">tpls: List[(<span name="scala.Int" class="extype">Int</span>, <span name="scala.Int" class="extype">Int</span>)]</span>, <span name="data">data: D</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="di">di: <span name="scala.Predef.DummyImplicit" class="extype">DummyImplicit</span></span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D] with <a name="geotrellis.feature.Dim2" class="extype" href="Dim2.html">Dim2</a></span>
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Double" class="extype">Double</span>]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a polygon using a one-dimensional array with alternating x and y values.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polygon using a one-dimensional array with alternating x and y values.
+</p></div><dl class="paramcmts block"><dt class="param">coords</dt><dd class="cmt"><p>Array of alternating x and y values</p></dd><dt class="param">data</dt><dd class="cmt"><p>The data of this feature
+</p></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
+      <a id="apply[D](List[(Int, Int)],D)(DummyImplicit):Polygon[D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="tpls">tpls: List[(<span name="scala.Int" class="extype">Int</span>, <span name="scala.Int" class="extype">Int</span>)]</span>, <span name="data">data: D</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="di">di: <span name="scala.Predef.DummyImplicit" class="extype">DummyImplicit</span></span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
-      <a id="apply[D](List[(Double, Double)],D):Polygon[D] with Dim2"></a>
+      <a id="apply[D](List[(Double, Double)],D):Polygon[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="tpls">tpls: List[(<span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>)]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D] with <a name="geotrellis.feature.Dim2" class="extype" href="Dim2.html">Dim2</a></span>
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="tpls">tpls: List[(<span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>)]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a polygon using a list of tuples.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polygon using a list of tuples.</p><p>This method is not very efficient -- use only for small polygons.
-</p></div></div>
+</p></div><dl class="paramcmts block"><dt class="param">tpls</dt><dd class="cmt"><p>List of (x,y) tuples</p></dd><dt class="param">data</dt><dd class="cmt"><p>The data of this feature
+</p></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
-      <a id="apply[D](Geometry,D):Polygon[D] with Dim2"></a>
+      <a id="apply[D](Polygon,D):Polygon[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: <span name="com.vividsolutions.jts.geom.Geometry" class="extype">Geometry</span></span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D] with <a name="geotrellis.feature.Dim2" class="extype" href="Dim2.html">Dim2</a></span>
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <span name="com.vividsolutions.jts.geom.Polygon" class="extype">Polygon</span></span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a polgyon feature from a JTS Geometry object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polgyon feature from a JTS Geometry object.</p><p>Only use when you are certain the Geometry object
-is a polygon.
-</p></div></div>
-    </li><li visbl="pub" name="geotrellis.feature.Polygon#apply" data-isabs="false">
-      <a id="apply[D](Polygon,D):Polygon[D] with Dim2"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <span name="com.vividsolutions.jts.geom.Polygon" class="extype">Polygon</span></span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.Polygon" class="extype" href="Polygon.html">Polygon</a>[D] with <a name="geotrellis.feature.Dim2" class="extype" href="Dim2.html">Dim2</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Create a polgyon feature from a JTS Polygon object.</p>
+      <p class="shortcomment cmt">Create a polgyon feature from a JTS Polygon object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a polgyon feature from a JTS Polygon object.
+</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>JTS Polygon object</p></dd><dt class="param">data</dt><dd class="cmt"><p>The data of this feature
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -238,6 +274,42 @@ is a polygon.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="prt" name="geotrellis.feature.Polygon#createJtsPolygon" data-isabs="false">
+      <a id="createJtsPolygon(Array[Coordinate],Array[Array[Coordinate]]):Polygon"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createJtsPolygon</span><span class="params">(<span name="exterior">exterior: <span name="scala.Array" class="extype">Array</span>[<span name="com.vividsolutions.jts.geom.Coordinate" class="extype">Coordinate</span>]</span>, <span name="holes">holes: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="com.vividsolutions.jts.geom.Coordinate" class="extype">Coordinate</span>]]</span>)</span><span class="result">: <span name="com.vividsolutions.jts.geom.Polygon" class="extype">Polygon</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="geotrellis" class="extype" href="../package.html">geotrellis</a>] </dd></dl></div>
+    </li><li visbl="prt" name="geotrellis.feature.Polygon#createJtsPolygonFromArrays" data-isabs="false">
+      <a id="createJtsPolygonFromArrays(Array[Array[Double]],Array[Array[Array[Double]]]):Polygon"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createJtsPolygonFromArrays</span><span class="params">(<span name="exterior">exterior: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="scala.Double" class="extype">Double</span>]]</span>, <span name="holes">holes: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="scala.Array" class="extype">Array</span>[<span name="scala.Double" class="extype">Double</span>]]]</span>)</span><span class="result">: <span name="com.vividsolutions.jts.geom.Polygon" class="extype">Polygon</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="geotrellis" class="extype" href="../package.html">geotrellis</a>] </dd></dl></div>
+    </li><li visbl="prt" name="geotrellis.feature.Polygon#createJtsPolygonFromSeqs" data-isabs="false">
+      <a id="createJtsPolygonFromSeqs(Seq[Seq[Double]],Seq[Seq[Seq[Double]]]):Polygon"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createJtsPolygonFromSeqs</span><span class="params">(<span name="exterior">exterior: Seq[Seq[<span name="scala.Double" class="extype">Double</span>]]</span>, <span name="holes">holes: Seq[Seq[Seq[<span name="scala.Double" class="extype">Double</span>]]]</span>)</span><span class="result">: <span name="com.vividsolutions.jts.geom.Polygon" class="extype">Polygon</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="geotrellis" class="extype" href="../package.html">geotrellis</a>] </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">

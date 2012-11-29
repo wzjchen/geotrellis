@@ -146,14 +146,14 @@ specified minimum and maximum value range.</p>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp1" data-isabs="true">
-      <a id="CellwiseFocalOp1:CellwiseFocalOp1[D]"></a>
+      <a id="CellwiseFocalOp1:CellwiseFocalOp1[T, D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="CellwiseFocalOp1.html"><span class="name">CellwiseFocalOp1</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends FocalOp1 with CellwiseCalculator[D]</span>
+        <a href="CellwiseFocalOp1.html"><span class="name">CellwiseFocalOp1</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends FocalOp1[T] with CellwiseCalculator[D]</span>
       </span>
       </h4>
       
@@ -231,14 +231,14 @@ specified minimum and maximum value range.</p>
       <p class="comment cmt">Represents a cursor that can be used to iterate over cells within a focal
 neighborhood.</p>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.CursorFocalOp1" data-isabs="true">
-      <a id="CursorFocalOp1:CursorFocalOp1[D]"></a>
+      <a id="CursorFocalOp1:CursorFocalOp1[T, D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="CursorFocalOp1.html"><span class="name">CursorFocalOp1</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends FocalOp1</span>
+        <a href="CursorFocalOp1.html"><span class="name">CursorFocalOp1</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends FocalOp1[T]</span>
       </span>
       </h4>
       
@@ -262,19 +262,7 @@ neighborhood.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CursorMean.html"><span class="name">CursorMean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends DoubleCursorFocalOp1 with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellwiseFocalOp1" data-isabs="true">
-      <a id="DoubleCellwiseFocalOp1:DoubleCellwiseFocalOp1"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleCellwiseFocalOp1.html"><span class="name">DoubleCellwiseFocalOp1</span></a><span class="result"> extends CellwiseFocalOp1[Double]</span>
+        <a href="CursorMean.html"><span class="name">CursorMean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends DoubleCursorFocalOp1[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -291,14 +279,14 @@ neighborhood.</p>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCursorFocalOp1" data-isabs="true">
-      <a id="DoubleCursorFocalOp1:DoubleCursorFocalOp1"></a>
+      <a id="DoubleCursorFocalOp1:DoubleCursorFocalOp1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleCursorFocalOp1.html"><span class="name">DoubleCursorFocalOp1</span></a><span class="result"> extends CursorFocalOp1[Double]</span>
+        <a href="DoubleCursorFocalOp1.html"><span class="name">DoubleCursorFocalOp1</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends CursorFocalOp1[T, Double]</span>
       </span>
       </h4>
       
@@ -387,14 +375,14 @@ neighborhood.</p>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1" data-isabs="true">
-      <a id="FocalOp1:FocalOp1"></a>
+      <a id="FocalOp1:FocalOp1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOp1.html"><span class="name">FocalOp1</span></a><span class="result"> extends Operation[Raster]</span>
+        <a href="FocalOp1.html"><span class="name">FocalOp1</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
@@ -512,18 +500,6 @@ strategy in mind to maximize caching.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp1" data-isabs="true">
-      <a id="IntCellwiseFocalOp1:IntCellwiseFocalOp1"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="IntCellwiseFocalOp1.html"><span class="name">IntCellwiseFocalOp1</span></a><span class="result"> extends CellwiseFocalOp1[Int]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCursor" data-isabs="false">
       <a id="IntCursor:IntCursor"></a>
       <h4 class="signature">
@@ -537,14 +513,14 @@ strategy in mind to maximize caching.</p>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCursorFocalOp1" data-isabs="true">
-      <a id="IntCursorFocalOp1:IntCursorFocalOp1"></a>
+      <a id="IntCursorFocalOp1:IntCursorFocalOp1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntCursorFocalOp1.html"><span class="name">IntCursorFocalOp1</span></a><span class="result"> extends CursorFocalOp1[Int]</span>
+        <a href="IntCursorFocalOp1.html"><span class="name">IntCursorFocalOp1</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends CursorFocalOp1[T, Int]</span>
       </span>
       </h4>
       
@@ -653,7 +629,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Mean.html"><span class="name">Mean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends DoubleCellwiseFocalOp1 with Product with Serializable</span>
+        <a href="Mean.html"><span class="name">Mean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends CellwiseFocalOp1[Raster, Double] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -701,7 +677,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Min2.html"><span class="name">Min2</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends IntCursorFocalOp1 with Product with Serializable</span>
+        <a href="Min2.html"><span class="name">Min2</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends IntCursorFocalOp1[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -804,6 +780,18 @@ along the x any y axis of the raster
       </span>
       </h4>
       
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.NoopResultBuilder" data-isabs="false">
+      <a id="NoopResultBuilder:NoopResultBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NoopResultBuilder.html"><span class="name">NoopResultBuilder</span></a><span class="result"> extends ResultBuilder[Double, Double]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.PrecomputedNormalize" data-isabs="false">
       <a id="PrecomputedNormalize:PrecomputedNormalize"></a>
       <h4 class="signature">
@@ -825,6 +813,18 @@ along the x any y axis of the raster
       </span>
       <span class="symbol">
         <a href="RasterMoransI.html"><span class="name">RasterMoransI</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.ScalarMoransI" data-isabs="false">
+      <a id="ScalarMoransI:ScalarMoransI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalarMoransI.html"><span class="name">ScalarMoransI</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Double] with Product with Serializable</span>
       </span>
       </h4>
       

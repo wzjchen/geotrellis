@@ -155,7 +155,7 @@
         <a href="JtsLineString.html"><span class="name">JtsLineString</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="geom">geom: LineString</span>, <span name="data">data: D</span>)</span><span class="result"> extends LineString[D] with Product with Serializable</span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Implementation of LineString feature with underlying jts instance.</p>
     </li><li visbl="pub" name="geotrellis.feature.JtsMultiLineString" data-isabs="false">
       <a id="JtsMultiLineString:JtsMultiLineString[D]"></a>
       <h4 class="signature">
@@ -224,7 +224,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="LineString.html"><span class="name">LineString</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends SingleGeometry[LineString, D] with Dim1</span>
+        <a href="LineString.html"><span class="name">LineString</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends SingleGeometry[LineString, D]</span>
       </span>
       </h4>
       
@@ -248,7 +248,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="MultiLineString.html"><span class="name">MultiLineString</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends GeometryCollection[MultiLineString, D] with Dim1</span>
+        <a href="MultiLineString.html"><span class="name">MultiLineString</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends GeometryCollection[MultiLineString, D]</span>
       </span>
       </h4>
       
@@ -296,7 +296,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="MultiPolygon.html"><span class="name">MultiPolygon</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends GeometryCollection[MultiPolygon, D] with Dim2</span>
+        <a href="MultiPolygon.html"><span class="name">MultiPolygon</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends GeometryCollection[MultiPolygon, D]</span>
       </span>
       </h4>
       
@@ -356,7 +356,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Polygon.html"><span class="name">Polygon</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends SingleGeometry[Polygon, D] with Dim2</span>
+        <a href="Polygon.html"><span class="name">Polygon</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends SingleGeometry[Polygon, D]</span>
       </span>
       </h4>
       
@@ -427,19 +427,7 @@
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.feature.Factory" data-isabs="false">
-      <a id="Factory:Factory"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Factory$.html"><span class="name">Factory</span></a><span class="result"> extends UsesCoords</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Factory wraps GeometryFactory, which is used to build various JTS objects.</p>
-    </li><li visbl="pub" name="geotrellis.feature.Feature" data-isabs="false">
+              <ol><li visbl="pub" name="geotrellis.feature.Feature" data-isabs="false">
       <a id="Feature:Feature"></a>
       <h4 class="signature">
       <span class="modifier_kind">
