@@ -29,7 +29,8 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A MultiLineString feature is a set of lines with associated data.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -124,6 +125,22 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.feature.MultiLineString#apply" data-isabs="false">
+      <a id="apply[D](Seq[Seq[Seq[Double]]],D):MultiLineString[D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="multiLineCoords">multiLineCoords: Seq[Seq[Seq[<span name="scala.Double" class="extype">Double</span>]]]</span>, <span name="data">data: D</span>)</span><span class="result">: <a name="geotrellis.feature.MultiLineString" class="extype" href="MultiLineString.html">MultiLineString</a>[D]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a MultiLineString feature with sequences of coordinate values.</p><div class="fullcomment"><div class="comment cmt"><p>Create a MultiLineString feature with sequences of coordinate values.</p><p>A MultiLineString feature is *
+The coordinate values are represented as a sequence of coordinates, each
+represented as a sequence of two double values (x and y).
+</p></div><dl class="paramcmts block"><dt class="param">data</dt><dd class="cmt"><p>The data of this feature
+</p></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.feature.MultiLineString#apply" data-isabs="false">
       <a id="apply[D](MultiLineString,D):JtsMultiLineString[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -186,6 +203,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.feature.MultiLineString#factory" data-isabs="false">
+      <a id="factory:GeometryFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">factory</span><span class="result">: <span name="com.vividsolutions.jts.geom.GeometryFactory" class="extype">GeometryFactory</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">

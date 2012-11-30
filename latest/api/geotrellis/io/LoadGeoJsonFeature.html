@@ -2,39 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.Op1</title>
+          <title>geotrellis.io.LoadGeoJsonFeature</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../lib/template.css" />
-      <script type="text/javascript" src="../lib/jquery.js"></script>
-      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../lib/template.js"></script>
-      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+      <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
+      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
     
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <img src="../lib/class_big.png" />
-        <p id="owner"><a name="geotrellis" class="extype" href="package.html">geotrellis</a></p>
-        <h1>Op1</h1>
+        <img src="../../lib/class_big.png" />
+        <p id="owner"><a name="geotrellis" class="extype" href="../package.html">geotrellis</a>.<a name="geotrellis.io" class="extype" href="package.html">io</a></p>
+        <h1>LoadGeoJsonFeature</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Op1</span><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[T]</span>
+        <span class="name">LoadGeoJsonFeature</span><span class="params">(<span name="geojson">geojson: Op[String]</span>)</span><span class="result"> extends <a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a>[String, Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]] with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Load a feature from GeoJson.</p><p>This operation loads a feature from GeoJson.  It accepts both simple
+geometry definitions and feature definitions.  If there is a property
+JSON clause, the feature data will be Some(JsonNode).
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[T], <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="geotrellis.raster.op.data.AsArray" class="extype" href="raster/op/data/AsArray.html">AsArray</a>, <a name="geotrellis.logic.AsList" class="extype" href="logic/AsList.html">AsList</a>, <a name="geotrellis.raster.op.local.CeilDouble" class="extype" href="raster/op/local/CeilDouble.html">CeilDouble</a>, <a name="geotrellis.raster.op.local.CeilInt" class="extype" href="raster/op/local/CeilInt.html">CeilInt</a>, <a name="geotrellis.raster.op.local.CeilRaster" class="extype" href="raster/op/local/CeilRaster.html">CeilRaster</a>, <a name="geotrellis.rest.op.string.Concat" class="extype" href="rest/op/string/Concat.html">Concat</a>, <a name="geotrellis.feature.op.geometry.ConvexHull" class="extype" href="feature/op/geometry/ConvexHull.html">ConvexHull</a>, <a name="geotrellis.raster.op.focal.Conway" class="extype" href="raster/op/focal/Conway.html">Conway</a>, <a name="geotrellis.raster.op.CreateRaster" class="extype" href="raster/op/CreateRaster.html">CreateRaster</a>, <a name="geotrellis.raster.op.local.DefinedConstant" class="extype" href="raster/op/local/DefinedConstant.html">DefinedConstant</a>, <a name="geotrellis.raster.op.local.DefinedRaster" class="extype" href="raster/op/local/DefinedRaster.html">DefinedRaster</a>, <a name="geotrellis.raster.op.local.DoCell" class="extype" href="raster/op/local/DoCell.html">DoCell</a>, <a name="geotrellis.feature.op.geometry.package.FilterGeometry" class="extype" href="feature/op/geometry/package$$FilterGeometry.html">FilterGeometry</a>, <a name="geotrellis.raster.op.local.FloorDouble" class="extype" href="raster/op/local/FloorDouble.html">FloorDouble</a>, <a name="geotrellis.raster.op.local.FloorInt" class="extype" href="raster/op/local/FloorInt.html">FloorInt</a>, <a name="geotrellis.raster.op.local.FloorRaster" class="extype" href="raster/op/local/FloorRaster.html">FloorRaster</a>, <a name="geotrellis.logic.applicative.Fmap" class="extype" href="logic/applicative/Fmap.html">Fmap</a>, <a name="geotrellis.raster.op.Force" class="extype" href="raster/op/Force.html">Force</a>, <a name="geotrellis.feature.op.geometry.GetArea" class="extype" href="feature/op/geometry/GetArea.html">GetArea</a>, <a name="geotrellis.feature.op.geometry.GetCentroid" class="extype" href="feature/op/geometry/GetCentroid.html">GetCentroid</a>, <a name="geotrellis.feature.op.geometry.GetEnvelope" class="extype" href="feature/op/geometry/GetEnvelope.html">GetEnvelope</a>, <a name="geotrellis.statistics.op.stat.GetMinMax" class="extype" href="statistics/op/stat/GetMinMax.html">GetMinMax</a>, <a name="geotrellis.raster.op.extent.GetRasterExtentFromRaster" class="extype" href="raster/op/extent/GetRasterExtentFromRaster.html">GetRasterExtentFromRaster</a>, <a name="geotrellis.statistics.op.stat.GetStatistics" class="extype" href="statistics/op/stat/GetStatistics.html">GetStatistics</a>, <a name="geotrellis.raster.op.local.IfCell" class="extype" href="raster/op/local/IfCell.html">IfCell</a>, <a name="geotrellis.raster.op.local.IfElseCell" class="extype" href="raster/op/local/IfElseCell.html">IfElseCell</a>, <a name="geotrellis.io.LoadGeoJsonFeature" class="extype" href="io/LoadGeoJsonFeature.html">LoadGeoJsonFeature</a>, <a name="geotrellis.io.LoadRasterExtentFromFile" class="extype" href="io/LoadRasterExtentFromFile.html">LoadRasterExtentFromFile</a>, <a name="geotrellis.io.LoadRasterMetadataFromFile" class="extype" href="io/LoadRasterMetadataFromFile.html">LoadRasterMetadataFromFile</a>, <a name="geotrellis.io.LoadWkt" class="extype" href="io/LoadWkt.html">LoadWkt</a>, <a name="geotrellis.raster.op.local.LogDouble" class="extype" href="raster/op/local/LogDouble.html">LogDouble</a>, <a name="geotrellis.raster.op.local.LogInt" class="extype" href="raster/op/local/LogInt.html">LogInt</a>, <a name="geotrellis.raster.op.local.LogRaster" class="extype" href="raster/op/local/LogRaster.html">LogRaster</a>, <a name="geotrellis.raster.op.focal.Max" class="extype" href="raster/op/focal/Max.html">Max</a>, <a name="geotrellis.raster.op.focal.Median" class="extype" href="raster/op/focal/Median.html">Median</a>, <a name="geotrellis.raster.op.focal.Min" class="extype" href="raster/op/focal/Min.html">Min</a>, <a name="geotrellis.raster.op.focal.Mode" class="extype" href="raster/op/focal/Mode.html">Mode</a>, <a name="geotrellis.raster.op.local.Negate" class="extype" href="raster/op/local/Negate.html">Negate</a>, <a name="geotrellis.raster.op.local.NotConstant" class="extype" href="raster/op/local/NotConstant.html">NotConstant</a>, <a name="geotrellis.raster.op.local.NotRaster" class="extype" href="raster/op/local/NotRaster.html">NotRaster</a>, <a name="geotrellis.rest.op.string.ParseDouble" class="extype" href="rest/op/string/ParseDouble.html">ParseDouble</a>, <a name="geotrellis.rest.op.string.ParseExtent" class="extype" href="rest/op/string/ParseExtent.html">ParseExtent</a>, <a name="geotrellis.rest.op.string.ParseInt" class="extype" href="rest/op/string/ParseInt.html">ParseInt</a>, <a name="geotrellis.vector.op.extent.PolygonExtent" class="extype" href="vector/op/extent/PolygonExtent.html">PolygonExtent</a>, <a name="geotrellis.raster.op.focal.RasterMoransI" class="extype" href="raster/op/focal/RasterMoransI.html">RasterMoransI</a>, <a name="geotrellis.io.RenderPngRgba" class="extype" href="io/RenderPngRgba.html">RenderPngRgba</a>, <a name="geotrellis.raster.op.local.RoundDouble" class="extype" href="raster/op/local/RoundDouble.html">RoundDouble</a>, <a name="geotrellis.raster.op.local.RoundInt" class="extype" href="raster/op/local/RoundInt.html">RoundInt</a>, <a name="geotrellis.raster.op.local.RoundRaster" class="extype" href="raster/op/local/RoundRaster.html">RoundRaster</a>, <a name="geotrellis.raster.op.focal.ScalarMoransI" class="extype" href="raster/op/focal/ScalarMoransI.html">ScalarMoransI</a>, <a name="geotrellis.vector.op.data.SplitMultiPolygon" class="extype" href="vector/op/data/SplitMultiPolygon.html">SplitMultiPolygon</a>, <a name="geotrellis.rest.op.string.SplitOnComma" class="extype" href="rest/op/string/SplitOnComma.html">SplitOnComma</a>, <a name="geotrellis.raster.op.local.SqrtDouble" class="extype" href="raster/op/local/SqrtDouble.html">SqrtDouble</a>, <a name="geotrellis.raster.op.local.SqrtInt" class="extype" href="raster/op/local/SqrtInt.html">SqrtInt</a>, <a name="geotrellis.raster.op.local.SqrtRaster" class="extype" href="raster/op/local/SqrtRaster.html">SqrtRaster</a>, <a name="geotrellis.raster.op.focal.Sum" class="extype" href="raster/op/focal/Sum.html">Sum</a>, <a name="geotrellis.raster.op.local.UndefinedConstant" class="extype" href="raster/op/local/UndefinedConstant.html">UndefinedConstant</a>, <a name="geotrellis.raster.op.local.UndefinedRaster" class="extype" href="raster/op/local/UndefinedRaster.html">UndefinedRaster</a>, <a name="geotrellis.raster.op.VerticalFlip" class="extype" href="raster/op/VerticalFlip.html">VerticalFlip</a></div>
+          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a>[String, Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]], <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]], <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -48,7 +48,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="geotrellis.Op1" class="in"><span>Op1</span></li><li name="geotrellis.Operation" class="in"><span>Operation</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="geotrellis.io.LoadGeoJsonFeature" class="in"><span>LoadGeoJsonFeature</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="geotrellis.Op1" class="in"><span>Op1</span></li><li name="geotrellis.Operation" class="in"><span>Operation</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -60,15 +60,15 @@
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="geotrellis.Op1#this" data-isabs="false">
-      <a id="this:Op1[A, T]"></a>
+              <ol><li visbl="pub" name="geotrellis.io.LoadGeoJsonFeature#this" data-isabs="false">
+      <a id="this:LoadGeoJsonFeature"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Op1</span><span class="params">(<span name="a">a: Op[A]</span>)</span><span class="params">(<span name="f">f: (A) ⇒ <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]</span>)</span>
+        <span class="name">LoadGeoJsonFeature</span><span class="params">(<span name="geojson">geojson: Op[String]</span>)</span>
       </span>
       </h4>
       
@@ -88,7 +88,7 @@
         <span class="name">Args</span><span class="result"> = <span name="scala.collection.immutable.List" class="extype">List</span>[<span name="scala.Any" class="extype">Any</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#Steps" data-isabs="false">
       <a id="Steps:Steps"></a>
       <h4 class="signature">
@@ -97,10 +97,10 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Steps</span><span class="result"> = <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]]</span>
+        <span class="name">Steps</span><span class="result"> = <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <a name="geotrellis.StepOutput" class="extype" href="../StepOutput.html">StepOutput</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -169,17 +169,17 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Op1#_run" data-isabs="false">
-      <a id="_run(Context):StepOutput[T]"></a>
+      <a id="_run(Context):StepOutput[Geometry[Option[JsonNode]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_run</span><span class="params">(<span name="context">context: <a name="geotrellis.Context" class="extype" href="Context.html">Context</a></span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]</span>
+        <span class="name">_run</span><span class="params">(<span name="context">context: <a name="geotrellis.Context" class="extype" href="../Context.html">Context</a></span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="../StepOutput.html">StepOutput</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="">Op1</a> → <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a> → <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -203,7 +203,7 @@
         <span class="name">canEqual</span><span class="params">(<span name="other">other: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="">Op1</a> → Equals</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a> → Equals</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -215,7 +215,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -230,19 +230,19 @@
         <span class="name">debug</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#dispatch" data-isabs="false">
-      <a id="dispatch(ActorRef):DispatchedOperation[T]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[Geometry[Option[JsonNode]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span name="akka.actor.ActorRef" class="extype">ActorRef</span></span>)</span><span class="result">: <a name="geotrellis.DispatchedOperation" class="extype" href="DispatchedOperation.html">DispatchedOperation</a>[T]</span>
+        <span class="name">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span name="akka.actor.ActorRef" class="extype">ActorRef</span></span>)</span><span class="result">: <a name="geotrellis.DispatchedOperation" class="extype" href="../DispatchedOperation.html">DispatchedOperation</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -255,7 +255,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.io.LoadGeoJsonFeature#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -266,19 +266,19 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.io.LoadGeoJsonFeature" class="extype" href="">LoadGeoJsonFeature</a> → Equals → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#filter" data-isabs="false">
-      <a id="filter((T) ⇒ Boolean):Operation[T]"></a>
+      <a id="filter((Geometry[Option[JsonNode]]) ⇒ Boolean):Operation[Geometry[Option[JsonNode]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="f">f: (T) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[T]</span>
+        <span class="name">filter</span><span class="params">(<span name="f">f: (Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -290,40 +290,52 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#flatMap" data-isabs="false">
-      <a id="flatMap[U]((T) ⇒ Operation[U]):Operation[U]"></a>
+      <a id="flatMap[U]((Geometry[Option[JsonNode]]) ⇒ Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (T) ⇒ <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[U]</span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[U]</span>
+        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]) ⇒ <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[U]</span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[U]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#foreach" data-isabs="false">
-      <a id="foreach[U]((T) ⇒ U):Unit"></a>
+      <a id="foreach[U]((Geometry[Option[JsonNode]]) ⇒ U):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (T) ⇒ U</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]) ⇒ U</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
 but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
 but returns nothing.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.io.LoadGeoJsonFeature#geojson" data-isabs="false">
+      <a id="geojson:Op[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">geojson</span><span class="result">: Op[String]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -336,7 +348,7 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.io.LoadGeoJsonFeature#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -347,7 +359,7 @@ but returns nothing.
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.io.LoadGeoJsonFeature" class="extype" href="">LoadGeoJsonFeature</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -361,32 +373,32 @@ but returns nothing.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#map" data-isabs="false">
-      <a id="map[U]((T) ⇒ U):Operation[U]"></a>
+      <a id="map[U]((Geometry[Option[JsonNode]]) ⇒ U):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (T) ⇒ U</span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[U]</span>
+        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]) ⇒ U</span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[U]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Op1#myNextSteps" data-isabs="false">
-      <a id="myNextSteps:PartialFunction[Any, StepOutput[T]]"></a>
+      <a id="myNextSteps:PartialFunction[Any, StepOutput[Geometry[Option[JsonNode]]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">myNextSteps</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]]</span>
+        <span class="name">myNextSteps</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <a name="geotrellis.StepOutput" class="extype" href="../StepOutput.html">StepOutput</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]]</span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#name" data-isabs="false">
       <a id="name:String"></a>
       <h4 class="signature">
@@ -399,7 +411,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -413,17 +425,17 @@ takes this operation's result as its argument.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Op1#nextSteps" data-isabs="false">
-      <a id="nextSteps:PartialFunction[Any, StepOutput[T]]"></a>
+      <a id="nextSteps:PartialFunction[Any, StepOutput[Geometry[Option[JsonNode]]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">nextSteps</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]]</span>
+        <span class="name">nextSteps</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <a name="geotrellis.StepOutput" class="extype" href="../StepOutput.html">StepOutput</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="">Op1</a> → <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a> → <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
@@ -449,17 +461,17 @@ takes this operation's result as its argument.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#processNextSteps" data-isabs="false">
-      <a id="processNextSteps(Args):StepOutput[T]"></a>
+      <a id="processNextSteps(Args):StepOutput[Geometry[Option[JsonNode]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: Args</span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]</span>
+        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: Args</span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="../StepOutput.html">StepOutput</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Op1#productArity" data-isabs="false">
       <a id="productArity:Int"></a>
       <h4 class="signature">
@@ -471,7 +483,7 @@ takes this operation's result as its argument.
         <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="">Op1</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a> → Product</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Op1#productElement" data-isabs="false">
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
@@ -483,7 +495,7 @@ takes this operation's result as its argument.
         <span class="name">productElement</span><span class="params">(<span name="n">n: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="">Op1</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a> → Product</dd></dl></div>
     </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
       <a id="productIterator:Iterator[Any]"></a>
       <h4 class="signature">
@@ -496,7 +508,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li visbl="pub" name="scala.Product#productPrefix" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.io.LoadGeoJsonFeature#productPrefix" data-isabs="false">
       <a id="productPrefix:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -507,32 +519,32 @@ takes this operation's result as its argument.
         <span class="name">productPrefix</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.io.LoadGeoJsonFeature" class="extype" href="">LoadGeoJsonFeature</a> → Product</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#run" data-isabs="false">
-      <a id="run(Context):StepOutput[T]"></a>
+      <a id="run(Context):StepOutput[Geometry[Option[JsonNode]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="context">context: <a name="geotrellis.Context" class="extype" href="Context.html">Context</a></span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]</span>
+        <span class="name">run</span><span class="params">(<span name="context">context: <a name="geotrellis.Context" class="extype" href="../Context.html">Context</a></span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="../StepOutput.html">StepOutput</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#runAsync" data-isabs="false">
-      <a id="runAsync(Args):StepOutput[T]"></a>
+      <a id="runAsync(Args):StepOutput[Geometry[Option[JsonNode]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runAsync</span><span class="params">(<span name="args">args: Args</span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="StepOutput.html">StepOutput</a>[T]</span>
+        <span class="name">runAsync</span><span class="params">(<span name="args">args: Args</span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="../StepOutput.html">StepOutput</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -545,7 +557,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.io.LoadGeoJsonFeature#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -553,10 +565,10 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: String</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.io.LoadGeoJsonFeature" class="extype" href="">LoadGeoJsonFeature</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -603,20 +615,20 @@ takes this operation's result as its argument.
               
         </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#withResult" data-isabs="false">
-      <a id="withResult[U]((T) ⇒ Operation[U]):Operation[U]"></a>
+      <a id="withResult[U]((Geometry[Option[JsonNode]]) ⇒ Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (T) ⇒ <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[U]</span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[U]</span>
+        <span class="name">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]) ⇒ <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[U]</span>)</span><span class="result">: <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[U]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><p>Same as flatMap.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -642,8 +654,14 @@ and returns a new operation.</p><p>Same as flatMap.
         </div>
 
         <div id="inheritedMembers">
-        <div name="geotrellis.Operation" class="parent">
-              <h3>Inherited from <a name="geotrellis.Operation" class="extype" href="Operation.html">Operation</a>[T]</h3>
+        <div name="scala.Serializable" class="parent">
+              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="java.io.Serializable" class="parent">
+              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="geotrellis.Op1" class="parent">
+              <h3>Inherited from <a name="geotrellis.Op1" class="extype" href="../Op1.html">Op1</a>[String, Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</h3>
+            </div><div name="geotrellis.Operation" class="parent">
+              <h3>Inherited from <a name="geotrellis.Operation" class="extype" href="../Operation.html">Operation</a>[Geometry[<span name="scala.Option" class="extype">Option</span>[<span name="org.codehaus.jackson.JsonNode" class="extype">JsonNode</span>]]]</h3>
             </div><div name="scala.Product" class="parent">
               <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>
             </div><div name="scala.Equals" class="parent">

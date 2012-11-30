@@ -124,19 +124,20 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.feature.MultiPolygon#apply" data-isabs="false">
-      <a id="apply[D](List[List[List[List[Double]]]],D)(DI,DI):MultiPolygon[D]"></a>
+      <a id="apply[D](Seq[Seq[Seq[Seq[Double]]]],D)(DI,DI):MultiPolygon[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: List[List[List[List[<span name="scala.Double" class="extype">Double</span>]]]]</span>, <span name="data">data: D</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: DI</span>, <span name="dummy2">dummy2: DI</span>)</span><span class="result">: <a name="geotrellis.feature.MultiPolygon" class="extype" href="MultiPolygon.html">MultiPolygon</a>[D]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="coords">coords: Seq[Seq[Seq[Seq[<span name="scala.Double" class="extype">Double</span>]]]]</span>, <span name="data">data: D</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: DI</span>, <span name="dummy2">dummy2: DI</span>)</span><span class="result">: <a name="geotrellis.feature.MultiPolygon" class="extype" href="MultiPolygon.html">MultiPolygon</a>[D]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a MultiPolygon using four nested lists.</p><div class="fullcomment"><div class="comment cmt"><p>Create a MultiPolygon using four nested lists.</p><p>The first list represents each polygon.</p><p>The second list represents each ring of the polygon, the first being
 the exterior ring.</p><p>The third list is a list of coordinates in the ring.</p><p>The fourth list represents a single coordinate, which is two double values.
-</p></div></div>
+</p></div><dl class="paramcmts block"><dt class="param">coords</dt><dd class="cmt"><p>Nested sequence of polygon coordinates</p></dd><dt class="param">data</dt><dd class="cmt"><p>The data of this feature
+</p></dd></dl></div>
     </li><li visbl="pub" name="geotrellis.feature.MultiPolygon#apply" data-isabs="false">
       <a id="apply[D](MultiPolygon,D):MultiPolygon[D]"></a>
       <h4 class="signature">
