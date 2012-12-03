@@ -68,22 +68,10 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Aspect.html"><span class="name">Aspect</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="zFactor">zFactor: Op[Double]</span>)</span><span class="result"> extends Op2[Raster, Double, Raster] with Product with Serializable</span>
+        <a href="Aspect.html"><span class="name">Aspect</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="zFactorOp">zFactorOp: Op[Double]</span>)</span><span class="result"> extends DoubleFocalOp1[Double, Raster] with SlopeAspectCalculator with Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.AspectCalc" data-isabs="false">
-      <a id="AspectCalc:AspectCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="AspectCalc.html"><span class="name">AspectCalc</span></a><span class="params">(<span name="zFactor">zFactor: Double</span>, <span name="cellWidth">cellWidth: Double</span>, <span name="cellHeight">cellHeight: Double</span>)</span><span class="result"> extends SlopeAspectCalculator[Double] with Product with Serializable</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.AutomaticNormalize" data-isabs="false">
       <a id="AutomaticNormalize:AutomaticNormalize"></a>
       <h4 class="signature">
@@ -97,27 +85,63 @@
       </h4>
       <p class="comment cmt">Normalize the values in the given raster so that all values are within the
 specified minimum and maximum value range.</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BitFocalOpData" data-isabs="false">
-      <a id="BitFocalOpData:BitFocalOpData"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp" data-isabs="true">
+      <a id="BaseFocalOp:BaseFocalOp[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="BitFocalOpData.html"><span class="name">BitFocalOpData</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends FocalOpData[Int] with Product with Serializable</span>
+        <a href="BaseFocalOp.html"><span class="name">BaseFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.ByteFocalOpData" data-isabs="false">
-      <a id="ByteFocalOpData:ByteFocalOpData"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp1" data-isabs="true">
+      <a id="BaseFocalOp1:BaseFocalOp1[A, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ByteFocalOpData.html"><span class="name">ByteFocalOpData</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends FocalOpData[Int] with Product with Serializable</span>
+        <a href="BaseFocalOp1.html"><span class="name">BaseFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2" data-isabs="true">
+      <a id="BaseFocalOp2:BaseFocalOp2[A, B, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseFocalOp2.html"><span class="name">BaseFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp3" data-isabs="true">
+      <a id="BaseFocalOp3:BaseFocalOp3[A, B, C, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseFocalOp3.html"><span class="name">BaseFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp4" data-isabs="true">
+      <a id="BaseFocalOp4:BaseFocalOp4[A, B, C, M, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseFocalOp4.html"><span class="name">BaseFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
@@ -145,15 +169,63 @@ specified minimum and maximum value range.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp1" data-isabs="true">
-      <a id="CellwiseFocalOp1:CellwiseFocalOp1[T, D]"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp" data-isabs="true">
+      <a id="CellwiseFocalOp:CellwiseFocalOp[T, D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="CellwiseFocalOp1.html"><span class="name">CellwiseFocalOp1</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends FocalOp1[T] with CellwiseCalculator[D]</span>
+        <a href="CellwiseFocalOp.html"><span class="name">CellwiseFocalOp</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp[T] with CellwiseCalculator[D]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp1" data-isabs="true">
+      <a id="CellwiseFocalOp1:CellwiseFocalOp1[A, T, D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseFocalOp1.html"><span class="name">CellwiseFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp1[A, T] with CellwiseCalculator[D]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp2" data-isabs="true">
+      <a id="CellwiseFocalOp2:CellwiseFocalOp2[A, B, T, D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseFocalOp2.html"><span class="name">CellwiseFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp2[A, B, T] with CellwiseCalculator[D]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp3" data-isabs="true">
+      <a id="CellwiseFocalOp3:CellwiseFocalOp3[A, B, C, T, D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseFocalOp3.html"><span class="name">CellwiseFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp3[A, B, C, T] with CellwiseCalculator[D]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp4" data-isabs="true">
+      <a id="CellwiseFocalOp4:CellwiseFocalOp4[A, B, C, M, T, D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseFocalOp4.html"><span class="name">CellwiseFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp4[A, B, C, M, T] with CellwiseCalculator[D]</span>
       </span>
       </h4>
       
@@ -166,18 +238,6 @@ specified minimum and maximum value range.</p>
       </span>
       <span class="symbol">
         <a href="Circle.html"><span class="name">Circle</span></a><span class="params">(<span name="radius">radius: Double</span>)</span><span class="result"> extends Neighborhood with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CircleStrategy" data-isabs="false">
-      <a id="CircleStrategy:CircleStrategy[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="CircleStrategy.html"><span class="name">CircleStrategy</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="n">n: Int</span>, <span name="strategyType">strategyType: FocalStrategyType</span>)</span><span class="result"> extends FocalStrategy[D] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -201,22 +261,10 @@ specified minimum and maximum value range.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Conway.html"><span class="name">Conway</span></a><span class="params">(<span name="r">r: Op[Raster]</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Conway.html"><span class="name">Conway</span></a><span class="params">(<span name="r">r: Op[Raster]</span>)</span><span class="result"> extends FocalOp[Raster, Int] with Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.ConwayCalc" data-isabs="false">
-      <a id="ConwayCalc:ConwayCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ConwayCalc.html"><span class="name">ConwayCalc</span></a><span class="result"> extends FocalCalculation[Int]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor" data-isabs="true">
       <a id="Cursor:Cursor[D]"></a>
       <h4 class="signature">
@@ -230,18 +278,6 @@ specified minimum and maximum value range.</p>
       </h4>
       <p class="comment cmt">Represents a cursor that can be used to iterate over cells within a focal
 neighborhood.</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CursorFocalOp1" data-isabs="true">
-      <a id="CursorFocalOp1:CursorFocalOp1[T, D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CursorFocalOp1.html"><span class="name">CursorFocalOp1</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends FocalOp1[T]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.CursorMask" data-isabs="false">
       <a id="CursorMask:CursorMask"></a>
       <h4 class="signature">
@@ -262,7 +298,7 @@ neighborhood.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CursorMean.html"><span class="name">CursorMean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends DoubleCursorFocalOp1[Raster] with Product with Serializable</span>
+        <a href="CursorMean.html"><span class="name">CursorMean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends DoubleFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -278,180 +314,126 @@ neighborhood.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCursorFocalOp1" data-isabs="true">
-      <a id="DoubleCursorFocalOp1:DoubleCursorFocalOp1[T]"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOp" data-isabs="true">
+      <a id="DoubleFocalOp:DoubleFocalOp[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleCursorFocalOp1.html"><span class="name">DoubleCursorFocalOp1</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends CursorFocalOp1[T, Double]</span>
+        <a href="DoubleFocalOp.html"><span class="name">DoubleFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T, Double]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOpData" data-isabs="false">
-      <a id="DoubleFocalOpData:DoubleFocalOpData"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOp1" data-isabs="true">
+      <a id="DoubleFocalOp1:DoubleFocalOp1[A, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleFocalOpData.html"><span class="name">DoubleFocalOpData</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends FocalOpData[Double] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOpDefinition" data-isabs="true">
-      <a id="DoubleFocalOpDefinition:DoubleFocalOpDefinition"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleFocalOpDefinition.html"><span class="name">DoubleFocalOpDefinition</span></a><span class="result"> extends FocalOpDefinition</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.DoubleMaxCalc" data-isabs="false">
-      <a id="DoubleMaxCalc:DoubleMaxCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleMaxCalc.html"><span class="name">DoubleMaxCalc</span></a><span class="result"> extends FocalCalculation[Double]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.DoubleMinCalc" data-isabs="false">
-      <a id="DoubleMinCalc:DoubleMinCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleMinCalc.html"><span class="name">DoubleMinCalc</span></a><span class="result"> extends FocalCalculation[Double]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.DoubleSumCalc" data-isabs="false">
-      <a id="DoubleSumCalc:DoubleSumCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleSumCalc.html"><span class="name">DoubleSumCalc</span></a><span class="result"> extends FocalCalculation[Double]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FloatFocalOpData" data-isabs="false">
-      <a id="FloatFocalOpData:FloatFocalOpData"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="FloatFocalOpData.html"><span class="name">FloatFocalOpData</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends FocalOpData[Double] with Product with Serializable</span>
+        <a href="DoubleFocalOp1.html"><span class="name">DoubleFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T, Double]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalCalculation" data-isabs="true">
-      <a id="FocalCalculation:FocalCalculation[D]"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOp2" data-isabs="true">
+      <a id="DoubleFocalOp2:DoubleFocalOp2[A, B, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalCalculation.html"><span class="name">FocalCalculation</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
+        <a href="DoubleFocalOp2.html"><span class="name">DoubleFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T, Double]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOp3" data-isabs="true">
+      <a id="DoubleFocalOp3:DoubleFocalOp3[A, B, C, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleFocalOp3.html"><span class="name">DoubleFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T, Double]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOp4" data-isabs="true">
+      <a id="DoubleFocalOp4:DoubleFocalOp4[A, B, C, M, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleFocalOp4.html"><span class="name">DoubleFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, M, T, Double]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp" data-isabs="true">
+      <a id="FocalOp:FocalOp[T, D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOp.html"><span class="name">FocalOp</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1" data-isabs="true">
-      <a id="FocalOp1:FocalOp1[T]"></a>
+      <a id="FocalOp1:FocalOp1[A, T, D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOp1.html"><span class="name">FocalOp1</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
+        <a href="FocalOp1.html"><span class="name">FocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp1[A, T]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOpData" data-isabs="true">
-      <a id="FocalOpData:FocalOpData[D]"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp2" data-isabs="true">
+      <a id="FocalOp2:FocalOp2[A, B, T, D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOpData.html"><span class="name">FocalOpData</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provides a storage mechanism for focal operations that is later converted into a raster.</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOpDefinition" data-isabs="true">
-      <a id="FocalOpDefinition:FocalOpDefinition"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="FocalOpDefinition.html"><span class="name">FocalOpDefinition</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Defines methods to create new FocalCalculations and FocalOpDatas
-that define how a focal operation
-</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalStrategy" data-isabs="true">
-      <a id="FocalStrategy:FocalStrategy[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="FocalStrategy.html"><span class="name">FocalStrategy</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An algorithm that iterates over a raster and performs a focal operation, using
-a neighborhood calculation that is passed in.</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalStrategy2" data-isabs="true">
-      <a id="FocalStrategy2:FocalStrategy2[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="FocalStrategy2.html"><span class="name">FocalStrategy2</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
+        <a href="FocalOp2.html"><span class="name">FocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp2[A, B, T]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalStrategyType" data-isabs="true">
-      <a id="FocalStrategyType:FocalStrategyType"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp3" data-isabs="true">
+      <a id="FocalOp3:FocalOp3[A, B, C, T, D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalStrategyType.html"><span class="name">FocalStrategyType</span></a><span class="result"> extends AnyRef</span>
+        <a href="FocalOp3.html"><span class="name">FocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp3[A, B, C, T]</span>
       </span>
       </h4>
-      <p class="comment cmt">Allows the operation writer to define the most optimal
-cell-visiting strategy for the FocalStrategy to use,
-so that the FocalCalculation may be designed with that
-strategy in mind to maximize caching.</p>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp4" data-isabs="true">
+      <a id="FocalOp4:FocalOp4[A, B, C, M, T, D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOp4.html"><span class="name">FocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp4[A, B, C, M, T]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Gaussian" data-isabs="false">
       <a id="Gaussian:Gaussian"></a>
       <h4 class="signature">
@@ -472,34 +454,10 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Hillshade.html"><span class="name">Hillshade</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="azimuth">azimuth: Op[Double]</span>, <span name="altitude">altitude: Op[Double]</span>, <span name="zFactor">zFactor: Op[Double]</span>)</span><span class="result"> extends Op4[Raster, Double, Double, Double, Raster] with Product with Serializable</span>
+        <a href="Hillshade.html"><span class="name">Hillshade</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="azimuthOp">azimuthOp: Op[Double]</span>, <span name="altitudeOp">altitudeOp: Op[Double]</span>, <span name="zFactorOp">zFactorOp: Op[Double]</span>)</span><span class="result"> extends IntFocalOp3[Double, Double, Double, Raster] with SlopeAspectCalculator with Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.HillshadeCalc" data-isabs="false">
-      <a id="HillshadeCalc:HillshadeCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="HillshadeCalc.html"><span class="name">HillshadeCalc</span></a><span class="params">(<span name="azimuth">azimuth: Double</span>, <span name="zenith">zenith: Double</span>, <span name="zFactor">zFactor: Double</span>, <span name="cw">cw: Double</span>, <span name="ch">ch: Double</span>)</span><span class="result"> extends SlopeAspectCalculator[Int] with Product with Serializable</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.HillshadeFocalOpDef" data-isabs="false">
-      <a id="HillshadeFocalOpDef:HillshadeFocalOpDef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="HillshadeFocalOpDef.html"><span class="name">HillshadeFocalOpDef</span></a><span class="params">(<span name="azimuth">azimuth: Double</span>, <span name="zenith">zenith: Double</span>, <span name="zFactor">zFactor: Double</span>, <span name="cw">cw: Double</span>, <span name="ch">ch: Double</span>)</span><span class="result"> extends IntFocalOpDefinition with Product with Serializable</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCursor" data-isabs="false">
       <a id="IntCursor:IntCursor"></a>
       <h4 class="signature">
@@ -512,78 +470,66 @@ strategy in mind to maximize caching.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCursorFocalOp1" data-isabs="true">
-      <a id="IntCursorFocalOp1:IntCursorFocalOp1[T]"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOp" data-isabs="true">
+      <a id="IntFocalOp:IntFocalOp[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntCursorFocalOp1.html"><span class="name">IntCursorFocalOp1</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends CursorFocalOp1[T, Int]</span>
+        <a href="IntFocalOp.html"><span class="name">IntFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T, Int]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOpData" data-isabs="false">
-      <a id="IntFocalOpData:IntFocalOpData"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOp1" data-isabs="true">
+      <a id="IntFocalOp1:IntFocalOp1[A, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntFocalOpData.html"><span class="name">IntFocalOpData</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends FocalOpData[Int] with Product with Serializable</span>
+        <a href="IntFocalOp1.html"><span class="name">IntFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T, Int]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOpDefinition" data-isabs="true">
-      <a id="IntFocalOpDefinition:IntFocalOpDefinition"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOp2" data-isabs="true">
+      <a id="IntFocalOp2:IntFocalOp2[A, B, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntFocalOpDefinition.html"><span class="name">IntFocalOpDefinition</span></a><span class="result"> extends FocalOpDefinition</span>
+        <a href="IntFocalOp2.html"><span class="name">IntFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T, Int]</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.IntMaxCalc" data-isabs="false">
-      <a id="IntMaxCalc:IntMaxCalc"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOp3" data-isabs="true">
+      <a id="IntFocalOp3:IntFocalOp3[A, B, C, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntMaxCalc.html"><span class="name">IntMaxCalc</span></a><span class="result"> extends FocalCalculation[Int]</span>
+        <a href="IntFocalOp3.html"><span class="name">IntFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T, Int]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.IntMinCalc" data-isabs="false">
-      <a id="IntMinCalc:IntMinCalc"></a>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOp4" data-isabs="true">
+      <a id="IntFocalOp4:IntFocalOp4[A, B, C, M, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntMinCalc.html"><span class="name">IntMinCalc</span></a><span class="result"> extends FocalCalculation[Int]</span>
+        <a href="IntFocalOp4.html"><span class="name">IntFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, M, T, Int]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.IntSumCalc" data-isabs="false">
-      <a id="IntSumCalc:IntSumCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="IntSumCalc.html"><span class="name">IntSumCalc</span></a><span class="result"> extends FocalCalculation[Int]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity" data-isabs="false">
       <a id="KernelDensity:KernelDensity"></a>
       <h4 class="signature">
@@ -617,7 +563,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Max.html"><span class="name">Max</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Max.html"><span class="name">Max</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends IntFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -629,7 +575,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Mean.html"><span class="name">Mean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends CellwiseFocalOp1[Raster, Double] with Product with Serializable</span>
+        <a href="Mean.html"><span class="name">Mean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends CellwiseFocalOp[Raster, Double] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -641,22 +587,10 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Median.html"><span class="name">Median</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Median.html"><span class="name">Median</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends IntFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.MedianCalc" data-isabs="false">
-      <a id="MedianCalc:MedianCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="MedianCalc.html"><span class="name">MedianCalc</span></a><span class="result"> extends FocalCalculation[Int]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Min" data-isabs="false">
       <a id="Min:Min"></a>
       <h4 class="signature">
@@ -665,19 +599,7 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Min.html"><span class="name">Min</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Min2" data-isabs="false">
-      <a id="Min2:Min2"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Min2.html"><span class="name">Min2</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Neighborhood</span>)</span><span class="result"> extends IntCursorFocalOp1[Raster] with Product with Serializable</span>
+        <a href="Min.html"><span class="name">Min</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends IntFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -689,34 +611,10 @@ strategy in mind to maximize caching.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Mode.html"><span class="name">Mode</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Mode.html"><span class="name">Mode</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends IntFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.ModeCalc" data-isabs="false">
-      <a id="ModeCalc:ModeCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ModeCalc.html"><span class="name">ModeCalc</span></a><span class="result"> extends FocalCalculation[Int]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.MoranCalc" data-isabs="false">
-      <a id="MoranCalc:MoranCalc"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="MoranCalc.html"><span class="name">MoranCalc</span></a><span class="result"> extends FocalCalculation[Double]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Movement" data-isabs="true">
       <a id="Movement:Movement"></a>
       <h4 class="signature">
@@ -726,18 +624,6 @@ strategy in mind to maximize caching.</p>
       </span>
       <span class="symbol">
         <a href="Movement.html"><span class="name">Movement</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.MultiTypeFocalOpDefinition" data-isabs="true">
-      <a id="MultiTypeFocalOpDefinition:MultiTypeFocalOpDefinition"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="MultiTypeFocalOpDefinition.html"><span class="name">MultiTypeFocalOpDefinition</span></a><span class="result"> extends FocalOpDefinition</span>
       </span>
       </h4>
       
@@ -768,18 +654,6 @@ of the neighborhood the focal operation should use.</p>
       <p class="comment cmt">Simple neighborhood that goes through the center of the focus
 along the x any y axis of the raster
 </p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.NeswStrategy" data-isabs="false">
-      <a id="NeswStrategy:NeswStrategy[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="NeswStrategy.html"><span class="name">NeswStrategy</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="strategyType">strategyType: FocalStrategyType</span>)</span><span class="result"> extends FocalStrategy[D] with Product with Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.NoopResultBuilder" data-isabs="false">
       <a id="NoopResultBuilder:NoopResultBuilder"></a>
       <h4 class="signature">
@@ -812,7 +686,7 @@ along the x any y axis of the raster
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RasterMoransI.html"><span class="name">RasterMoransI</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="RasterMoransI.html"><span class="name">RasterMoransI</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends DoubleFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -828,18 +702,6 @@ along the x any y axis of the raster
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.ShortFocalOpData" data-isabs="false">
-      <a id="ShortFocalOpData:ShortFocalOpData"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="ShortFocalOpData.html"><span class="name">ShortFocalOpData</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends FocalOpData[Int] with Product with Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Slope" data-isabs="false">
       <a id="Slope:Slope"></a>
       <h4 class="signature">
@@ -848,34 +710,22 @@ along the x any y axis of the raster
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Slope.html"><span class="name">Slope</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="zFactor">zFactor: Op[Double]</span>)</span><span class="result"> extends Op2[Raster, Double, Raster] with Product with Serializable</span>
+        <a href="Slope.html"><span class="name">Slope</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="zFactorOp">zFactorOp: Op[Double]</span>)</span><span class="result"> extends DoubleFocalOp1[Double, Raster] with SlopeAspectCalculator with Product with Serializable</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.SlopeAspectCalculator" data-isabs="true">
-      <a id="SlopeAspectCalculator:SlopeAspectCalculator[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="SlopeAspectCalculator.html"><span class="name">SlopeAspectCalculator</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends FocalCalculation[D]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.SlopeCalc" data-isabs="false">
-      <a id="SlopeCalc:SlopeCalc"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.SlopeAspectCalculator" data-isabs="true">
+      <a id="SlopeAspectCalculator:SlopeAspectCalculator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="SlopeCalc.html"><span class="name">SlopeCalc</span></a><span class="params">(<span name="zFactor">zFactor: Double</span>, <span name="cellWidth">cellWidth: Double</span>, <span name="cellHeight">cellHeight: Double</span>)</span><span class="result"> extends SlopeAspectCalculator[Double] with Product with Serializable</span>
+        <a href="SlopeAspectCalculator.html"><span class="name">SlopeAspectCalculator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Square" data-isabs="false">
       <a id="Square:Square"></a>
       <h4 class="signature">
@@ -888,18 +738,6 @@ along the x any y axis of the raster
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.SquareStrategy" data-isabs="false">
-      <a id="SquareStrategy:SquareStrategy[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="SquareStrategy.html"><span class="name">SquareStrategy</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="n">n: Int</span>, <span name="strategyType">strategyType: FocalStrategyType</span>)</span><span class="result"> extends FocalStrategy[D] with Product with Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Sum" data-isabs="false">
       <a id="Sum:Sum"></a>
       <h4 class="signature">
@@ -908,7 +746,19 @@ along the x any y axis of the raster
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Sum.html"><span class="name">Sum</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="neighborhoodType">neighborhoodType: Neighborhood</span>)</span><span class="result"> extends Op1[Raster, Raster] with Product with Serializable</span>
+        <a href="Sum.html"><span class="name">Sum</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends IntFocalOp[Raster] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.TraversalStrategy" data-isabs="true">
+      <a id="TraversalStrategy:TraversalStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TraversalStrategy.html"><span class="name">TraversalStrategy</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -931,19 +781,7 @@ along the x any y axis of the raster
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Aggregated" data-isabs="false">
-      <a id="Aggregated:Aggregated"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Aggregated$.html"><span class="name">Aggregated</span></a><span class="result"> extends FocalStrategyType with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Specifies an Aggregated strategy should be used</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Angles" data-isabs="false">
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Angles" data-isabs="false">
       <a id="Angles:Angles"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -967,18 +805,6 @@ along the x any y axis of the raster
       </span>
       </h4>
       
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.ConwayFocalOpDef" data-isabs="false">
-      <a id="ConwayFocalOpDef:ConwayFocalOpDef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ConwayFocalOpDef$.html"><span class="name">ConwayFocalOpDef</span></a><span class="result"> extends IntFocalOpDefinition</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor" data-isabs="false">
       <a id="Cursor:Cursor"></a>
       <h4 class="signature">
@@ -1003,54 +829,6 @@ along the x any y axis of the raster
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Default" data-isabs="false">
-      <a id="Default:Default"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Default$.html"><span class="name">Default</span></a><span class="result"> extends FocalStrategyType with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Specifies the Default strategy should be used</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalStrategy" data-isabs="false">
-      <a id="DoubleFocalStrategy:DoubleFocalStrategy"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleFocalStrategy$.html"><span class="name">DoubleFocalStrategy</span></a><span class="result"> extends FocalStrategy2[Double]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp" data-isabs="false">
-      <a id="FocalOp:FocalOp"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="FocalOp$.html"><span class="name">FocalOp</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalStrategy" data-isabs="false">
-      <a id="FocalStrategy:FocalStrategy"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="FocalStrategy$.html"><span class="name">FocalStrategy</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Hillshade" data-isabs="false">
       <a id="Hillshade:Hillshade"></a>
       <h4 class="signature">
@@ -1060,18 +838,6 @@ along the x any y axis of the raster
       </span>
       <span class="symbol">
         <a href="Hillshade$.html"><span class="name">Hillshade</span></a><span class="result"> extends Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalStrategy" data-isabs="false">
-      <a id="IntFocalStrategy:IntFocalStrategy"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="IntFocalStrategy$.html"><span class="name">IntFocalStrategy</span></a><span class="result"> extends FocalStrategy2[Int]</span>
       </span>
       </h4>
       
@@ -1100,30 +866,6 @@ along the x any y axis of the raster
       </h4>
       <p class="comment cmt">Object used for generating kernels
 </p>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.MaxFocalOpDef" data-isabs="false">
-      <a id="MaxFocalOpDef:MaxFocalOpDef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MaxFocalOpDef$.html"><span class="name">MaxFocalOpDef</span></a><span class="result"> extends MultiTypeFocalOpDefinition</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.MinFocalOpDef" data-isabs="false">
-      <a id="MinFocalOpDef:MinFocalOpDef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MinFocalOpDef$.html"><span class="name">MinFocalOpDef</span></a><span class="result"> extends MultiTypeFocalOpDefinition</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Movement" data-isabs="false">
       <a id="Movement:Movement"></a>
       <h4 class="signature">
@@ -1161,30 +903,18 @@ detect the min/max values, and when we provide them explicitly.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Sliding" data-isabs="false">
-      <a id="Sliding:Sliding"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.TraversalStrategy" data-isabs="false">
+      <a id="TraversalStrategy:TraversalStrategy"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Sliding$.html"><span class="name">Sliding</span></a><span class="result"> extends FocalStrategyType with Product with Serializable</span>
+        <a href="TraversalStrategy$.html"><span class="name">TraversalStrategy</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      <p class="comment cmt">Specifies a Sliding strategy should be used</p>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.SumFocalOpDef" data-isabs="false">
-      <a id="SumFocalOpDef:SumFocalOpDef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="SumFocalOpDef$.html"><span class="name">SumFocalOpDef</span></a><span class="result"> extends MultiTypeFocalOpDefinition</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+      
     </li></ol>
             </div>
 
