@@ -85,147 +85,28 @@
       </h4>
       <p class="comment cmt">Normalize the values in the given raster so that all values are within the
 specified minimum and maximum value range.</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp" data-isabs="true">
-      <a id="BaseFocalOp:BaseFocalOp[T]"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseCursor" data-isabs="true">
+      <a id="BaseCursor:BaseCursor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
+        <span class="modifier">sealed abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="BaseFocalOp.html"><span class="name">BaseFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
+        <a href="BaseCursor.html"><span class="name">BaseCursor</span></a><span class="result"> extends Cursor</span>
       </span>
       </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp1" data-isabs="true">
-      <a id="BaseFocalOp1:BaseFocalOp1[A, T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="BaseFocalOp1.html"><span class="name">BaseFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2" data-isabs="true">
-      <a id="BaseFocalOp2:BaseFocalOp2[A, B, T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="BaseFocalOp2.html"><span class="name">BaseFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp3" data-isabs="true">
-      <a id="BaseFocalOp3:BaseFocalOp3[A, B, C, T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="BaseFocalOp3.html"><span class="name">BaseFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp4" data-isabs="true">
-      <a id="BaseFocalOp4:BaseFocalOp4[A, B, C, M, T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="BaseFocalOp4.html"><span class="name">BaseFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellSet" data-isabs="true">
-      <a id="CellSet:CellSet[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="CellSet.html"><span class="name">CellSet</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
+      <p class="comment cmt">Represents a cursor that can be used to iterate over cells within a focal
+neighborhood.</p>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator" data-isabs="true">
-      <a id="CellwiseCalculator:CellwiseCalculator[D]"></a>
+      <a id="CellwiseCalculator:CellwiseCalculator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="CellwiseCalculator.html"><span class="name">CellwiseCalculator</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp" data-isabs="true">
-      <a id="CellwiseFocalOp:CellwiseFocalOp[T, D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CellwiseFocalOp.html"><span class="name">CellwiseFocalOp</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp[T] with CellwiseCalculator[D]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp1" data-isabs="true">
-      <a id="CellwiseFocalOp1:CellwiseFocalOp1[A, T, D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CellwiseFocalOp1.html"><span class="name">CellwiseFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp1[A, T] with CellwiseCalculator[D]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp2" data-isabs="true">
-      <a id="CellwiseFocalOp2:CellwiseFocalOp2[A, B, T, D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CellwiseFocalOp2.html"><span class="name">CellwiseFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp2[A, B, T] with CellwiseCalculator[D]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp3" data-isabs="true">
-      <a id="CellwiseFocalOp3:CellwiseFocalOp3[A, B, C, T, D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CellwiseFocalOp3.html"><span class="name">CellwiseFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp3[A, B, C, T] with CellwiseCalculator[D]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseFocalOp4" data-isabs="true">
-      <a id="CellwiseFocalOp4:CellwiseFocalOp4[A, B, C, M, T, D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CellwiseFocalOp4.html"><span class="name">CellwiseFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp4[A, B, C, M, T] with CellwiseCalculator[D]</span>
+        <a href="CellwiseCalculator.html"><span class="name">CellwiseCalculator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -261,23 +142,22 @@ specified minimum and maximum value range.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Conway.html"><span class="name">Conway</span></a><span class="params">(<span name="r">r: Op[Raster]</span>)</span><span class="result"> extends FocalOp[Raster, Int] with Product with Serializable</span>
+        <a href="Conway.html"><span class="name">Conway</span></a><span class="params">(<span name="r">r: Op[Raster]</span>)</span><span class="result"> extends IntFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor" data-isabs="true">
-      <a id="Cursor:Cursor[D]"></a>
+      <a id="Cursor:Cursor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Cursor.html"><span class="name">Cursor</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
+        <a href="Cursor.html"><span class="name">Cursor</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      <p class="comment cmt">Represents a cursor that can be used to iterate over cells within a focal
-neighborhood.</p>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.CursorMask" data-isabs="false">
       <a id="CursorMask:CursorMask"></a>
       <h4 class="signature">
@@ -302,6 +182,90 @@ neighborhood.</p>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellSet" data-isabs="true">
+      <a id="DoubleCellSet:DoubleCellSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleCellSet.html"><span class="name">DoubleCellSet</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellwiseCalculator" data-isabs="true">
+      <a id="DoubleCellwiseCalculator:DoubleCellwiseCalculator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleCellwiseCalculator.html"><span class="name">DoubleCellwiseCalculator</span></a><span class="result"> extends CellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellwiseFocalOp" data-isabs="true">
+      <a id="DoubleCellwiseFocalOp:DoubleCellwiseFocalOp[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleCellwiseFocalOp.html"><span class="name">DoubleCellwiseFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T] with DoubleCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellwiseFocalOp1" data-isabs="true">
+      <a id="DoubleCellwiseFocalOp1:DoubleCellwiseFocalOp1[A, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleCellwiseFocalOp1.html"><span class="name">DoubleCellwiseFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T] with DoubleCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellwiseFocalOp2" data-isabs="true">
+      <a id="DoubleCellwiseFocalOp2:DoubleCellwiseFocalOp2[A, B, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleCellwiseFocalOp2.html"><span class="name">DoubleCellwiseFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T] with DoubleCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellwiseFocalOp3" data-isabs="true">
+      <a id="DoubleCellwiseFocalOp3:DoubleCellwiseFocalOp3[A, B, C, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleCellwiseFocalOp3.html"><span class="name">DoubleCellwiseFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T] with DoubleCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCellwiseFocalOp4" data-isabs="true">
+      <a id="DoubleCellwiseFocalOp4:DoubleCellwiseFocalOp4[A, B, C, D, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleCellwiseFocalOp4.html"><span class="name">DoubleCellwiseFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, D, T] with DoubleCellwiseCalculator</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleCursor" data-isabs="false">
       <a id="DoubleCursor:DoubleCursor"></a>
       <h4 class="signature">
@@ -310,7 +274,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleCursor.html"><span class="name">DoubleCursor</span></a><span class="result"> extends Cursor[Double]</span>
+        <a href="DoubleCursor.html"><span class="name">DoubleCursor</span></a><span class="result"> extends BaseCursor</span>
       </span>
       </h4>
       
@@ -322,7 +286,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleFocalOp.html"><span class="name">DoubleFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T, Double]</span>
+        <a href="DoubleFocalOp.html"><span class="name">DoubleFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T]</span>
       </span>
       </h4>
       
@@ -334,7 +298,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleFocalOp1.html"><span class="name">DoubleFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T, Double]</span>
+        <a href="DoubleFocalOp1.html"><span class="name">DoubleFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T]</span>
       </span>
       </h4>
       
@@ -346,7 +310,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleFocalOp2.html"><span class="name">DoubleFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T, Double]</span>
+        <a href="DoubleFocalOp2.html"><span class="name">DoubleFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T]</span>
       </span>
       </h4>
       
@@ -358,79 +322,79 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleFocalOp3.html"><span class="name">DoubleFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T, Double]</span>
+        <a href="DoubleFocalOp3.html"><span class="name">DoubleFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.DoubleFocalOp4" data-isabs="true">
-      <a id="DoubleFocalOp4:DoubleFocalOp4[A, B, C, M, T]"></a>
+      <a id="DoubleFocalOp4:DoubleFocalOp4[A, B, C, D, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleFocalOp4.html"><span class="name">DoubleFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, M, T, Double]</span>
+        <a href="DoubleFocalOp4.html"><span class="name">DoubleFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, D, T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp" data-isabs="true">
-      <a id="FocalOp:FocalOp[T, D]"></a>
+      <a id="FocalOp:FocalOp[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOp.html"><span class="name">FocalOp</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp[T]</span>
+        <a href="FocalOp.html"><span class="name">FocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1" data-isabs="true">
-      <a id="FocalOp1:FocalOp1[A, T, D]"></a>
+      <a id="FocalOp1:FocalOp1[A, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOp1.html"><span class="name">FocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp1[A, T]</span>
+        <a href="FocalOp1.html"><span class="name">FocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp2" data-isabs="true">
-      <a id="FocalOp2:FocalOp2[A, B, T, D]"></a>
+      <a id="FocalOp2:FocalOp2[A, B, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOp2.html"><span class="name">FocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp2[A, B, T]</span>
+        <a href="FocalOp2.html"><span class="name">FocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp3" data-isabs="true">
-      <a id="FocalOp3:FocalOp3[A, B, C, T, D]"></a>
+      <a id="FocalOp3:FocalOp3[A, B, C, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOp3.html"><span class="name">FocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp3[A, B, C, T]</span>
+        <a href="FocalOp3.html"><span class="name">FocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp4" data-isabs="true">
-      <a id="FocalOp4:FocalOp4[A, B, C, M, T, D]"></a>
+      <a id="FocalOp4:FocalOp4[A, B, C, D, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FocalOp4.html"><span class="name">FocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends BaseFocalOp4[A, B, C, M, T]</span>
+        <a href="FocalOp4.html"><span class="name">FocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends Operation[T]</span>
       </span>
       </h4>
       
@@ -458,6 +422,90 @@ neighborhood.</p>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellSet" data-isabs="true">
+      <a id="IntCellSet:IntCellSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCellSet.html"><span class="name">IntCellSet</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseCalculator" data-isabs="true">
+      <a id="IntCellwiseCalculator:IntCellwiseCalculator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCellwiseCalculator.html"><span class="name">IntCellwiseCalculator</span></a><span class="result"> extends CellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp" data-isabs="true">
+      <a id="IntCellwiseFocalOp:IntCellwiseFocalOp[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCellwiseFocalOp.html"><span class="name">IntCellwiseFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T] with IntCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp1" data-isabs="true">
+      <a id="IntCellwiseFocalOp1:IntCellwiseFocalOp1[A, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCellwiseFocalOp1.html"><span class="name">IntCellwiseFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T] with IntCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp2" data-isabs="true">
+      <a id="IntCellwiseFocalOp2:IntCellwiseFocalOp2[A, B, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCellwiseFocalOp2.html"><span class="name">IntCellwiseFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T] with IntCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp3" data-isabs="true">
+      <a id="IntCellwiseFocalOp3:IntCellwiseFocalOp3[A, B, C, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCellwiseFocalOp3.html"><span class="name">IntCellwiseFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T] with IntCellwiseCalculator</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp4" data-isabs="true">
+      <a id="IntCellwiseFocalOp4:IntCellwiseFocalOp4[A, B, C, D, T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCellwiseFocalOp4.html"><span class="name">IntCellwiseFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, D, T] with IntCellwiseCalculator</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCursor" data-isabs="false">
       <a id="IntCursor:IntCursor"></a>
       <h4 class="signature">
@@ -466,7 +514,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntCursor.html"><span class="name">IntCursor</span></a><span class="result"> extends Cursor[Int]</span>
+        <a href="IntCursor.html"><span class="name">IntCursor</span></a><span class="result"> extends BaseCursor</span>
       </span>
       </h4>
       
@@ -478,7 +526,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntFocalOp.html"><span class="name">IntFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T, Int]</span>
+        <a href="IntFocalOp.html"><span class="name">IntFocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends FocalOp[T]</span>
       </span>
       </h4>
       
@@ -490,7 +538,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntFocalOp1.html"><span class="name">IntFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T, Int]</span>
+        <a href="IntFocalOp1.html"><span class="name">IntFocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp1[A, T]</span>
       </span>
       </h4>
       
@@ -502,7 +550,7 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntFocalOp2.html"><span class="name">IntFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T, Int]</span>
+        <a href="IntFocalOp2.html"><span class="name">IntFocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp2[A, B, T]</span>
       </span>
       </h4>
       
@@ -514,19 +562,19 @@ neighborhood.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntFocalOp3.html"><span class="name">IntFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T, Int]</span>
+        <a href="IntFocalOp3.html"><span class="name">IntFocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp3[A, B, C, T]</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="geotrellis.raster.op.focal.IntFocalOp4" data-isabs="true">
-      <a id="IntFocalOp4:IntFocalOp4[A, B, C, M, T]"></a>
+      <a id="IntFocalOp4:IntFocalOp4[A, B, C, D, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntFocalOp4.html"><span class="name">IntFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="M">M</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, M, T, Int]</span>
+        <a href="IntFocalOp4.html"><span class="name">IntFocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends FocalOp4[A, B, C, D, T]</span>
       </span>
       </h4>
       
@@ -575,7 +623,7 @@ neighborhood.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Mean.html"><span class="name">Mean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends CellwiseFocalOp[Raster, Double] with Product with Serializable</span>
+        <a href="Mean.html"><span class="name">Mean</span></a><span class="params">(<span name="r">r: Op[Raster]</span>, <span name="n">n: Op[Neighborhood]</span>)</span><span class="result"> extends DoubleCellwiseFocalOp[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -662,7 +710,7 @@ along the x any y axis of the raster
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="NoopResultBuilder.html"><span class="name">NoopResultBuilder</span></a><span class="result"> extends ResultBuilder[Double, Double]</span>
+        <a href="NoopResultBuilder.html"><span class="name">NoopResultBuilder</span></a><span class="result"> extends DoubleResultBuilder[Double]</span>
       </span>
       </h4>
       

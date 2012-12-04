@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.op.focal.BaseFocalOp2</title>
+          <title>geotrellis.raster.op.focal.IntCellwiseFocalOp1</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
@@ -16,7 +16,7 @@
       <div id="definition">
         <img src="../../../../lib/class_big.png" />
         <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a>.<a name="geotrellis.raster.op.focal" class="extype" href="package.html">focal</a></p>
-        <h1>BaseFocalOp2</h1>
+        <h1>IntCellwiseFocalOp1</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,16 +25,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">BaseFocalOp2</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a>[T]</span>
+        <span class="name">IntCellwiseFocalOp1</span><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends <a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a>[A, T] with <a name="geotrellis.raster.op.focal.IntCellwiseCalculator" class="extype" href="IntCellwiseCalculator.html">IntCellwiseCalculator</a></span>
       </span>
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a>[T], <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="geotrellis.raster.op.focal.CellwiseFocalOp2" class="extype" href="CellwiseFocalOp2.html">CellwiseFocalOp2</a>, <a name="geotrellis.raster.op.focal.DoubleFocalOp2" class="extype" href="DoubleFocalOp2.html">DoubleFocalOp2</a>, <a name="geotrellis.raster.op.focal.FocalOp2" class="extype" href="FocalOp2.html">FocalOp2</a>, <a name="geotrellis.raster.op.focal.IntFocalOp2" class="extype" href="IntFocalOp2.html">IntFocalOp2</a></div>
+          <div class="superTypes hiddenContent"><a name="geotrellis.raster.op.focal.IntCellwiseCalculator" class="extype" href="IntCellwiseCalculator.html">IntCellwiseCalculator</a>, <a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a>, <a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a>[A, T], <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a>[T], <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -48,7 +45,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="geotrellis.raster.op.focal.BaseFocalOp2" class="in"><span>BaseFocalOp2</span></li><li name="geotrellis.Operation" class="in"><span>Operation</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="geotrellis.raster.op.focal.IntCellwiseFocalOp1" class="in"><span>IntCellwiseFocalOp1</span></li><li name="geotrellis.raster.op.focal.IntCellwiseCalculator" class="in"><span>IntCellwiseCalculator</span></li><li name="geotrellis.raster.op.focal.CellwiseCalculator" class="in"><span>CellwiseCalculator</span></li><li name="geotrellis.raster.op.focal.FocalOp1" class="in"><span>FocalOp1</span></li><li name="geotrellis.Operation" class="in"><span>Operation</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -60,15 +57,15 @@
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#this" data-isabs="false">
-      <a id="this:BaseFocalOp2[A, B, T]"></a>
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp1#this" data-isabs="false">
+      <a id="this:IntCellwiseFocalOp1[A, T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BaseFocalOp2</span><span class="params">(<span name="r">r: Op[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>, <span name="n">n: Op[<a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a>]</span>, <span name="a">a: Op[A]</span>, <span name="b">b: Op[B]</span>)</span>
+        <span class="name">IntCellwiseFocalOp1</span><span class="params">(<span name="r">r: Op[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>, <span name="n">n: Op[<a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a>]</span>, <span name="a">a: Op[A]</span>)</span>
       </span>
       </h4>
       
@@ -106,30 +103,90 @@
 
         <div class="values members" id="values">
               <h3>Abstract Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#execute" data-isabs="true">
-      <a id="execute(Raster,Neighborhood):Result[T]"></a>
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator#add" data-isabs="true">
+      <a id="add(Raster,Int,Int):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[T]</span>
+        <span class="name">add</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#init" data-isabs="true">
-      <a id="init(Raster,A,B):Unit"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp1#createBuilder" data-isabs="true">
+      <a id="createBuilder(Raster):IntResultBuilder[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">init</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="a">a: A</span>, <span name="b">b: B</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">createBuilder</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>)</span><span class="result">: <a name="geotrellis.raster.IntResultBuilder" class="extype" href="../../IntResultBuilder.html">IntResultBuilder</a>[T]</span>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1#execute" data-isabs="true">
+      <a id="execute(Raster,Neighborhood,A):Result[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">execute</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></span>, <span name="a">a: A</span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseCalculator#getValue" data-isabs="true">
+      <a id="getValue:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValue</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.IntCellwiseCalculator" class="extype" href="IntCellwiseCalculator.html">IntCellwiseCalculator</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1#init" data-isabs="true">
+      <a id="init(Raster,A):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">init</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="a">a: A</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator#remove" data-isabs="true">
+      <a id="remove(Raster,Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">remove</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator#reset" data-isabs="true">
+      <a id="reset():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reset</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -195,7 +252,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#_run" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1#_run" data-isabs="false">
       <a id="_run(Context):StepOutput[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -206,7 +263,7 @@
         <span class="name">_run</span><span class="params">(<span name="context">context: <a name="geotrellis.Context" class="extype" href="../../../Context.html">Context</a></span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="../../../StepOutput.html">StepOutput</a>[T]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.BaseFocalOp2" class="extype" href="">BaseFocalOp2</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -219,7 +276,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#canEqual" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1#canEqual" data-isabs="false">
       <a id="canEqual(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -230,7 +287,7 @@
         <span class="name">canEqual</span><span class="params">(<span name="other">other: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.BaseFocalOp2" class="extype" href="">BaseFocalOp2</a> → Equals</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a> → Equals</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -294,6 +351,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseFocalOp1#execute" data-isabs="false">
+      <a id="execute(Raster,Neighborhood):Result[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">execute</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="n">n: <a name="geotrellis.raster.op.focal.Neighborhood" class="extype" href="Neighborhood.html">Neighborhood</a></span>)</span><span class="result">: <a name="geotrellis.Result" class="extype" href="../../../Result.html">Result</a>[T]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.Operation#filter" data-isabs="false">
       <a id="filter((T) ⇒ Boolean):Operation[T]"></a>
       <h4 class="signature">
@@ -427,7 +496,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#nextSteps" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1#nextSteps" data-isabs="false">
       <a id="nextSteps:PartialFunction[Any, StepOutput[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -438,7 +507,7 @@ takes this operation's result as its argument.
         <span class="name">nextSteps</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <a name="geotrellis.StepOutput" class="extype" href="../../../StepOutput.html">StepOutput</a>[T]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.BaseFocalOp2" class="extype" href="">BaseFocalOp2</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
@@ -475,7 +544,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#productArity" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1#productArity" data-isabs="false">
       <a id="productArity:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -486,8 +555,8 @@ takes this operation's result as its argument.
         <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.BaseFocalOp2" class="extype" href="">BaseFocalOp2</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.BaseFocalOp2#productElement" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a> → Product</dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.FocalOp1#productElement" data-isabs="false">
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -498,7 +567,7 @@ takes this operation's result as its argument.
         <span class="name">productElement</span><span class="params">(<span name="n">n: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.BaseFocalOp2" class="extype" href="">BaseFocalOp2</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a> → Product</dd></dl></div>
     </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
       <a id="productIterator:Iterator[Any]"></a>
       <h4 class="signature">
@@ -657,7 +726,13 @@ and returns a new operation.</p><p>Same as flatMap.
         </div>
 
         <div id="inheritedMembers">
-        <div name="geotrellis.Operation" class="parent">
+        <div name="geotrellis.raster.op.focal.IntCellwiseCalculator" class="parent">
+              <h3>Inherited from <a name="geotrellis.raster.op.focal.IntCellwiseCalculator" class="extype" href="IntCellwiseCalculator.html">IntCellwiseCalculator</a></h3>
+            </div><div name="geotrellis.raster.op.focal.CellwiseCalculator" class="parent">
+              <h3>Inherited from <a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></h3>
+            </div><div name="geotrellis.raster.op.focal.FocalOp1" class="parent">
+              <h3>Inherited from <a name="geotrellis.raster.op.focal.FocalOp1" class="extype" href="FocalOp1.html">FocalOp1</a>[A, T]</h3>
+            </div><div name="geotrellis.Operation" class="parent">
               <h3>Inherited from <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a>[T]</h3>
             </div><div name="scala.Product" class="parent">
               <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>

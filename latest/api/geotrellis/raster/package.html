@@ -56,7 +56,19 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="BitRasterBuilder.html"><span class="name">BitRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends RasterBuilder[Int] with Product with Serializable</span>
+        <a href="BitRasterBuilder.html"><span class="name">BitRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.Builder" data-isabs="true">
+      <a id="Builder:Builder[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Builder.html"><span class="name">Builder</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -68,7 +80,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ByteRasterBuilder.html"><span class="name">ByteRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends RasterBuilder[Int] with Product with Serializable</span>
+        <a href="ByteRasterBuilder.html"><span class="name">ByteRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -118,7 +130,19 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleRasterBuilder.html"><span class="name">DoubleRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends RasterBuilder[Double] with Product with Serializable</span>
+        <a href="DoubleRasterBuilder.html"><span class="name">DoubleRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends DoubleResultBuilder[Raster] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.DoubleResultBuilder" data-isabs="true">
+      <a id="DoubleResultBuilder:DoubleResultBuilder[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleResultBuilder.html"><span class="name">DoubleResultBuilder</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Builder[T]</span>
       </span>
       </h4>
       
@@ -130,7 +154,7 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="FloatRasterBuilder.html"><span class="name">FloatRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends RasterBuilder[Double] with Product with Serializable</span>
+        <a href="FloatRasterBuilder.html"><span class="name">FloatRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends DoubleResultBuilder[Raster] with Product with Serializable</span>
       </span>
       </h4>
       
@@ -154,7 +178,19 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="IntRasterBuilder.html"><span class="name">IntRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends RasterBuilder[Int] with Product with Serializable</span>
+        <a href="IntRasterBuilder.html"><span class="name">IntRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.IntResultBuilder" data-isabs="true">
+      <a id="IntResultBuilder:IntResultBuilder[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IntResultBuilder.html"><span class="name">IntResultBuilder</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Builder[T]</span>
       </span>
       </h4>
       
@@ -246,18 +282,6 @@ chunk of an underlying ArrayRaster.</p>
       </h4>
       <p class="comment cmt">NOTE: col1 and row1 (upper left) is inclusive, while col2 and row2 (lower
 right) is not.</p>
-    </li><li visbl="pub" name="geotrellis.raster.RasterBuilder" data-isabs="true">
-      <a id="RasterBuilder:RasterBuilder[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="RasterBuilder.html"><span class="name">RasterBuilder</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends ResultBuilder[Raster, D]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.ResampledArrayRasterData" data-isabs="false">
       <a id="ResampledArrayRasterData:ResampledArrayRasterData"></a>
       <h4 class="signature">
@@ -284,18 +308,6 @@ cropping of an underlying raster data object.</p>
       </h4>
       <p class="comment cmt">For a particular resolution and tile layout, this class stores the
 geographical boundaries of each tile extent.</p>
-    </li><li visbl="pub" name="geotrellis.raster.ResultBuilder" data-isabs="true">
-      <a id="ResultBuilder:ResultBuilder[T, D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="ResultBuilder.html"><span class="name">ResultBuilder</span></a><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.ShortRasterBuilder" data-isabs="false">
       <a id="ShortRasterBuilder:ShortRasterBuilder"></a>
       <h4 class="signature">
@@ -304,7 +316,7 @@ geographical boundaries of each tile extent.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ShortRasterBuilder.html"><span class="name">ShortRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends RasterBuilder[Int] with Product with Serializable</span>
+        <a href="ShortRasterBuilder.html"><span class="name">ShortRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
       </span>
       </h4>
       

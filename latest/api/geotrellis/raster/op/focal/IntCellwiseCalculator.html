@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.op.focal.SlopeAspectCalculator</title>
+          <title>geotrellis.raster.op.focal.IntCellwiseCalculator</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
@@ -16,7 +16,7 @@
       <div id="definition">
         <img src="../../../../lib/trait_big.png" />
         <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a>.<a name="geotrellis.raster.op.focal" class="extype" href="package.html">focal</a></p>
-        <h1>SlopeAspectCalculator</h1>
+        <h1>IntCellwiseCalculator</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,16 +25,16 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">SlopeAspectCalculator</span><span class="result"> extends AnyRef</span>
+        <span class="name">IntCellwiseCalculator</span><span class="result"> extends <a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></span>
       </span>
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="geotrellis.raster.op.focal.Aspect" class="extype" href="Aspect.html">Aspect</a>, <a name="geotrellis.raster.op.focal.Hillshade" class="extype" href="Hillshade.html">Hillshade</a>, <a name="geotrellis.raster.op.focal.Slope" class="extype" href="Slope.html">Slope</a></div>
+          <div class="subClasses hiddenContent"><a name="geotrellis.raster.op.focal.IntCellwiseFocalOp" class="extype" href="IntCellwiseFocalOp.html">IntCellwiseFocalOp</a>, <a name="geotrellis.raster.op.focal.IntCellwiseFocalOp1" class="extype" href="IntCellwiseFocalOp1.html">IntCellwiseFocalOp1</a>, <a name="geotrellis.raster.op.focal.IntCellwiseFocalOp2" class="extype" href="IntCellwiseFocalOp2.html">IntCellwiseFocalOp2</a>, <a name="geotrellis.raster.op.focal.IntCellwiseFocalOp3" class="extype" href="IntCellwiseFocalOp3.html">IntCellwiseFocalOp3</a>, <a name="geotrellis.raster.op.focal.IntCellwiseFocalOp4" class="extype" href="IntCellwiseFocalOp4.html">IntCellwiseFocalOp4</a></div>
         </div></div>
     
 
@@ -48,7 +48,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="geotrellis.raster.op.focal.SlopeAspectCalculator" class="in"><span>SlopeAspectCalculator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="geotrellis.raster.op.focal.IntCellwiseCalculator" class="in"><span>IntCellwiseCalculator</span></li><li name="geotrellis.raster.op.focal.CellwiseCalculator" class="in"><span>CellwiseCalculator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -62,10 +62,61 @@
 
         
 
-        
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator#add" data-isabs="true">
+      <a id="add(Raster,Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">add</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.IntCellwiseCalculator#getValue" data-isabs="true">
+      <a id="getValue:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValue</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator#remove" data-isabs="true">
+      <a id="remove(Raster,Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">remove</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CellwiseCalculator#reset" data-isabs="true">
+      <a id="reset():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reset</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></dd></dl></div>
+    </li></ol>
+            </div>
 
         <div class="values members" id="values">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -204,30 +255,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.SlopeAspectCalculator#getSlopeAndAspect" data-isabs="false">
-      <a id="getSlopeAndAspect(IntCursor,Double,Double,Double):(Double, Double)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSlopeAndAspect</span><span class="params">(<span name="cursor">cursor: <a name="geotrellis.raster.op.focal.IntCursor" class="extype" href="IntCursor.html">IntCursor</a></span>, <span name="zFactor">zFactor: <span name="scala.Double" class="extype">Double</span></span>, <span name="cellWidth">cellWidth: <span name="scala.Double" class="extype">Double</span></span>, <span name="cellHeight">cellHeight: <span name="scala.Double" class="extype">Double</span></span>)</span><span class="result">: (<span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>)</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.SlopeAspectCalculator#getSlopeAndAspectDouble" data-isabs="false">
-      <a id="getSlopeAndAspectDouble(DoubleCursor,Double,Double,Double):(Double, Double)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSlopeAndAspectDouble</span><span class="params">(<span name="cursor">cursor: <a name="geotrellis.raster.op.focal.DoubleCursor" class="extype" href="DoubleCursor.html">DoubleCursor</a></span>, <span name="zFactor">zFactor: <span name="scala.Double" class="extype">Double</span></span>, <span name="cellWidth">cellWidth: <span name="scala.Double" class="extype">Double</span></span>, <span name="cellHeight">cellHeight: <span name="scala.Double" class="extype">Double</span></span>)</span><span class="result">: (<span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>)</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -364,7 +391,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div name="scala.AnyRef" class="parent">
+        <div name="geotrellis.raster.op.focal.CellwiseCalculator" class="parent">
+              <h3>Inherited from <a name="geotrellis.raster.op.focal.CellwiseCalculator" class="extype" href="CellwiseCalculator.html">CellwiseCalculator</a></h3>
+            </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

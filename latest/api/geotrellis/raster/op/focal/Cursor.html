@@ -14,29 +14,27 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <a title="Go to companion" href="Cursor$.html"><img src="../../../../lib/class_to_object_big.png" /></a>
+        <a title="Go to companion" href="Cursor$.html"><img src="../../../../lib/trait_to_object_big.png" /></a>
         <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a>.<a name="geotrellis.raster.op.focal" class="extype" href="package.html">focal</a></p>
         <h1><a title="Go to companion" href="Cursor$.html">Cursor</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Cursor</span><span class="tparams">[<span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
+        <span class="name">Cursor</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Represents a cursor that can be used to iterate over cells within a focal
-neighborhood.
-</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="geotrellis.raster.op.focal.DoubleCursor" class="extype" href="DoubleCursor.html">DoubleCursor</a>, <a name="geotrellis.raster.op.focal.IntCursor" class="extype" href="IntCursor.html">IntCursor</a></div>
+          <div class="subClasses hiddenContent"><a name="geotrellis.raster.op.focal.BaseCursor" class="extype" href="BaseCursor.html">BaseCursor</a>, <a name="geotrellis.raster.op.focal.DoubleCursor" class="extype" href="DoubleCursor.html">DoubleCursor</a>, <a name="geotrellis.raster.op.focal.IntCursor" class="extype" href="IntCursor.html">IntCursor</a></div>
         </div></div>
     
 
@@ -60,52 +58,33 @@ neighborhood.
 
       <div id="template">
         <div id="allMembers">
-        <div class="members" id="constructors">
-              <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#this" data-isabs="false">
-      <a id="this:Cursor[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Cursor</span><span class="params">(<span name="r">r: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>, <span name="distanceFromCenter">distanceFromCenter: <span name="scala.Int" class="extype">Int</span></span>)</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster that this cursor runs over</p></dd><dt class="param">distanceFromCenter</dt><dd class="cmt"><p>The distance from the focus that the
-                                  bounding box of this cursor extends.
-                                  e.g. if the bounding box is 9x9, then
-                                  the distance from center is 1.
-</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
 
         
 
         <div class="values members" id="values">
               <h3>Abstract Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#get" data-isabs="true">
-      <a id="get(Int,Int):D"></a>
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#centerOn" data-isabs="true">
+      <a id="centerOn(Int,Int):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: D</span>
+        <span class="name">centerOn</span><span class="params">(<span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#getStr" data-isabs="true">
-      <a id="getStr(Int,Int):String"></a>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#move" data-isabs="true">
+      <a id="move(Movement):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getStr</span><span class="params">(<span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: String</span>
+        <span class="name">move</span><span class="params">(<span name="m">m: <a name="geotrellis.raster.op.focal.Movement" class="extype" href="Movement.html">Movement</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       
@@ -174,18 +153,6 @@ neighborhood.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#addedCells" data-isabs="false">
-      <a id="addedCells:CellSet[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addedCells</span><span class="result">: <a name="geotrellis.raster.op.focal.CellSet" class="extype" href="CellSet.html">CellSet</a>[D]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -198,30 +165,6 @@ neighborhood.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#asciiDraw" data-isabs="false">
-      <a id="asciiDraw:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">asciiDraw</span><span class="result">: String</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#centerOn" data-isabs="false">
-      <a id="centerOn(Int,Int):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">centerOn</span><span class="params">(<span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -237,18 +180,6 @@ neighborhood.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#dim" data-isabs="false">
-      <a id="dim:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dim</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -288,138 +219,6 @@ neighborhood.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#focusValue" data-isabs="false">
-      <a id="focusValue:D"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">focusValue</span><span class="result">: D</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#focusX" data-isabs="false">
-      <a id="focusX:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">focusX</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#focusY" data-isabs="false">
-      <a id="focusY:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">focusY</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#foldLeft" data-isabs="false">
-      <a id="foldLeft(D)((D, D) ⇒ D):D"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foldLeft</span><span class="params">(<span name="seed">seed: D</span>)</span><span class="params">(<span name="f">f: (D, D) ⇒ D</span>)</span><span class="result">: D</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#foreach" data-isabs="false">
-      <a id="foreach((D) ⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreach</span><span class="params">(<span name="f">f: (D) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#foreach" data-isabs="false">
-      <a id="foreach((Int, Int, D) ⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreach</span><span class="params">(<span name="f">f: (<span name="scala.Int" class="extype">Int</span>, <span name="scala.Int" class="extype">Int</span>, D) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#foreachAdded" data-isabs="false">
-      <a id="foreachAdded((D) ⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachAdded</span><span class="params">(<span name="f">f: (D) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#foreachAdded" data-isabs="false">
-      <a id="foreachAdded((Int, Int, D) ⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachAdded</span><span class="params">(<span name="f">f: (<span name="scala.Int" class="extype">Int</span>, <span name="scala.Int" class="extype">Int</span>, D) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#foreachRemoved" data-isabs="false">
-      <a id="foreachRemoved((D) ⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachRemoved</span><span class="params">(<span name="f">f: (D) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#foreachRemoved" data-isabs="false">
-      <a id="foreachRemoved((Int, Int, D) ⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachRemoved</span><span class="params">(<span name="f">f: (<span name="scala.Int" class="extype">Int</span>, <span name="scala.Int" class="extype">Int</span>, D) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#getAll" data-isabs="false">
-      <a id="getAll:Seq[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getAll</span><span class="result">: Seq[D]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -456,42 +255,6 @@ neighborhood.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#isReset" data-isabs="false">
-      <a id="isReset:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isReset</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#mask" data-isabs="false">
-      <a id="mask:CursorMask"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mask</span><span class="result">: <a name="geotrellis.raster.op.focal.CursorMask" class="extype" href="CursorMask.html">CursorMask</a></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#move" data-isabs="false">
-      <a id="move(Movement):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">move</span><span class="params">(<span name="m">m: <a name="geotrellis.raster.op.focal.Movement" class="extype" href="Movement.html">Movement</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -528,42 +291,6 @@ neighborhood.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="prt" name="geotrellis.raster.op.focal.Cursor#raster" data-isabs="false">
-      <a id="raster:Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">raster</span><span class="result">: <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#removedCells" data-isabs="false">
-      <a id="removedCells:CellSet[D]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">removedCells</span><span class="result">: <a name="geotrellis.raster.op.focal.CellSet" class="extype" href="CellSet.html">CellSet</a>[D]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#setMask" data-isabs="false">
-      <a id="setMask((Int, Int) ⇒ Boolean):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setMask</span><span class="params">(<span name="f">f: (<span name="scala.Int" class="extype">Int</span>, <span name="scala.Int" class="extype">Int</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -633,54 +360,6 @@ neighborhood.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#xmax" data-isabs="false">
-      <a id="xmax:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">xmax</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#xmin" data-isabs="false">
-      <a id="xmin:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">xmin</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#ymax" data-isabs="false">
-      <a id="ymax:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ymax</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor#ymin" data-isabs="false">
-      <a id="ymin:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ymin</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      
     </li></ol>
             </div>
 

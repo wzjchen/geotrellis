@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.ResultBuilder</title>
+          <title>geotrellis.raster.Builder</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
@@ -16,7 +16,7 @@
       <div id="definition">
         <img src="../../lib/trait_big.png" />
         <p id="owner"><a name="geotrellis" class="extype" href="../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="package.html">raster</a></p>
-        <h1>ResultBuilder</h1>
+        <h1>Builder</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,7 +25,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">ResultBuilder</span><span class="tparams">[<span name="T">T</span>, <span name="D">D</span>]</span><span class="result"> extends AnyRef</span>
+        <span class="name">Builder</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -34,7 +34,7 @@
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="geotrellis.raster.BitRasterBuilder" class="extype" href="BitRasterBuilder.html">BitRasterBuilder</a>, <a name="geotrellis.raster.ByteRasterBuilder" class="extype" href="ByteRasterBuilder.html">ByteRasterBuilder</a>, <a name="geotrellis.raster.DoubleRasterBuilder" class="extype" href="DoubleRasterBuilder.html">DoubleRasterBuilder</a>, <a name="geotrellis.raster.FloatRasterBuilder" class="extype" href="FloatRasterBuilder.html">FloatRasterBuilder</a>, <a name="geotrellis.raster.IntRasterBuilder" class="extype" href="IntRasterBuilder.html">IntRasterBuilder</a>, <a name="geotrellis.raster.op.focal.NoopResultBuilder" class="extype" href="op/focal/NoopResultBuilder.html">NoopResultBuilder</a>, <a name="geotrellis.raster.RasterBuilder" class="extype" href="RasterBuilder.html">RasterBuilder</a>, <a name="geotrellis.raster.ShortRasterBuilder" class="extype" href="ShortRasterBuilder.html">ShortRasterBuilder</a></div>
+          <div class="subClasses hiddenContent"><a name="geotrellis.raster.BitRasterBuilder" class="extype" href="BitRasterBuilder.html">BitRasterBuilder</a>, <a name="geotrellis.raster.ByteRasterBuilder" class="extype" href="ByteRasterBuilder.html">ByteRasterBuilder</a>, <a name="geotrellis.raster.DoubleRasterBuilder" class="extype" href="DoubleRasterBuilder.html">DoubleRasterBuilder</a>, <a name="geotrellis.raster.DoubleResultBuilder" class="extype" href="DoubleResultBuilder.html">DoubleResultBuilder</a>, <a name="geotrellis.raster.FloatRasterBuilder" class="extype" href="FloatRasterBuilder.html">FloatRasterBuilder</a>, <a name="geotrellis.raster.IntRasterBuilder" class="extype" href="IntRasterBuilder.html">IntRasterBuilder</a>, <a name="geotrellis.raster.IntResultBuilder" class="extype" href="IntResultBuilder.html">IntResultBuilder</a>, <a name="geotrellis.raster.op.focal.NoopResultBuilder" class="extype" href="op/focal/NoopResultBuilder.html">NoopResultBuilder</a>, <a name="geotrellis.raster.ShortRasterBuilder" class="extype" href="ShortRasterBuilder.html">ShortRasterBuilder</a></div>
         </div></div>
     
 
@@ -48,7 +48,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="geotrellis.raster.ResultBuilder" class="in"><span>ResultBuilder</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="geotrellis.raster.Builder" class="in"><span>Builder</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -64,7 +64,7 @@
 
         <div class="values members" id="values">
               <h3>Abstract Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.ResultBuilder#build" data-isabs="true">
+              <ol><li visbl="pub" name="geotrellis.raster.Builder#build" data-isabs="true">
       <a id="build:T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -73,18 +73,6 @@
       </span>
       <span class="symbol">
         <span class="name">build</span><span class="result">: T</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.ResultBuilder#set" data-isabs="true">
-      <a id="set(Int,Int,D):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="x">x: <span name="scala.Int" class="extype">Int</span></span>, <span name="y">y: <span name="scala.Int" class="extype">Int</span></span>, <span name="v">v: D</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       
