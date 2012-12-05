@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.op.focal.KernelDensity</title>
+          <title>geotrellis.raster.op.focal.CreateGaussianRaster</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
@@ -16,7 +16,7 @@
       <div id="definition">
         <img src="../../../../lib/class_big.png" />
         <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a>.<a name="geotrellis.raster.op.focal" class="extype" href="package.html">focal</a></p>
-        <h1>KernelDensity</h1>
+        <h1>CreateGaussianRaster</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,16 +25,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">KernelDensity</span><span class="params">(<span name="outputRasterExtent">outputRasterExtent: Op[<a name="geotrellis.RasterExtent" class="extype" href="../../../RasterExtent.html">RasterExtent</a>]</span>, <span name="kernel">kernel: Op[<a name="geotrellis.raster.op.focal.Kernelx" class="extype" href="Kernelx.html">Kernelx</a>]</span>, <span name="points">points: Op[<span name="scala.Array" class="extype">Array</span>[<a name="geotrellis.geometry.Point" class="extype" href="../../../geometry/Point.html">Point</a>]]</span>)</span><span class="result"> extends <a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a>[<a name="geotrellis.RasterExtent" class="extype" href="../../../RasterExtent.html">RasterExtent</a>, <a name="geotrellis.raster.op.focal.Kernelx" class="extype" href="Kernelx.html">Kernelx</a>, <span name="scala.Array" class="extype">Array</span>[<a name="geotrellis.geometry.Point" class="extype" href="../../../geometry/Point.html">Point</a>], <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>] with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="name">CreateGaussianRaster</span><span class="params">(<span name="size">size: Op[<span name="scala.Int" class="extype">Int</span>]</span>, <span name="cellWidth">cellWidth: Op[<span name="scala.Double" class="extype">Double</span>]</span>, <span name="sigma">sigma: Op[<span name="scala.Double" class="extype">Double</span>]</span>, <span name="amp">amp: Op[<span name="scala.Double" class="extype">Double</span>]</span>)</span><span class="result"> extends <a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a>[<span name="scala.Int" class="extype">Int</span>, <span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>, <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>] with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Compute the kernel density of a set of points onto a raster</p><p>This operation is currently O(n*m) where n is the number of points and m is
-the size of the kernel array.
-</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>geotrellis.op.Kernel$ for methods of creating the input kernel
-</p></span></dd></dl><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a>[<a name="geotrellis.RasterExtent" class="extype" href="../../../RasterExtent.html">RasterExtent</a>, <a name="geotrellis.raster.op.focal.Kernelx" class="extype" href="Kernelx.html">Kernelx</a>, <span name="scala.Array" class="extype">Array</span>[<a name="geotrellis.geometry.Point" class="extype" href="../../../geometry/Point.html">Point</a>], <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>], <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>], <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a>[<span name="scala.Int" class="extype">Int</span>, <span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>, <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>], <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>], <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -48,7 +45,7 @@ the size of the kernel array.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="geotrellis.raster.op.focal.KernelDensity" class="in"><span>KernelDensity</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="geotrellis.Op3" class="in"><span>Op3</span></li><li name="geotrellis.Operation" class="in"><span>Operation</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="geotrellis.raster.op.focal.CreateGaussianRaster" class="in"><span>CreateGaussianRaster</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="geotrellis.Op4" class="in"><span>Op4</span></li><li name="geotrellis.Operation" class="in"><span>Operation</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -60,18 +57,18 @@ the size of the kernel array.
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#this" data-isabs="false">
-      <a id="this:KernelDensity"></a>
+              <ol><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#this" data-isabs="false">
+      <a id="this:CreateGaussianRaster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">KernelDensity</span><span class="params">(<span name="outputRasterExtent">outputRasterExtent: Op[<a name="geotrellis.RasterExtent" class="extype" href="../../../RasterExtent.html">RasterExtent</a>]</span>, <span name="kernel">kernel: Op[<a name="geotrellis.raster.op.focal.Kernelx" class="extype" href="Kernelx.html">Kernelx</a>]</span>, <span name="points">points: Op[<span name="scala.Array" class="extype">Array</span>[<a name="geotrellis.geometry.Point" class="extype" href="../../../geometry/Point.html">Point</a>]]</span>)</span>
+        <span class="name">CreateGaussianRaster</span><span class="params">(<span name="size">size: Op[<span name="scala.Int" class="extype">Int</span>]</span>, <span name="cellWidth">cellWidth: Op[<span name="scala.Double" class="extype">Double</span>]</span>, <span name="sigma">sigma: Op[<span name="scala.Double" class="extype">Double</span>]</span>, <span name="amp">amp: Op[<span name="scala.Double" class="extype">Double</span>]</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p>
+      
     </li></ol>
             </div>
 
@@ -168,7 +165,7 @@ the size of the kernel array.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.Op3#_run" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.Op4#_run" data-isabs="false">
       <a id="_run(Context):StepOutput[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -179,7 +176,19 @@ the size of the kernel array.
         <span class="name">_run</span><span class="params">(<span name="context">context: <a name="geotrellis.Context" class="extype" href="../../../Context.html">Context</a></span>)</span><span class="result">: <a name="geotrellis.StepOutput" class="extype" href="../../../StepOutput.html">StepOutput</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#amp" data-isabs="false">
+      <a id="amp:Op[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">amp</span><span class="result">: Op[<span name="scala.Double" class="extype">Double</span>]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -192,7 +201,7 @@ the size of the kernel array.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.Op3#canEqual" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.Op4#canEqual" data-isabs="false">
       <a id="canEqual(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -203,7 +212,19 @@ the size of the kernel array.
         <span class="name">canEqual</span><span class="params">(<span name="other">other: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a> → Equals</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a> → Equals</dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#cellWidth" data-isabs="false">
+      <a id="cellWidth:Op[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cellWidth</span><span class="result">: Op[<span name="scala.Double" class="extype">Double</span>]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -255,7 +276,7 @@ the size of the kernel array.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#equals" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -266,7 +287,7 @@ the size of the kernel array.
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.KernelDensity" class="extype" href="">KernelDensity</a> → Equals → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CreateGaussianRaster" class="extype" href="">CreateGaussianRaster</a> → Equals → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#filter" data-isabs="false">
       <a id="filter((Raster) ⇒ Boolean):Operation[Raster]"></a>
       <h4 class="signature">
@@ -336,7 +357,7 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#hashCode" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -347,7 +368,7 @@ but returns nothing.
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.KernelDensity" class="extype" href="">KernelDensity</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CreateGaussianRaster" class="extype" href="">CreateGaussianRaster</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -360,18 +381,6 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#kernel" data-isabs="false">
-      <a id="kernel:Op[Kernelx]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">kernel</span><span class="result">: Op[<a name="geotrellis.raster.op.focal.Kernelx" class="extype" href="Kernelx.html">Kernelx</a>]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.Operation#map" data-isabs="false">
       <a id="map[U]((Raster) ⇒ U):Operation[U]"></a>
       <h4 class="signature">
@@ -412,7 +421,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.Op3#nextSteps" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.Op4#nextSteps" data-isabs="false">
       <a id="nextSteps:Steps"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -423,7 +432,7 @@ takes this operation's result as its argument.
         <span class="name">nextSteps</span><span class="result">: Steps</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a> → <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
@@ -448,30 +457,6 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#outputRasterExtent" data-isabs="false">
-      <a id="outputRasterExtent:Op[RasterExtent]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">outputRasterExtent</span><span class="result">: Op[<a name="geotrellis.RasterExtent" class="extype" href="../../../RasterExtent.html">RasterExtent</a>]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#points" data-isabs="false">
-      <a id="points:Op[Array[Point]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">points</span><span class="result">: Op[<span name="scala.Array" class="extype">Array</span>[<a name="geotrellis.geometry.Point" class="extype" href="../../../geometry/Point.html">Point</a>]]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.Operation#processNextSteps" data-isabs="false">
       <a id="processNextSteps(Args):StepOutput[Raster]"></a>
       <h4 class="signature">
@@ -484,7 +469,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.Op3#productArity" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.Op4#productArity" data-isabs="false">
       <a id="productArity:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -495,8 +480,8 @@ takes this operation's result as its argument.
         <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.Op3#productElement" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a> → Product</dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.Op4#productElement" data-isabs="false">
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -507,7 +492,7 @@ takes this operation's result as its argument.
         <span class="name">productElement</span><span class="params">(<span name="n">n: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a> → Product</dd></dl></div>
     </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
       <a id="productIterator:Iterator[Any]"></a>
       <h4 class="signature">
@@ -520,7 +505,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#productPrefix" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#productPrefix" data-isabs="false">
       <a id="productPrefix:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -531,7 +516,7 @@ takes this operation's result as its argument.
         <span class="name">productPrefix</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.KernelDensity" class="extype" href="">KernelDensity</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CreateGaussianRaster" class="extype" href="">CreateGaussianRaster</a> → Product</dd></dl></div>
     </li><li visbl="pub" name="geotrellis.Operation#run" data-isabs="false">
       <a id="run(Context):StepOutput[Raster]"></a>
       <h4 class="signature">
@@ -557,6 +542,30 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a></dd></dl></div>
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#sigma" data-isabs="false">
+      <a id="sigma:Op[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sigma</span><span class="result">: Op[<span name="scala.Double" class="extype">Double</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#size" data-isabs="false">
+      <a id="size:Op[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">size</span><span class="result">: Op[<span name="scala.Int" class="extype">Int</span>]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -569,7 +578,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity#toString" data-isabs="false">
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -580,7 +589,7 @@ takes this operation's result as its argument.
         <span class="name">toString</span><span class="params">()</span><span class="result">: String</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.KernelDensity" class="extype" href="">KernelDensity</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.raster.op.focal.CreateGaussianRaster" class="extype" href="">CreateGaussianRaster</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -670,8 +679,8 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
             </div><div name="java.io.Serializable" class="parent">
               <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="geotrellis.Op3" class="parent">
-              <h3>Inherited from <a name="geotrellis.Op3" class="extype" href="../../../Op3.html">Op3</a>[<a name="geotrellis.RasterExtent" class="extype" href="../../../RasterExtent.html">RasterExtent</a>, <a name="geotrellis.raster.op.focal.Kernelx" class="extype" href="Kernelx.html">Kernelx</a>, <span name="scala.Array" class="extype">Array</span>[<a name="geotrellis.geometry.Point" class="extype" href="../../../geometry/Point.html">Point</a>], <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</h3>
+            </div><div name="geotrellis.Op4" class="parent">
+              <h3>Inherited from <a name="geotrellis.Op4" class="extype" href="../../../Op4.html">Op4</a>[<span name="scala.Int" class="extype">Int</span>, <span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>, <a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</h3>
             </div><div name="geotrellis.Operation" class="parent">
               <h3>Inherited from <a name="geotrellis.Operation" class="extype" href="../../../Operation.html">Operation</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]</h3>
             </div><div name="scala.Product" class="parent">

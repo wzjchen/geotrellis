@@ -146,6 +146,30 @@ neighborhood.</p>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateCircleRaster" data-isabs="false">
+      <a id="CreateCircleRaster:CreateCircleRaster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CreateCircleRaster.html"><span class="name">CreateCircleRaster</span></a><span class="params">(<span name="size">size: Op[Int]</span>, <span name="cellWidth">cellWidth: Op[Double]</span>, <span name="rad">rad: Op[Int]</span>)</span><span class="result"> extends Op3[Int, Double, Int, Raster] with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="geotrellis.raster.op.focal.CreateGaussianRaster" data-isabs="false">
+      <a id="CreateGaussianRaster:CreateGaussianRaster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CreateGaussianRaster.html"><span class="name">CreateGaussianRaster</span></a><span class="params">(<span name="size">size: Op[Int]</span>, <span name="cellWidth">cellWidth: Op[Double]</span>, <span name="sigma">sigma: Op[Double]</span>, <span name="amp">amp: Op[Double]</span>)</span><span class="result"> extends Op4[Int, Double, Double, Double, Raster] with Product with Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Cursor" data-isabs="true">
       <a id="Cursor:Cursor"></a>
       <h4 class="signature">
@@ -410,18 +434,6 @@ neighborhood.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Gaussian" data-isabs="false">
-      <a id="Gaussian:Gaussian"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Gaussian.html"><span class="name">Gaussian</span></a><span class="params">(<span name="size">size: Op[Int]</span>, <span name="cellWidth">cellWidth: Op[Double]</span>, <span name="sigma">sigma: Op[Double]</span>, <span name="amp">amp: Op[Double]</span>)</span><span class="result"> extends Op4[Int, Double, Double, Double, Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Hillshade" data-isabs="false">
       <a id="Hillshade:Hillshade"></a>
       <h4 class="signature">
@@ -602,31 +614,6 @@ neighborhood.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensity" data-isabs="false">
-      <a id="KernelDensity:KernelDensity"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="KernelDensity.html"><span class="name">KernelDensity</span></a><span class="params">(<span name="outputRasterExtent">outputRasterExtent: Op[RasterExtent]</span>, <span name="kernel">kernel: Op[Kernelx]</span>, <span name="points">points: Op[Array[Point]]</span>)</span><span class="result"> extends Op3[RasterExtent, Kernelx, Array[Point], Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Compute the kernel density of a set of points onto a raster</p>
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Kernelx" data-isabs="false">
-      <a id="Kernelx:Kernelx"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Kernelx.html"><span class="name">Kernelx</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Used for Kernel Density calculation
-</p>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Max" data-isabs="false">
       <a id="Max:Max"></a>
       <h4 class="signature">
@@ -913,31 +900,6 @@ along the x any y axis of the raster
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.KernelDensityHelper" data-isabs="false">
-      <a id="KernelDensityHelper:KernelDensityHelper"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="KernelDensityHelper$.html"><span class="name">KernelDensityHelper</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.op.focal.Kernelx" data-isabs="false">
-      <a id="Kernelx:Kernelx"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Kernelx$.html"><span class="name">Kernelx</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Object used for generating kernels
-</p>
     </li><li visbl="pub" name="geotrellis.raster.op.focal.Movement" data-isabs="false">
       <a id="Movement:Movement"></a>
       <h4 class="signature">
