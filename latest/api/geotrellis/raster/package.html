@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster</title>
+          <title>raster - geotrellis.raster</title>
+          <meta name="description" content="raster - geotrellis.raster" />
+          <meta name="keywords" content="raster geotrellis.raster" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
       <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'geotrellis.raster.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../lib/package_big.png" />
-        <p id="owner"><a name="geotrellis" class="extype" href="../package.html">geotrellis</a></p>
+        <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a></p>
         <h1>raster</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,11 +44,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         
         
         <div id="visbl">
@@ -46,45 +61,10 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.BitRasterBuilder" data-isabs="false">
-      <a id="BitRasterBuilder:BitRasterBuilder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="BitRasterBuilder.html"><span class="name">BitRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.Builder" data-isabs="true">
-      <a id="Builder:Builder[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Builder.html"><span class="name">Builder</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.ByteRasterBuilder" data-isabs="false">
-      <a id="ByteRasterBuilder:ByteRasterBuilder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="ByteRasterBuilder.html"><span class="name">ByteRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.CroppedArrayRasterData" data-isabs="false">
+              <ol><li name="geotrellis.raster.CroppedArrayRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CroppedArrayRasterDataextendsArrayRasterDatawithProductwithSerializable"></a>
       <a id="CroppedArrayRasterData:CroppedArrayRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,12 +72,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CroppedArrayRasterData.html"><span class="name">CroppedArrayRasterData</span></a><span class="params">(<span name="underlying">underlying: ArrayRasterData</span>, <span name="rasterExtent">rasterExtent: RasterExtent</span>, <span name="colOffset">colOffset: Int</span>, <span name="rowOffset">rowOffset: Int</span>, <span name="cols">cols: Int</span>, <span name="rows">rows: Int</span>)</span><span class="result"> extends ArrayRasterData with Product with Serializable</span>
+        <a href="CroppedArrayRasterData.html"><span class="name">CroppedArrayRasterData</span></a><span class="params">(<span name="underlying">underlying: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="colOffset">colOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowOffset">rowOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This trait represents a raster data which represents a lazily-applied
 cropping of an underlying raster data object.</p>
-    </li><li visbl="pub" name="geotrellis.raster.CroppedTiledRasterData" data-isabs="false">
+    </li><li name="geotrellis.raster.CroppedTiledRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CroppedTiledRasterDataextendsTiledRasterDatawithProductwithSerializable"></a>
       <a id="CroppedTiledRasterData:CroppedTiledRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -105,12 +86,13 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CroppedTiledRasterData.html"><span class="name">CroppedTiledRasterData</span></a><span class="params">(<span name="underlying">underlying: TiledRasterData</span>, <span name="rasterExtent">rasterExtent: RasterExtent</span>, <span name="colOffset">colOffset: Int</span>, <span name="rowOffset">rowOffset: Int</span>, <span name="_cols">_cols: Int</span>, <span name="_rows">_rows: Int</span>)</span><span class="result"> extends TiledRasterData with Product with Serializable</span>
+        <a href="CroppedTiledRasterData.html"><span class="name">CroppedTiledRasterData</span></a><span class="params">(<span name="underlying">underlying: <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="colOffset">colOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowOffset">rowOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="_cols">_cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="_rows">_rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This trait represents a raster data which represents a lazily-applied
 cropping of an underlying raster data object.</p>
-    </li><li visbl="pub" name="geotrellis.raster.DoubleConstant" data-isabs="false">
+    </li><li name="geotrellis.raster.DoubleConstant" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DoubleConstantextendsStrictRasterDatawithProductwithSerializable"></a>
       <a id="DoubleConstant:DoubleConstant"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -118,47 +100,12 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleConstant.html"><span class="name">DoubleConstant</span></a><span class="params">(<span name="n">n: Double</span>, <span name="cols">cols: Int</span>, <span name="rows">rows: Int</span>)</span><span class="result"> extends StrictRasterData with Product with Serializable</span>
+        <a href="DoubleConstant.html"><span class="name">DoubleConstant</span></a><span class="params">(<span name="n">n: <span class="extype" name="scala.Double">Double</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../StrictRasterData.html" class="extype" name="geotrellis.StrictRasterData">StrictRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.DoubleRasterBuilder" data-isabs="false">
-      <a id="DoubleRasterBuilder:DoubleRasterBuilder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleRasterBuilder.html"><span class="name">DoubleRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends DoubleResultBuilder[Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.DoubleResultBuilder" data-isabs="true">
-      <a id="DoubleResultBuilder:DoubleResultBuilder[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleResultBuilder.html"><span class="name">DoubleResultBuilder</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Builder[T]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.FloatRasterBuilder" data-isabs="false">
-      <a id="FloatRasterBuilder:FloatRasterBuilder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="FloatRasterBuilder.html"><span class="name">FloatRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends DoubleResultBuilder[Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.IntConstant" data-isabs="false">
+    </li><li name="geotrellis.raster.IntConstant" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IntConstantextendsStrictRasterDatawithProductwithSerializable"></a>
       <a id="IntConstant:IntConstant"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -166,35 +113,12 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="IntConstant.html"><span class="name">IntConstant</span></a><span class="params">(<span name="n">n: Int</span>, <span name="cols">cols: Int</span>, <span name="rows">rows: Int</span>)</span><span class="result"> extends StrictRasterData with Product with Serializable</span>
+        <a href="IntConstant.html"><span class="name">IntConstant</span></a><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../StrictRasterData.html" class="extype" name="geotrellis.StrictRasterData">StrictRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.IntRasterBuilder" data-isabs="false">
-      <a id="IntRasterBuilder:IntRasterBuilder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="IntRasterBuilder.html"><span class="name">IntRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.IntResultBuilder" data-isabs="true">
-      <a id="IntResultBuilder:IntResultBuilder[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="IntResultBuilder.html"><span class="name">IntResultBuilder</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends Builder[T]</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.LazyTiledCombine" data-isabs="false">
+    </li><li name="geotrellis.raster.LazyTiledCombine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazyTiledCombineextendsTiledRasterDatawithProductwithSerializable"></a>
       <a id="LazyTiledCombine:LazyTiledCombine"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -202,12 +126,13 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledCombine.html"><span class="name">LazyTiledCombine</span></a><span class="params">(<span name="data1">data1: TiledRasterData</span>, <span name="data2">data2: TiledRasterData</span>, <span name="g">g: (Int, Int) ⇒ Int</span>)</span><span class="result"> extends TiledRasterData with Product with Serializable</span>
+        <a href="LazyTiledCombine.html"><span class="name">LazyTiledCombine</span></a><span class="params">(<span name="data1">data1: <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="data2">data2: <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="g">g: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This lazy, tiled raster data represents two tiled raster data objects
 combined with a function.</p>
-    </li><li visbl="pub" name="geotrellis.raster.LazyTiledMap" data-isabs="false">
+    </li><li name="geotrellis.raster.LazyTiledMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazyTiledMapextendsLazyTiledRasterDatawithProductwithSerializable"></a>
       <a id="LazyTiledMap:LazyTiledMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -215,11 +140,12 @@ combined with a function.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledMap.html"><span class="name">LazyTiledMap</span></a><span class="params">(<span name="data">data: TiledRasterData</span>, <span name="g">g: (Int) ⇒ Int</span>)</span><span class="result"> extends LazyTiledRasterData with Product with Serializable</span>
+        <a href="LazyTiledMap.html"><span class="name">LazyTiledMap</span></a><span class="params">(<span name="data">data: <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="g">g: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="LazyTiledRasterData.html" class="extype" name="geotrellis.raster.LazyTiledRasterData">LazyTiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This lazy, tiled raster data represents a map over a tiled raster data.</p>
-    </li><li visbl="pub" name="geotrellis.raster.LazyTiledMapIfSet" data-isabs="false">
+    </li><li name="geotrellis.raster.LazyTiledMapIfSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazyTiledMapIfSetextendsLazyTiledRasterDatawithProductwithSerializable"></a>
       <a id="LazyTiledMapIfSet:LazyTiledMapIfSet"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -227,11 +153,12 @@ combined with a function.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledMapIfSet.html"><span class="name">LazyTiledMapIfSet</span></a><span class="params">(<span name="data">data: TiledRasterData</span>, <span name="g">g: (Int) ⇒ Int</span>)</span><span class="result"> extends LazyTiledRasterData with Product with Serializable</span>
+        <a href="LazyTiledMapIfSet.html"><span class="name">LazyTiledMapIfSet</span></a><span class="params">(<span name="data">data: <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="g">g: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="LazyTiledRasterData.html" class="extype" name="geotrellis.raster.LazyTiledRasterData">LazyTiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This lazy, tiled raster data represents a mapIfSet over a tiled raster data.</p>
-    </li><li visbl="pub" name="geotrellis.raster.LazyTiledRasterData" data-isabs="true">
+    </li><li name="geotrellis.raster.LazyTiledRasterData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LazyTiledRasterDataextendsTiledRasterData"></a>
       <a id="LazyTiledRasterData:LazyTiledRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -239,11 +166,12 @@ combined with a function.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledRasterData.html"><span class="name">LazyTiledRasterData</span></a><span class="result"> extends TiledRasterData</span>
+        <a href="LazyTiledRasterData.html"><span class="name">LazyTiledRasterData</span></a><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>
       </span>
       </h4>
       <p class="comment cmt">This trait provides some methods in terms of underlying raster data.</p>
-    </li><li visbl="pub" name="geotrellis.raster.LazyTiledWrapper" data-isabs="false">
+    </li><li name="geotrellis.raster.LazyTiledWrapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazyTiledWrapperextendsTiledRasterDatawithProductwithSerializable"></a>
       <a id="LazyTiledWrapper:LazyTiledWrapper"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -251,12 +179,13 @@ combined with a function.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledWrapper.html"><span class="name">LazyTiledWrapper</span></a><span class="params">(<span name="data">data: ArrayRasterData</span>, <span name="tileLayout">tileLayout: TileLayout</span>, <span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends TiledRasterData with Product with Serializable</span>
+        <a href="LazyTiledWrapper.html"><span class="name">LazyTiledWrapper</span></a><span class="params">(<span name="data">data: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="tileLayout">tileLayout: <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This RasterData warps an existing ArrayRasterData so as to allow operations
 on it to be executed in parallel.</p>
-    </li><li visbl="pub" name="geotrellis.raster.LazyViewWrapper" data-isabs="false">
+    </li><li name="geotrellis.raster.LazyViewWrapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazyViewWrapperextendsLazyRasterDatawithProductwithSerializable"></a>
       <a id="LazyViewWrapper:LazyViewWrapper"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -264,12 +193,13 @@ on it to be executed in parallel.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="LazyViewWrapper.html"><span class="name">LazyViewWrapper</span></a><span class="params">(<span name="data">data: ArrayRasterData</span>, <span name="cols">cols: Int</span>, <span name="rows">rows: Int</span>, <span name="col1">col1: Int</span>, <span name="row1">row1: Int</span>, <span name="col2">col2: Int</span>, <span name="row2">row2: Int</span>)</span><span class="result"> extends LazyRasterData with Product with Serializable</span>
+        <a href="LazyViewWrapper.html"><span class="name">LazyViewWrapper</span></a><span class="params">(<span name="data">data: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>, <span name="col1">col1: <span class="extype" name="scala.Int">Int</span></span>, <span name="row1">row1: <span class="extype" name="scala.Int">Int</span></span>, <span name="col2">col2: <span class="extype" name="scala.Int">Int</span></span>, <span name="row2">row2: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../LazyRasterData.html" class="extype" name="geotrellis.LazyRasterData">LazyRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This RasterData class is used by LazyTiledWrapper to encompass a particular
 chunk of an underlying ArrayRaster.</p>
-    </li><li visbl="pub" name="geotrellis.raster.MaskedArrayRasterData" data-isabs="false">
+    </li><li name="geotrellis.raster.MaskedArrayRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaskedArrayRasterDataextendsLazyRasterDatawithWrapperwithProductwithSerializable"></a>
       <a id="MaskedArrayRasterData:MaskedArrayRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -277,12 +207,13 @@ chunk of an underlying ArrayRaster.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="MaskedArrayRasterData.html"><span class="name">MaskedArrayRasterData</span></a><span class="params">(<span name="data">data: ArrayRasterData</span>, <span name="col1">col1: Int</span>, <span name="row1">row1: Int</span>, <span name="col2">col2: Int</span>, <span name="row2">row2: Int</span>)</span><span class="result"> extends LazyRasterData with Wrapper with Product with Serializable</span>
+        <a href="MaskedArrayRasterData.html"><span class="name">MaskedArrayRasterData</span></a><span class="params">(<span name="data">data: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="col1">col1: <span class="extype" name="scala.Int">Int</span></span>, <span name="row1">row1: <span class="extype" name="scala.Int">Int</span></span>, <span name="col2">col2: <span class="extype" name="scala.Int">Int</span></span>, <span name="row2">row2: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../LazyRasterData.html" class="extype" name="geotrellis.LazyRasterData">LazyRasterData</a> with <a href="../Wrapper.html" class="extype" name="geotrellis.Wrapper">Wrapper</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">NOTE: col1 and row1 (upper left) is inclusive, while col2 and row2 (lower
 right) is not.</p>
-    </li><li visbl="pub" name="geotrellis.raster.ResampledArrayRasterData" data-isabs="false">
+    </li><li name="geotrellis.raster.ResampledArrayRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResampledArrayRasterDataextendsArrayRasterDatawithProductwithSerializable"></a>
       <a id="ResampledArrayRasterData:ResampledArrayRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -290,12 +221,13 @@ right) is not.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ResampledArrayRasterData.html"><span class="name">ResampledArrayRasterData</span></a><span class="params">(<span name="underlying">underlying: ArrayRasterData</span>, <span name="src">src: RasterExtent</span>, <span name="dst">dst: RasterExtent</span>)</span><span class="result"> extends ArrayRasterData with Product with Serializable</span>
+        <a href="ResampledArrayRasterData.html"><span class="name">ResampledArrayRasterData</span></a><span class="params">(<span name="underlying">underlying: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="src">src: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="dst">dst: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result"> extends <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This trait represents a raster data which represents a lazily-applied
 cropping of an underlying raster data object.</p>
-    </li><li visbl="pub" name="geotrellis.raster.ResolutionLayout" data-isabs="false">
+    </li><li name="geotrellis.raster.ResolutionLayout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResolutionLayoutextendsProductwithSerializable"></a>
       <a id="ResolutionLayout:ResolutionLayout"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -303,24 +235,13 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ResolutionLayout.html"><span class="name">ResolutionLayout</span></a><span class="params">(<span name="xs">xs: Array[Double]</span>, <span name="ys">ys: Array[Double]</span>, <span name="cw">cw: Double</span>, <span name="ch">ch: Double</span>, <span name="pcols">pcols: Int</span>, <span name="prows">prows: Int</span>)</span><span class="result"> extends Product with Serializable</span>
+        <a href="ResolutionLayout.html"><span class="name">ResolutionLayout</span></a><span class="params">(<span name="xs">xs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="ys">ys: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="cw">cw: <span class="extype" name="scala.Double">Double</span></span>, <span name="ch">ch: <span class="extype" name="scala.Double">Double</span></span>, <span name="pcols">pcols: <span class="extype" name="scala.Int">Int</span></span>, <span name="prows">prows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">For a particular resolution and tile layout, this class stores the
 geographical boundaries of each tile extent.</p>
-    </li><li visbl="pub" name="geotrellis.raster.ShortRasterBuilder" data-isabs="false">
-      <a id="ShortRasterBuilder:ShortRasterBuilder"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="ShortRasterBuilder.html"><span class="name">ShortRasterBuilder</span></a><span class="params">(<span name="rasterExtent">rasterExtent: RasterExtent</span>)</span><span class="result"> extends IntResultBuilder[Raster] with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="geotrellis.raster.TileArrayRasterData" data-isabs="false">
+    </li><li name="geotrellis.raster.TileArrayRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileArrayRasterDataextendsTiledRasterData"></a>
       <a id="TileArrayRasterData:TileArrayRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -328,11 +249,25 @@ geographical boundaries of each tile extent.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="TileArrayRasterData.html"><span class="name">TileArrayRasterData</span></a><span class="result"> extends TiledRasterData</span>
+        <a href="TileArrayRasterData.html"><span class="name">TileArrayRasterData</span></a><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>
       </span>
       </h4>
       <p class="comment cmt">This RasterData wraps an array of tile Rasters in memory.</p>
-    </li><li visbl="pub" name="geotrellis.raster.TileLayout" data-isabs="false">
+    </li><li name="geotrellis.raster.TileCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileCacheextendsObject"></a>
+      <a id="TileCache:TileCache"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TileCache.html"><span class="name">TileCache</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.TileLayout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileLayoutextendsProductwithSerializable"></a>
       <a id="TileLayout:TileLayout"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -340,12 +275,13 @@ geographical boundaries of each tile extent.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TileLayout.html"><span class="name">TileLayout</span></a><span class="params">(<span name="tileCols">tileCols: Int</span>, <span name="tileRows">tileRows: Int</span>, <span name="pixelCols">pixelCols: Int</span>, <span name="pixelRows">pixelRows: Int</span>)</span><span class="result"> extends Product with Serializable</span>
+        <a href="TileLayout.html"><span class="name">TileLayout</span></a><span class="params">(<span name="tileCols">tileCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileRows">tileRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelCols">pixelCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelRows">pixelRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This class stores the layout of a tiled raster: the number of tiles (in
 cols/rows) and also the size of each tile (in cols/rows of pixels).</p>
-    </li><li visbl="pub" name="geotrellis.raster.TileSetRasterData" data-isabs="false">
+    </li><li name="geotrellis.raster.TileSetRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileSetRasterDataextendsTiledRasterDatawithProductwithSerializable"></a>
       <a id="TileSetRasterData:TileSetRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -353,12 +289,13 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TileSetRasterData.html"><span class="name">TileSetRasterData</span></a><span class="params">(<span name="basePath">basePath: String</span>, <span name="name">name: String</span>, <span name="typ">typ: RasterType</span>, <span name="tileLayout">tileLayout: TileLayout</span>, <span name="rasterExtent">rasterExtent: RasterExtent</span>, <span name="server">server: Server</span>)</span><span class="result"> extends TiledRasterData with Product with Serializable</span>
+        <a href="TileSetRasterData.html"><span class="name">TileSetRasterData</span></a><span class="params">(<span name="basePath">basePath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="typ">typ: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="tileLayout">tileLayout: <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="server">server: <a href="../process/Server.html" class="extype" name="geotrellis.process.Server">Server</a></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This RasterData uses no in-memory caching and loads all tile data from disk
 when needed.</p>
-    </li><li visbl="pub" name="geotrellis.raster.TiledRasterData" data-isabs="true">
+    </li><li name="geotrellis.raster.TiledRasterData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TiledRasterDataextendsRasterData"></a>
       <a id="TiledRasterData:TiledRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -366,7 +303,7 @@ when needed.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="TiledRasterData.html"><span class="name">TiledRasterData</span></a><span class="result"> extends RasterData</span>
+        <a href="TiledRasterData.html"><span class="name">TiledRasterData</span></a><span class="result"> extends <a href="../RasterData.html" class="extype" name="geotrellis.RasterData">RasterData</a></span>
       </span>
       </h4>
       <p class="comment cmt"></p>
@@ -375,9 +312,10 @@ when needed.</p>
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.CroppedArrayRasterData" data-isabs="false">
+              <ol><li name="geotrellis.raster.CroppedArrayRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CroppedArrayRasterData"></a>
       <a id="CroppedArrayRasterData:CroppedArrayRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -385,11 +323,12 @@ when needed.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="CroppedArrayRasterData$.html"><span class="name">CroppedArrayRasterData</span></a><span class="result"> extends Serializable</span>
+        <a href="CroppedArrayRasterData$.html"><span class="name">CroppedArrayRasterData</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.CroppedRaster" data-isabs="false">
+    </li><li name="geotrellis.raster.CroppedRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CroppedRaster"></a>
       <a id="CroppedRaster:CroppedRaster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -397,11 +336,12 @@ when needed.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="CroppedRaster$.html"><span class="name">CroppedRaster</span></a><span class="result"> extends AnyRef</span>
+        <a href="CroppedRaster$.html"><span class="name">CroppedRaster</span></a>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.LazyTiledWrapper" data-isabs="false">
+    </li><li name="geotrellis.raster.LazyTiledWrapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazyTiledWrapper"></a>
       <a id="LazyTiledWrapper:LazyTiledWrapper"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -409,11 +349,12 @@ when needed.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledWrapper$.html"><span class="name">LazyTiledWrapper</span></a><span class="result"> extends Serializable</span>
+        <a href="LazyTiledWrapper$.html"><span class="name">LazyTiledWrapper</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.TileArrayRasterData" data-isabs="false">
+    </li><li name="geotrellis.raster.TileArrayRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileArrayRasterData"></a>
       <a id="TileArrayRasterData:TileArrayRasterData"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -421,23 +362,38 @@ when needed.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="TileArrayRasterData$.html"><span class="name">TileArrayRasterData</span></a><span class="result"> extends AnyRef</span>
+        <a href="TileArrayRasterData$.html"><span class="name">TileArrayRasterData</span></a>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.TileUtils" data-isabs="false">
-      <a id="TileUtils:TileUtils"></a>
+    </li><li name="geotrellis.raster.TileCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileCache"></a>
+      <a id="TileCache:TileCache"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="TileUtils$.html"><span class="name">TileUtils</span></a><span class="result"> extends AnyRef</span>
+        <a href="TileCache$.html"><span class="name">TileCache</span></a>
       </span>
       </h4>
-      <p class="comment cmt">Utility functions for working with web mercator tile systems.</p>
-    </li><li visbl="pub" name="geotrellis.raster.Tiler" data-isabs="false">
+      
+    </li><li name="geotrellis.raster.TileNeighborhood" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileNeighborhood"></a>
+      <a id="TileNeighborhood:TileNeighborhood"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TileNeighborhood$.html"><span class="name">TileNeighborhood</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.Tiler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tiler"></a>
       <a id="Tiler:Tiler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -445,12 +401,13 @@ when needed.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Tiler$.html"><span class="name">Tiler</span></a><span class="result"> extends AnyRef</span>
+        <a href="Tiler$.html"><span class="name">Tiler</span></a>
       </span>
       </h4>
       <p class="comment cmt">Used to create tiled rasters, as well as tilesets on the filesystem, based
 on a source raster.</p>
-    </li><li visbl="pub" name="geotrellis.raster.op" data-isabs="false">
+    </li><li name="geotrellis.raster.op" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="op"></a>
       <a id="op:op"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -466,10 +423,20 @@ on a source raster.</p>
             </div>
 
         
+
+        
         </div>
 
         <div id="inheritedMembers">
         
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.op.tiles</title>
+          <title>tiles - geotrellis.raster.op.tiles</title>
+          <meta name="description" content="tiles - geotrellis.raster.op.tiles" />
+          <meta name="keywords" content="tiles geotrellis.raster.op.tiles" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.raster.op.tiles.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a></p>
         <h1>tiles</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,11 +44,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         
         
         <div id="visbl">
@@ -46,33 +61,36 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.tiles.Reducer1" data-isabs="true">
-      <a id="Reducer1:Reducer1[B, C]"></a>
+              <ol><li name="geotrellis.raster.op.tiles.Reducer1" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Reducer1[B,C]extendsOp[C]"></a>
+      <a id="Reducer1[B,C]:Reducer1[B,C]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Reducer1.html"><span class="name">Reducer1</span></a><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends Op[C]</span>
+        <a href="Reducer1.html"><span class="name">Reducer1</span></a><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.raster.op.tiles.Reducer1.C">C</span>]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.tiles.ThroughputLimitedReducer1" data-isabs="true">
-      <a id="ThroughputLimitedReducer1:ThroughputLimitedReducer1[C]"></a>
+    </li><li name="geotrellis.raster.op.tiles.ThroughputLimitedReducer1" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ThroughputLimitedReducer1[C]extendsOp[C]"></a>
+      <a id="ThroughputLimitedReducer1[C]:ThroughputLimitedReducer1[C]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ThroughputLimitedReducer1.html"><span class="name">ThroughputLimitedReducer1</span></a><span class="tparams">[<span name="C">C</span>]</span><span class="result"> extends Op[C]</span>
+        <a href="ThroughputLimitedReducer1.html"><span class="name">ThroughputLimitedReducer1</span></a><span class="tparams">[<span name="C">C</span>]</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.raster.op.tiles.ThroughputLimitedReducer1.C">C</span>]</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.tiles.TileHistogram" data-isabs="false">
+    </li><li name="geotrellis.raster.op.tiles.TileHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileHistogramextendsReducer1[geotrellis.statistics.FastMapHistogram,geotrellis.statistics.Histogram]withProductwithSerializable"></a>
       <a id="TileHistogram:TileHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -80,11 +98,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TileHistogram.html"><span class="name">TileHistogram</span></a><span class="params">(<span name="r">r: Op[Raster]</span>)</span><span class="result"> extends Reducer1[FastMapHistogram, Histogram] with Product with Serializable</span>
+        <a href="TileHistogram.html"><span class="name">TileHistogram</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="Reducer1.html" class="extype" name="geotrellis.raster.op.tiles.Reducer1">Reducer1</a>[<a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>, <a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.tiles.TileMax" data-isabs="false">
+    </li><li name="geotrellis.raster.op.tiles.TileMax" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileMaxextendsReducer1[Int,Int]withProductwithSerializable"></a>
       <a id="TileMax:TileMax"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,11 +111,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TileMax.html"><span class="name">TileMax</span></a><span class="params">(<span name="r">r: Op[Raster]</span>)</span><span class="result"> extends Reducer1[Int, Int] with Product with Serializable</span>
+        <a href="TileMax.html"><span class="name">TileMax</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="Reducer1.html" class="extype" name="geotrellis.raster.op.tiles.Reducer1">Reducer1</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.raster.op.tiles.TileMin" data-isabs="false">
+    </li><li name="geotrellis.raster.op.tiles.TileMin" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileMinextendsReducer1[Int,Int]withProductwithSerializable"></a>
       <a id="TileMin:TileMin"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -104,7 +124,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TileMin.html"><span class="name">TileMin</span></a><span class="params">(<span name="r">r: Op[Raster]</span>)</span><span class="result"> extends Reducer1[Int, Int] with Product with Serializable</span>
+        <a href="TileMin.html"><span class="name">TileMin</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="Reducer1.html" class="extype" name="geotrellis.raster.op.tiles.Reducer1">Reducer1</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -116,10 +136,20 @@
         
 
         
+
+        
         </div>
 
         <div id="inheritedMembers">
         
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

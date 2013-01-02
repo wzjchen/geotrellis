@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.raster.op.zonal</title>
+          <title>zonal - geotrellis.raster.op.zonal</title>
+          <meta name="description" content="zonal - geotrellis.raster.op.zonal" />
+          <meta name="keywords" content="zonal geotrellis.raster.op.zonal" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.raster.op.zonal.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.raster" class="extype" href="../../package.html">raster</a>.<a name="geotrellis.raster.op" class="extype" href="../package.html">op</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a></p>
         <h1>zonal</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,11 +44,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         
         
         <div id="visbl">
@@ -46,17 +61,207 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary" data-isabs="true">
-      <a id="TiledPolygonalZonalSummary:TiledPolygonalZonalSummary[C]"></a>
+              <ol><li name="geotrellis.raster.op.zonal.Histogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Histogram[DD]extendsOp[geotrellis.statistics.Histogram]withTiledPolygonalZonalSummary[geotrellis.statistics.Histogram]withProductwithSerializable"></a>
+      <a id="Histogram[DD]:Histogram[DD]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Histogram.html"><span class="name">Histogram</span></a><span class="tparams">[<span name="DD">DD</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonePolygon">zonePolygon: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.Histogram.DD">DD</span>]]</span>, <span name="tileResults">tileResults: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">statistics.Histogram</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mB">mB: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">statistics.Histogram</a>]</span>, <span name="mD">mD: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.raster.op.zonal.Histogram.DD">DD</span>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">statistics.Histogram</a>] with <a href="TiledPolygonalZonalSummary.html" class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary">TiledPolygonalZonalSummary</a>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">statistics.Histogram</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Perform a zonal summary that calculates a histogram all raster cells within a geometry.</p>
+    </li><li name="geotrellis.raster.op.zonal.Max" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Max[DD]extendsOp[Int]withTiledPolygonalZonalSummary[Int]withProductwithSerializable"></a>
+      <a id="Max[DD]:Max[DD]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Max.html"><span class="name">Max</span></a><span class="tparams">[<span name="DD">DD</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonePolygon">zonePolygon: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.Max.DD">DD</span>]]</span>, <span name="tileResults">tileResults: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mB">mB: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="mD">mD: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.raster.op.zonal.Max.DD">DD</span>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>] with <a href="TiledPolygonalZonalSummary.html" class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary">TiledPolygonalZonalSummary</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Perform a zonal summary that calculates the max value of all raster cells within a geometry.</p>
+    </li><li name="geotrellis.raster.op.zonal.MaxDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxDouble[DD]extendsOp[Double]withTiledPolygonalZonalSummary[Double]withProductwithSerializable"></a>
+      <a id="MaxDouble[DD]:MaxDouble[DD]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MaxDouble.html"><span class="name">MaxDouble</span></a><span class="tparams">[<span name="DD">DD</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonePolygon">zonePolygon: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.MaxDouble.DD">DD</span>]]</span>, <span name="tileResults">tileResults: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mB">mB: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="mD">mD: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.raster.op.zonal.MaxDouble.DD">DD</span>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>] with <a href="TiledPolygonalZonalSummary.html" class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary">TiledPolygonalZonalSummary</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Perform a zonal summary that calculates the max value of all raster cells within a geometry.</p>
+    </li><li name="geotrellis.raster.op.zonal.Min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Min[DD]extendsOp[Int]withTiledPolygonalZonalSummary[Int]withProductwithSerializable"></a>
+      <a id="Min[DD]:Min[DD]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Min.html"><span class="name">Min</span></a><span class="tparams">[<span name="DD">DD</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonePolygon">zonePolygon: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.Min.DD">DD</span>]]</span>, <span name="tileResults">tileResults: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mB">mB: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="mD">mD: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.raster.op.zonal.Min.DD">DD</span>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>] with <a href="TiledPolygonalZonalSummary.html" class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary">TiledPolygonalZonalSummary</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Perform a zonal summary that calculates the sum of all raster cells within a geometry.</p>
+    </li><li name="geotrellis.raster.op.zonal.MinDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MinDouble[DD]extendsOp[Double]withTiledPolygonalZonalSummary[Double]withProductwithSerializable"></a>
+      <a id="MinDouble[DD]:MinDouble[DD]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MinDouble.html"><span class="name">MinDouble</span></a><span class="tparams">[<span name="DD">DD</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonePolygon">zonePolygon: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.MinDouble.DD">DD</span>]]</span>, <span name="tileResults">tileResults: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mB">mB: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="mD">mD: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.raster.op.zonal.MinDouble.DD">DD</span>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>] with <a href="TiledPolygonalZonalSummary.html" class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary">TiledPolygonalZonalSummary</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Perform a zonal summary that calculates the sum of all raster cells within a geometry.</p>
+    </li><li name="geotrellis.raster.op.zonal.Sum" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Sum[DD]extendsOp[Long]withTiledPolygonalZonalSummary[Long]withProductwithSerializable"></a>
+      <a id="Sum[DD]:Sum[DD]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Sum.html"><span class="name">Sum</span></a><span class="tparams">[<span name="DD">DD</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonePolygon">zonePolygon: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.Sum.DD">DD</span>]]</span>, <span name="tileResults">tileResults: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mB">mB: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="mD">mD: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.raster.op.zonal.Sum.DD">DD</span>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Long">Long</span>] with <a href="TiledPolygonalZonalSummary.html" class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary">TiledPolygonalZonalSummary</a>[<span class="extype" name="scala.Long">Long</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Perform a zonal summary that calculates the sum of all raster cells within a geometry.</p>
+    </li><li name="geotrellis.raster.op.zonal.SumDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SumDouble[DD]extendsOp[Double]withTiledPolygonalZonalSummary[Double]withProductwithSerializable"></a>
+      <a id="SumDouble[DD]:SumDouble[DD]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SumDouble.html"><span class="name">SumDouble</span></a><span class="tparams">[<span name="DD">DD</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonePolygon">zonePolygon: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.SumDouble.DD">DD</span>]]</span>, <span name="tileResults">tileResults: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mB">mB: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="mD">mD: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.raster.op.zonal.SumDouble.DD">DD</span>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>] with <a href="TiledPolygonalZonalSummary.html" class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary">TiledPolygonalZonalSummary</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Perform a zonal summary that calculates the sum of all raster cells within a geometry.</p>
+    </li><li name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TiledPolygonalZonalSummary[C]extendsOp[C]withThroughputLimitedReducer1[C]"></a>
+      <a id="TiledPolygonalZonalSummary[C]:TiledPolygonalZonalSummary[C]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="TiledPolygonalZonalSummary.html"><span class="name">TiledPolygonalZonalSummary</span></a><span class="tparams">[<span name="C">C</span>]</span><span class="result"> extends Op[C] with ThroughputLimitedReducer1[C]</span>
+        <a href="TiledPolygonalZonalSummary.html"><span class="name">TiledPolygonalZonalSummary</span></a><span class="tparams">[<span name="C">C</span>]</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary.C">C</span>] with <a href="../tiles/ThroughputLimitedReducer1.html" class="extype" name="geotrellis.raster.op.tiles.ThroughputLimitedReducer1">ThroughputLimitedReducer1</a>[<span class="extype" name="geotrellis.raster.op.zonal.TiledPolygonalZonalSummary.C">C</span>]</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="geotrellis.raster.op.zonal.Histogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Histogram"></a>
+      <a id="Histogram:Histogram"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Histogram$.html"><span class="name">Histogram</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.zonal.Max" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Max"></a>
+      <a id="Max:Max"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Max$.html"><span class="name">Max</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.zonal.MaxDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxDouble"></a>
+      <a id="MaxDouble:MaxDouble"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MaxDouble$.html"><span class="name">MaxDouble</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.zonal.Min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Min"></a>
+      <a id="Min:Min"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Min$.html"><span class="name">Min</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.zonal.MinDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MinDouble"></a>
+      <a id="MinDouble:MinDouble"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MinDouble$.html"><span class="name">MinDouble</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.zonal.Sum" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Sum"></a>
+      <a id="Sum:Sum"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Sum$.html"><span class="name">Sum</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.zonal.SumDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SumDouble"></a>
+      <a id="SumDouble:SumDouble"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SumDouble$.html"><span class="name">SumDouble</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -66,12 +271,18 @@
         
 
         
-
-        
         </div>
 
         <div id="inheritedMembers">
         
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

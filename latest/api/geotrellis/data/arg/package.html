@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.data.arg</title>
+          <title>arg - geotrellis.data.arg</title>
+          <meta name="description" content="arg - geotrellis.data.arg" />
+          <meta name="keywords" content="arg geotrellis.data.arg" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'geotrellis.data.arg.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
-        <p id="owner"><a name="geotrellis" class="extype" href="../../package.html">geotrellis</a>.<a name="geotrellis.data" class="extype" href="../package.html">data</a></p>
+        <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.data">data</a></p>
         <h1>arg</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,11 +44,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         
         
         <div id="visbl">
@@ -46,9 +61,10 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="geotrellis.data.arg.ArgWriter" data-isabs="false">
+              <ol><li name="geotrellis.data.arg.ArgWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArgWriterextendsWriterwithProductwithSerializable"></a>
       <a id="ArgWriter:ArgWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -56,11 +72,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ArgWriter.html"><span class="name">ArgWriter</span></a><span class="params">(<span name="typ">typ: RasterType</span>)</span><span class="result"> extends Writer with Product with Serializable</span>
+        <a href="ArgWriter.html"><span class="name">ArgWriter</span></a><span class="params">(<span name="typ">typ: <a href="../../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>)</span><span class="result"> extends <a href="../Writer.html" class="extype" name="geotrellis.data.Writer">Writer</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">ArgWriter will write a raster to disk in ARG format.</p>
-    </li><li visbl="pub" name="geotrellis.data.arg.CellWriter" data-isabs="true">
+    </li><li name="geotrellis.data.arg.CellWriter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CellWriterextendsObject"></a>
       <a id="CellWriter:CellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -68,11 +85,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="CellWriter.html"><span class="name">CellWriter</span></a><span class="result"> extends AnyRef</span>
+        <a href="CellWriter.html"><span class="name">CellWriter</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.FloatCellWriter" data-isabs="true">
+    </li><li name="geotrellis.data.arg.FloatCellWriter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FloatCellWriterextendsCellWriter"></a>
       <a id="FloatCellWriter:FloatCellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -80,11 +98,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="FloatCellWriter.html"><span class="name">FloatCellWriter</span></a><span class="result"> extends CellWriter</span>
+        <a href="FloatCellWriter.html"><span class="name">FloatCellWriter</span></a><span class="result"> extends <a href="CellWriter.html" class="extype" name="geotrellis.data.arg.CellWriter">CellWriter</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Int16ReadState" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Int16ReadState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Int16ReadStateextendsIntNReadState"></a>
       <a id="Int16ReadState:Int16ReadState"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,11 +111,12 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Int16ReadState.html"><span class="name">Int16ReadState</span></a><span class="result"> extends IntNReadState</span>
+        <a href="Int16ReadState.html"><span class="name">Int16ReadState</span></a><span class="result"> extends <a href="IntNReadState.html" class="extype" name="geotrellis.data.arg.IntNReadState">IntNReadState</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Int1ReadState" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Int1ReadState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Int1ReadStateextendsReadState"></a>
       <a id="Int1ReadState:Int1ReadState"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -104,11 +124,12 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Int1ReadState.html"><span class="name">Int1ReadState</span></a><span class="result"> extends ReadState</span>
+        <a href="Int1ReadState.html"><span class="name">Int1ReadState</span></a><span class="result"> extends <a href="../ReadState.html" class="extype" name="geotrellis.data.ReadState">ReadState</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Int32ReadState" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Int32ReadState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Int32ReadStateextendsIntNReadState"></a>
       <a id="Int32ReadState:Int32ReadState"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -116,11 +137,12 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Int32ReadState.html"><span class="name">Int32ReadState</span></a><span class="result"> extends IntNReadState</span>
+        <a href="Int32ReadState.html"><span class="name">Int32ReadState</span></a><span class="result"> extends <a href="IntNReadState.html" class="extype" name="geotrellis.data.arg.IntNReadState">IntNReadState</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Int8ReadState" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Int8ReadState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Int8ReadStateextendsIntNReadState"></a>
       <a id="Int8ReadState:Int8ReadState"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -128,11 +150,12 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Int8ReadState.html"><span class="name">Int8ReadState</span></a><span class="result"> extends IntNReadState</span>
+        <a href="Int8ReadState.html"><span class="name">Int8ReadState</span></a><span class="result"> extends <a href="IntNReadState.html" class="extype" name="geotrellis.data.arg.IntNReadState">IntNReadState</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.IntCellWriter" data-isabs="true">
+    </li><li name="geotrellis.data.arg.IntCellWriter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IntCellWriterextendsCellWriter"></a>
       <a id="IntCellWriter:IntCellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -140,11 +163,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="IntCellWriter.html"><span class="name">IntCellWriter</span></a><span class="result"> extends CellWriter</span>
+        <a href="IntCellWriter.html"><span class="name">IntCellWriter</span></a><span class="result"> extends <a href="CellWriter.html" class="extype" name="geotrellis.data.arg.CellWriter">CellWriter</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.IntNReadState" data-isabs="true">
+    </li><li name="geotrellis.data.arg.IntNReadState" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IntNReadStateextendsIntReadState"></a>
       <a id="IntNReadState:IntNReadState"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -152,7 +176,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntNReadState.html"><span class="name">IntNReadState</span></a><span class="result"> extends IntReadState</span>
+        <a href="IntNReadState.html"><span class="name">IntNReadState</span></a><span class="result"> extends <a href="../IntReadState.html" class="extype" name="geotrellis.data.IntReadState">IntReadState</a></span>
       </span>
       </h4>
       
@@ -161,9 +185,10 @@
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.data.arg.ArgReader" data-isabs="false">
+              <ol><li name="geotrellis.data.arg.ArgReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArgReader"></a>
       <a id="ArgReader:ArgReader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -171,11 +196,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ArgReader$.html"><span class="name">ArgReader</span></a><span class="result"> extends FileReader</span>
+        <a href="ArgReader$.html"><span class="name">ArgReader</span></a><span class="result"> extends <a href="../FileReader.html" class="extype" name="geotrellis.data.FileReader">FileReader</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.BoolCellWriter" data-isabs="false">
+    </li><li name="geotrellis.data.arg.BoolCellWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoolCellWriter"></a>
       <a id="BoolCellWriter:BoolCellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -183,11 +209,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="BoolCellWriter$.html"><span class="name">BoolCellWriter</span></a><span class="result"> extends CellWriter</span>
+        <a href="BoolCellWriter$.html"><span class="name">BoolCellWriter</span></a><span class="result"> extends <a href="CellWriter.html" class="extype" name="geotrellis.data.arg.CellWriter">CellWriter</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.CellWriter" data-isabs="false">
+    </li><li name="geotrellis.data.arg.CellWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CellWriter"></a>
       <a id="CellWriter:CellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -195,11 +222,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="CellWriter$.html"><span class="name">CellWriter</span></a><span class="result"> extends AnyRef</span>
+        <a href="CellWriter$.html"><span class="name">CellWriter</span></a>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Float32CellWriter" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Float32CellWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Float32CellWriter"></a>
       <a id="Float32CellWriter:Float32CellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -207,11 +235,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Float32CellWriter$.html"><span class="name">Float32CellWriter</span></a><span class="result"> extends FloatCellWriter</span>
+        <a href="Float32CellWriter$.html"><span class="name">Float32CellWriter</span></a><span class="result"> extends <a href="FloatCellWriter.html" class="extype" name="geotrellis.data.arg.FloatCellWriter">FloatCellWriter</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Float64CellWriter" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Float64CellWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Float64CellWriter"></a>
       <a id="Float64CellWriter:Float64CellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -219,11 +248,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Float64CellWriter$.html"><span class="name">Float64CellWriter</span></a><span class="result"> extends FloatCellWriter</span>
+        <a href="Float64CellWriter$.html"><span class="name">Float64CellWriter</span></a><span class="result"> extends <a href="FloatCellWriter.html" class="extype" name="geotrellis.data.arg.FloatCellWriter">FloatCellWriter</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Int16CellWriter" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Int16CellWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Int16CellWriter"></a>
       <a id="Int16CellWriter:Int16CellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -231,11 +261,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Int16CellWriter$.html"><span class="name">Int16CellWriter</span></a><span class="result"> extends IntCellWriter</span>
+        <a href="Int16CellWriter$.html"><span class="name">Int16CellWriter</span></a><span class="result"> extends <a href="IntCellWriter.html" class="extype" name="geotrellis.data.arg.IntCellWriter">IntCellWriter</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Int32CellWriter" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Int32CellWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Int32CellWriter"></a>
       <a id="Int32CellWriter:Int32CellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -243,11 +274,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Int32CellWriter$.html"><span class="name">Int32CellWriter</span></a><span class="result"> extends IntCellWriter</span>
+        <a href="Int32CellWriter$.html"><span class="name">Int32CellWriter</span></a><span class="result"> extends <a href="IntCellWriter.html" class="extype" name="geotrellis.data.arg.IntCellWriter">IntCellWriter</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.data.arg.Int8CellWriter" data-isabs="false">
+    </li><li name="geotrellis.data.arg.Int8CellWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Int8CellWriter"></a>
       <a id="Int8CellWriter:Int8CellWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -255,7 +287,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Int8CellWriter$.html"><span class="name">Int8CellWriter</span></a><span class="result"> extends IntCellWriter</span>
+        <a href="Int8CellWriter$.html"><span class="name">Int8CellWriter</span></a><span class="result"> extends <a href="IntCellWriter.html" class="extype" name="geotrellis.data.arg.IntCellWriter">IntCellWriter</a></span>
       </span>
       </h4>
       
@@ -263,10 +295,20 @@
             </div>
 
         
+
+        
         </div>
 
         <div id="inheritedMembers">
         
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

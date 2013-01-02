@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>geotrellis.feature.op.geometry</title>
+          <title>geometry - geotrellis.feature.op.geometry</title>
+          <meta name="description" content="geometry - geotrellis.feature.op.geometry" />
+          <meta name="keywords" content="geometry geotrellis.feature.op.geometry" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.feature.op.geometry.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="geotrellis" class="extype" href="../../../package.html">geotrellis</a>.<a name="geotrellis.feature" class="extype" href="../../package.html">feature</a>.<a name="geotrellis.feature.op" class="extype" href="../package.html">op</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.feature">feature</a>.<a href="../package.html" class="extype" name="geotrellis.feature.op">op</a></p>
         <h1>geometry</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,13 +44,36 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-        
-        
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.feature.op.geometry"><span>geometry</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -46,45 +84,49 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="geotrellis.feature.op.geometry.package.AsPolygonSet" data-isabs="false">
-      <a id="AsPolygonSet:AsPolygonSet[D]"></a>
+              <ol><li name="geotrellis.feature.op.geometry.AsPolygonSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AsPolygonSet[D]extendsOperation[List[geotrellis.feature.Geometry[D]]]withProductwithSerializable"></a>
+      <a id="AsPolygonSet[D]:AsPolygonSet[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="package$$AsPolygonSet.html"><span class="name">AsPolygonSet</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: Op[Geometry[D]]</span>)</span><span class="result"> extends Operation[List[Geometry[D]]] with Product with Serializable</span>
+        <a href="package$$AsPolygonSet.html"><span class="name">AsPolygonSet</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.AsPolygonSet.D">D</span>]]</span>)</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.List">List</span>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.AsPolygonSet.D">D</span>]]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Buffer" data-isabs="false">
-      <a id="Buffer:Buffer[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.Buffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Buffer[A]extendsOp3[geotrellis.feature.Geometry[A],Double,Int,ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="Buffer[A]:Buffer[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Buffer.html"><span class="name">Buffer</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[Geometry[A]]</span>, <span name="distance">distance: Op[Double]</span>, <span name="detail">detail: Op[Int]</span>, <span name="endCapStyle">endCapStyle: EndCapStyle</span>)</span><span class="result"> extends Op3[Geometry[A], Double, Int, Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="Buffer.html"><span class="name">Buffer</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Buffer.A">A</span>]]</span>, <span name="distance">distance: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="detail">detail: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="endCapStyle">endCapStyle: <a href="EndCapStyle.html" class="extype" name="geotrellis.feature.op.geometry.EndCapStyle">EndCapStyle</a></span>)</span><span class="result"> extends <a href="../../../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Buffer.A">A</span>], <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Buffer.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Computes a buffer area around this geometry.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.BufferWithParameters" data-isabs="false">
-      <a id="BufferWithParameters:BufferWithParameters[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.BufferWithParameters" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BufferWithParameters[A]extendsOp3[geotrellis.feature.Geometry[A],Double,com.vividsolutions.jts.operation.buffer.BufferParameters,ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="BufferWithParameters[A]:BufferWithParameters[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="BufferWithParameters.html"><span class="name">BufferWithParameters</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: Op[Geometry[A]]</span>, <span name="distance">distance: Op[Double]</span>, <span name="params">params: BufferParameters</span>)</span><span class="result"> extends Op3[Geometry[A], Double, BufferParameters, Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="BufferWithParameters.html"><span class="name">BufferWithParameters</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.BufferWithParameters.A">A</span>]]</span>, <span name="distance">distance: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="params">params: <span class="extype" name="com.vividsolutions.jts.operation.buffer.BufferParameters">BufferParameters</span></span>)</span><span class="result"> extends <a href="../../../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.BufferWithParameters.A">A</span>], <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="com.vividsolutions.jts.operation.buffer.BufferParameters">BufferParameters</span>, <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.BufferWithParameters.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Contains" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.Contains" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContainsextendsOp2[geotrellis.feature.Geometry[_],geotrellis.feature.Geometry[_],Boolean]withProductwithSerializable"></a>
       <a id="Contains:Contains"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,23 +134,25 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Contains.html"><span class="name">Contains</span></a><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[geotrellis.feature.package.Geometry[_], geotrellis.feature.package.Geometry[_], Boolean] with Product with Serializable</span>
+        <a href="Contains.html"><span class="name">Contains</span></a><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Boolean">Boolean</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Tests if one geometry contains another.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.ConvexHull" data-isabs="false">
-      <a id="ConvexHull:ConvexHull[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.ConvexHull" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConvexHull[A]extendsOp1[geotrellis.feature.Geometry[A],ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="ConvexHull[A]:ConvexHull[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ConvexHull.html"><span class="name">ConvexHull</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[Geometry[A]]</span>)</span><span class="result"> extends Op1[Geometry[A], Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="ConvexHull.html"><span class="name">ConvexHull</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.ConvexHull.A">A</span>]]</span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.ConvexHull.A">A</span>], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.ConvexHull.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Returns the convex hull of this geometry, which is the smallest polygon that contains it.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Covers" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.Covers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CoversextendsOp2[geotrellis.feature.Geometry[_],geotrellis.feature.Geometry[_],Boolean]withProductwithSerializable"></a>
       <a id="Covers:Covers"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -116,11 +160,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Covers.html"><span class="name">Covers</span></a><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[geotrellis.feature.package.Geometry[_], geotrellis.feature.package.Geometry[_], Boolean] with Product with Serializable</span>
+        <a href="Covers.html"><span class="name">Covers</span></a><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Boolean">Boolean</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Tests if one geometry covers another.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Disjoint" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.Disjoint" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DisjointextendsOp2[geotrellis.feature.Geometry[_],geotrellis.feature.Geometry[_],Boolean]withProductwithSerializable"></a>
       <a id="Disjoint:Disjoint"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -128,11 +173,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Disjoint.html"><span class="name">Disjoint</span></a><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[geotrellis.feature.package.Geometry[_], geotrellis.feature.package.Geometry[_], Boolean] with Product with Serializable</span>
+        <a href="Disjoint.html"><span class="name">Disjoint</span></a><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Boolean">Boolean</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Tests if two geometries are disjoint.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.EndCapStyle" data-isabs="true">
+    </li><li name="geotrellis.feature.op.geometry.EndCapStyle" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EndCapStyleextendsObject"></a>
       <a id="EndCapStyle:EndCapStyle"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -140,64 +186,69 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="EndCapStyle.html"><span class="name">EndCapStyle</span></a><span class="result"> extends AnyRef</span>
+        <a href="EndCapStyle.html"><span class="name">EndCapStyle</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Equals" data-isabs="false">
-      <a id="Equals:Equals[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.Equals" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Equals[A]extendsOp2[geotrellis.feature.Geometry[_],geotrellis.feature.Geometry[_],Boolean]withProductwithSerializable"></a>
+      <a id="Equals[A]:Equals[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Equals.html"><span class="name">Equals</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[geotrellis.feature.package.Geometry[_], geotrellis.feature.package.Geometry[_], Boolean] with Product with Serializable</span>
+        <a href="Equals.html"><span class="name">Equals</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Boolean">Boolean</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Tests if one geometry equals another.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Erase" data-isabs="false">
-      <a id="Erase:Erase[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.Erase" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Erase[A]extendsOp2[geotrellis.feature.Geometry[A],geotrellis.feature.Geometry[_],ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="Erase[A]:Erase[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Erase.html"><span class="name">Erase</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[Geometry[A]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[Geometry[A], geotrellis.feature.package.Geometry[_], Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="Erase.html"><span class="name">Erase</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Erase.A">A</span>]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Erase.A">A</span>], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Erase.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Returns a geometry that contains the points in the first geometry that
 aren't in the second geometry.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.package.FilterGeometry" data-isabs="false">
-      <a id="FilterGeometry:FilterGeometry[G, D]"></a>
+    </li><li name="geotrellis.feature.op.geometry.FilterGeometry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FilterGeometry[G&lt;:com.vividsolutions.jts.geom.Geometry,D]extendsOp1[List[geotrellis.feature.Geometry[D]],List[geotrellis.feature.Geometry[D]]]withProductwithSerializable"></a>
+      <a id="FilterGeometry[G&lt;:com.vividsolutions.jts.geom.Geometry,D]:FilterGeometry[G,D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="package$$FilterGeometry.html"><span class="name">FilterGeometry</span></a><span class="tparams">[<span name="G">G &lt;: Geometry</span>, <span name="D">D</span>]</span><span class="params">(<span name="s">s: Op[List[Geometry[D]]]</span>, <span name="m">m: Manifest[G]</span>)</span><span class="result"> extends Op1[List[Geometry[D]], List[Geometry[D]]] with Product with Serializable</span>
+        <a href="package$$FilterGeometry.html"><span class="name">FilterGeometry</span></a><span class="tparams">[<span name="G">G &lt;: <span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span></span>, <span name="D">D</span>]</span><span class="params">(<span name="s">s: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.List">List</span>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.FilterGeometry.D">D</span>]]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="t">t: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.feature.op.geometry.FilterGeometry.G">G</span>]</span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<span class="extype" name="scala.List">List</span>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.FilterGeometry.D">D</span>]], <span class="extype" name="scala.collection.immutable.List">List</span>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.FilterGeometry.D">D</span>]]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Given list of geometries, inspect the underlying geometry type,
 selecting only geometries that match G
 </p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.package.FlattenGeometry" data-isabs="false">
-      <a id="FlattenGeometry:FlattenGeometry[D]"></a>
+    </li><li name="geotrellis.feature.op.geometry.FlattenGeometry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FlattenGeometry[D]extendsOperation[List[geotrellis.feature.Geometry[D]]]withProductwithSerializable"></a>
+      <a id="FlattenGeometry[D]:FlattenGeometry[D]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="package$$FlattenGeometry.html"><span class="name">FlattenGeometry</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g1">g1: Op[Geometry[D]]</span>)</span><span class="result"> extends Operation[List[Geometry[D]]] with Product with Serializable</span>
+        <a href="package$$FlattenGeometry.html"><span class="name">FlattenGeometry</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g1">g1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.FlattenGeometry.D">D</span>]]</span>)</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.List">List</span>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.FlattenGeometry.D">D</span>]]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Given a Geometry object, inspect the underlying geometry type
 and recursively flatten it if it is a GeometryCollection
 </p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.GetArea" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.GetArea" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetAreaextendsOp1[geotrellis.feature.Geometry[_],Double]withProductwithSerializable"></a>
       <a id="GetArea:GetArea"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -205,23 +256,25 @@ and recursively flatten it if it is a GeometryCollection
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetArea.html"><span class="name">GetArea</span></a><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op1[geotrellis.feature.package.Geometry[_], Double] with Product with Serializable</span>
+        <a href="GetArea.html"><span class="name">GetArea</span></a><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Returns the area of a geometry.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.GetCentroid" data-isabs="false">
-      <a id="GetCentroid:GetCentroid[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.GetCentroid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetCentroid[A]extendsOp1[geotrellis.feature.Geometry[A],ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="GetCentroid[A]:GetCentroid[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetCentroid.html"><span class="name">GetCentroid</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: Op[Geometry[A]]</span>)</span><span class="result"> extends Op1[Geometry[A], Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="GetCentroid.html"><span class="name">GetCentroid</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.GetCentroid.A">A</span>]]</span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.GetCentroid.A">A</span>], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.GetCentroid.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Computes the centroid of this geometry.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.GetDistance" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.GetDistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetDistanceextendsOp2[geotrellis.feature.Geometry[_],geotrellis.feature.Geometry[_],Double]withProductwithSerializable"></a>
       <a id="GetDistance:GetDistance"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -229,48 +282,52 @@ and recursively flatten it if it is a GeometryCollection
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetDistance.html"><span class="name">GetDistance</span></a><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[geotrellis.feature.package.Geometry[_], geotrellis.feature.package.Geometry[_], Double] with Product with Serializable</span>
+        <a href="GetDistance.html"><span class="name">GetDistance</span></a><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Returns the minimum distance between these two geometries.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.GetEnvelope" data-isabs="false">
-      <a id="GetEnvelope:GetEnvelope[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.GetEnvelope" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetEnvelope[A]extendsOp1[geotrellis.feature.Geometry[A],ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="GetEnvelope[A]:GetEnvelope[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetEnvelope.html"><span class="name">GetEnvelope</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: Op[Geometry[A]]</span>)</span><span class="result"> extends Op1[Geometry[A], Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="GetEnvelope.html"><span class="name">GetEnvelope</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.GetEnvelope.A">A</span>]]</span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.GetEnvelope.A">A</span>], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.GetEnvelope.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Computes the centroid of this geometry.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.GetSymDifference" data-isabs="false">
-      <a id="GetSymDifference:GetSymDifference[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.GetSymDifference" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetSymDifference[A]extendsOp2[geotrellis.feature.Geometry[A],geotrellis.feature.Geometry[_],ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="GetSymDifference[A]:GetSymDifference[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetSymDifference.html"><span class="name">GetSymDifference</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[Geometry[A]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[Geometry[A], geotrellis.feature.package.Geometry[_], Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="GetSymDifference.html"><span class="name">GetSymDifference</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.GetSymDifference.A">A</span>]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.GetSymDifference.A">A</span>], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.GetSymDifference.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Returns a geometry defined by the points that are in one of the two geometries
 but not the other.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Intersect" data-isabs="false">
-      <a id="Intersect:Intersect[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.Intersect" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Intersect[A]extendsOp2[geotrellis.feature.Geometry[A],geotrellis.feature.Geometry[_],ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="Intersect[A]:Intersect[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Intersect.html"><span class="name">Intersect</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[Geometry[A]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[Geometry[A], geotrellis.feature.package.Geometry[_], Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="Intersect.html"><span class="name">Intersect</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Returns the intersection of these geometries.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Intersects" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.Intersects" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IntersectsextendsOp2[geotrellis.feature.Geometry[_],geotrellis.feature.Geometry[_],Boolean]withProductwithSerializable"></a>
       <a id="Intersects:Intersects"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -278,11 +335,12 @@ but not the other.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Intersects.html"><span class="name">Intersects</span></a><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[geotrellis.feature.package.Geometry[_], geotrellis.feature.package.Geometry[_], Boolean] with Product with Serializable</span>
+        <a href="Intersects.html"><span class="name">Intersects</span></a><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Boolean">Boolean</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Tests if one geometry intersects another.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Overlaps" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.Overlaps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OverlapsextendsOp2[geotrellis.feature.Geometry[_],geotrellis.feature.Geometry[_],Boolean]withProductwithSerializable"></a>
       <a id="Overlaps:Overlaps"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -290,31 +348,33 @@ but not the other.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Overlaps.html"><span class="name">Overlaps</span></a><span class="params">(<span name="g">g: Op[geotrellis.feature.package.Geometry[_]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[geotrellis.feature.package.Geometry[_], geotrellis.feature.package.Geometry[_], Boolean] with Product with Serializable</span>
+        <a href="Overlaps.html"><span class="name">Overlaps</span></a><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Boolean">Boolean</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Tests if one geometry overlaps another.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Simplify" data-isabs="false">
-      <a id="Simplify:Simplify[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.Simplify" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Simplify[A]extendsOp2[geotrellis.feature.Geometry[A],Double,ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="Simplify[A]:Simplify[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Simplify.html"><span class="name">Simplify</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[Geometry[A]]</span>, <span name="distanceTolerance">distanceTolerance: Op[Double]</span>)</span><span class="result"> extends Op2[Geometry[A], Double, Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="Simplify.html"><span class="name">Simplify</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Simplify.A">A</span>]]</span>, <span name="distanceTolerance">distanceTolerance: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Simplify.A">A</span>], <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Simplify.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Simplify a polygon or multipolygon.</p>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Union" data-isabs="false">
-      <a id="Union:Union[A]"></a>
+    </li><li name="geotrellis.feature.op.geometry.Union" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Union[A]extendsOp2[geotrellis.feature.Geometry[A],geotrellis.feature.Geometry[_],ProductwithSerializablewithgeotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,A]{defdata:A;defgeom:com.vividsolutions.jts.geom.Geometry}]withProductwithSerializable"></a>
+      <a id="Union[A]:Union[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Union.html"><span class="name">Union</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: Op[Geometry[A]]</span>, <span name="other">other: Op[geotrellis.feature.package.Geometry[_]]</span>)</span><span class="result"> extends Op2[Geometry[A], geotrellis.feature.package.Geometry[_], Product with Serializable with Feature[Geometry, A] { ... /* 3 definitions in type refinement */ }] with Product with Serializable</span>
+        <a href="Union.html"><span class="name">Union</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Union.A">A</span>]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Union.A">A</span>], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Union.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Returns the union of these geometries.</p>
@@ -323,21 +383,23 @@ but not the other.</p>
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="geotrellis.feature.op.geometry.package#AsFeature" data-isabs="false">
-      <a id="AsFeature:(Op[Extent]) ⇒ Op1[Extent, Polygon[Unit]]"></a>
+              <ol><li name="geotrellis.feature.op.geometry.package#AsFeature" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AsFeature:geotrellis.package.Op[geotrellis.Extent]=&gt;geotrellis.Op1[geotrellis.Extent,geotrellis.feature.Polygon[Unit]]"></a>
+      <a id="AsFeature:(Op[Extent])⇒Op1[Extent,Polygon[Unit]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">AsFeature</span><span class="result">: (Op[<a name="geotrellis.Extent" class="extype" href="../../../Extent.html">Extent</a>]) ⇒ <a name="geotrellis.Op1" class="extype" href="../../../Op1.html">Op1</a>[<a name="geotrellis.Extent" class="extype" href="../../../Extent.html">Extent</a>, <a name="geotrellis.feature.Polygon" class="extype" href="../../Polygon.html">Polygon</a>[<span name="scala.Unit" class="extype">Unit</span>]]</span>
+        <span class="name">AsFeature</span><span class="result">: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Extent.html" class="extype" name="geotrellis.Extent">Extent</a>]) ⇒ <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Extent.html" class="extype" name="geotrellis.Extent">Extent</a>, <a href="../../Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Unit">Unit</span>]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.feature.op.geometry.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.Buffer" data-isabs="false">
+      
+    </li><li name="geotrellis.feature.op.geometry.Buffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Buffer"></a>
       <a id="Buffer:Buffer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -345,11 +407,12 @@ but not the other.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Buffer$.html"><span class="name">Buffer</span></a><span class="result"> extends Serializable</span>
+        <a href="Buffer$.html"><span class="name">Buffer</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.EndCapFlat" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.EndCapFlat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EndCapFlat"></a>
       <a id="EndCapFlat:EndCapFlat"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -357,11 +420,12 @@ but not the other.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="EndCapFlat$.html"><span class="name">EndCapFlat</span></a><span class="result"> extends EndCapStyle with Product with Serializable</span>
+        <a href="EndCapFlat$.html"><span class="name">EndCapFlat</span></a><span class="result"> extends <a href="EndCapStyle.html" class="extype" name="geotrellis.feature.op.geometry.EndCapStyle">EndCapStyle</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.EndCapRound" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.EndCapRound" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EndCapRound"></a>
       <a id="EndCapRound:EndCapRound"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -369,11 +433,12 @@ but not the other.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="EndCapRound$.html"><span class="name">EndCapRound</span></a><span class="result"> extends EndCapStyle with Product with Serializable</span>
+        <a href="EndCapRound$.html"><span class="name">EndCapRound</span></a><span class="result"> extends <a href="EndCapStyle.html" class="extype" name="geotrellis.feature.op.geometry.EndCapStyle">EndCapStyle</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.EndCapSquare" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.EndCapSquare" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EndCapSquare"></a>
       <a id="EndCapSquare:EndCapSquare"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -381,11 +446,12 @@ but not the other.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="EndCapSquare$.html"><span class="name">EndCapSquare</span></a><span class="result"> extends EndCapStyle with Product with Serializable</span>
+        <a href="EndCapSquare$.html"><span class="name">EndCapSquare</span></a><span class="result"> extends <a href="EndCapStyle.html" class="extype" name="geotrellis.feature.op.geometry.EndCapStyle">EndCapStyle</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.GetDifference" data-isabs="false">
+    </li><li name="geotrellis.feature.op.geometry.GetDifference" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetDifference"></a>
       <a id="GetDifference:GetDifference"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -393,30 +459,45 @@ but not the other.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="GetDifference$.html"><span class="name">GetDifference</span></a><span class="result"> extends AnyRef</span>
+        <a href="GetDifference$.html"><span class="name">GetDifference</span></a>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="geotrellis.feature.op.geometry.package#GetExtent" data-isabs="false">
-      <a id="GetExtent:(Op[Raster]) ⇒ Op1[Raster, Extent]"></a>
+    </li><li name="geotrellis.feature.op.geometry.package#GetExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetExtent:geotrellis.package.Op[geotrellis.Raster]=&gt;geotrellis.Op1[geotrellis.Raster,geotrellis.Extent]"></a>
+      <a id="GetExtent:(Op[Raster])⇒Op1[Raster,Extent]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">GetExtent</span><span class="result">: (Op[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>]) ⇒ <a name="geotrellis.Op1" class="extype" href="../../../Op1.html">Op1</a>[<a name="geotrellis.Raster" class="extype" href="../../../Raster.html">Raster</a>, <a name="geotrellis.Extent" class="extype" href="../../../Extent.html">Extent</a>]</span>
+        <span class="name">GetExtent</span><span class="result">: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]) ⇒ <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Extent.html" class="extype" name="geotrellis.Extent">Extent</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="geotrellis.feature.op.geometry.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      
     </li></ol>
             </div>
+
+        
 
         
         </div>
 
         <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
         
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>
