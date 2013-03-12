@@ -1,7 +1,5 @@
 package geotrellis.feature.rasterize
 
-import language.higherKinds
-
 import geotrellis.feature._
 import geotrellis._
 

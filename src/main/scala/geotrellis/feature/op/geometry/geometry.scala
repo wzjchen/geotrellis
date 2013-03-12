@@ -5,8 +5,6 @@ import geotrellis.feature._
 import geotrellis.{ op => liftOp }
 import com.vividsolutions.jts.{ geom => jts }
 
-import scala.reflect.runtime.currentMirror
-import scala.reflect.runtime.universe._
 
 package object geometry {
 
@@ -37,26 +35,14 @@ package object geometry {
     }
   }
 
-  /**
-   * Given list of geometries, inspect the underlying geometry type,
-   * selecting only geometries that match G
-   */
-  case class FilterGeometry[G <: jts.Geometry,D](s: Op[List[Geometry[D]]])(
-    implicit t: TypeTag[G])
-      extends Op1(s)( s => {
-        val typeName = t.tpe.typeSymbol.name.toString()
-        val result = s.filter(_.geom.getGeometryType == typeName)
-        Result( result )
-      })
-
 
   /**
    * Returns a Geometry as a Polygon Set.
    */
   case class AsPolygonSet[D](g: Op[Geometry[D]]) extends Operation[List[Polygon[D]]] {    
-    val compositeOp = FilterGeometry[jts.Polygon,D](FlattenGeometry(g))
+    //val compositeOp = FilterGeometry[jts.Polygon,D](FlattenGeometry(g))
 
-    def _run(context:Context) = runAsync(List(compositeOp))
+    def _run(context:Context) = StepError("Not implemented in 2.9.2 branch", "")
     val nextSteps:Steps = {
       case a :: Nil => Result(a.asInstanceOf[List[Polygon[D]]])
     }

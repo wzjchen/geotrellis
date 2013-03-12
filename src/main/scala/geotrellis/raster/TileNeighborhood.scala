@@ -4,7 +4,6 @@
 package geotrellis.raster
 
 import geotrellis._
-import scala.collection.concurrent.Map
 import java.util.concurrent.atomic.AtomicInteger
 import scala.collection.mutable._
 

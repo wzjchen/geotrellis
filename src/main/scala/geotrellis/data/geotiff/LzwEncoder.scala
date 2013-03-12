@@ -179,7 +179,7 @@ abstract class LzwEncoder(encoder:Encoder) {
       // stringTable.toList.sorted.foreach {
       //   case (k, v) => println("  k=%s v=%s" format (xyz(k), v))
       // }
-      sys.error(s"no code found for ${xyz(s)}")
+      sys.error("no code found for %s".format(xyz(s)))
     }
     stringTable(s)
   }

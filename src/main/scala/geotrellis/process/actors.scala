@@ -3,8 +3,8 @@ package geotrellis.process
 // akka imports
 import akka.actor._
 import akka.routing._
-import scala.concurrent.Await
-import scala.concurrent.duration._
+import akka.dispatch.Await
+import akka.util.duration._
 
 import geotrellis._
 
@@ -243,7 +243,7 @@ case class Worker(val server: Server) extends WorkerLike {
         val z = op.run(geotrellisContext)
         handleResult(pos, client, z, Some(geotrellisContext.timer), dispatcher)
       } catch {
-        case e:Throwable => {
+        case e => {
           val error = StepError.fromException(e)
           System.err.printf("Operation failed, with exception: %s\n\nStack trace:\n%s\n", error.msg,error.trace)
           handleResult(pos, client, error, Some(geotrellisContext.timer), dispatcher)
@@ -333,9 +333,9 @@ extends WorkerLike {
     try {
       handleResult(pos, client, cb(getValues), None, dispatcher)
     } catch {
-      case e:Throwable => {
+      case e => {
         val error = StepError.fromException(e)
-        System.err.printf(s"Operation failed, with exception: ${error.msg}\n\nStack trace:${error.trace}\n\n")
+        System.err.printf("Operation failed, with exception: %s\n\nStack trace:\n%s\n", error.msg,error.trace)
         handleResult(pos, client, error, None, dispatcher)
       }
     }

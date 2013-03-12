@@ -366,7 +366,8 @@ object LazyTiledWrapper {
 class LazyTiledWrapper(data:ArrayRasterData,
                        val tileLayout:TileLayout) extends TiledRasterData {
 
-  if (data.length != length) sys.error(s"Data length ${data.length} does not match tiled raster data length ${length}.")
+  //if (data.length != length) sys.error(s"Data length ${data.length} does not match tiled raster data length ${length}.")
+  if (data.length != length) sys.error("Data length " + data.length + " does not match tiled raster data length: " + length)
 
   def getType = data.getType
 

@@ -1,7 +1,6 @@
 package geotrellis.logic.applicative
 
 import geotrellis._
-import language.implicitConversions
 
 /**
  * Some implicit operators to add some syntactic sugar. Example:

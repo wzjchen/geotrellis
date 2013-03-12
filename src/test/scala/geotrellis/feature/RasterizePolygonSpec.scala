@@ -191,4 +191,23 @@ class RasterizePolygonSpec extends FunSuite {
     //val r = foreachCellByPolygon(p1, re, (x:Int, y:Int, p:Polygon[Unit]) => ( sum = sum + 1 ) )
     //assert(sum === 6722)
   }
+
+
+  test("issue/412 -- specific multipolygon rasterization failure") {
+    val json = scala.io.Source.fromFile("src/test/resources/geojson/usace_division_3.json").mkString
+    val fOp = io.LoadGeoJsonFeature(json)
+    val feature = TestServer().run(fOp)
+    val p1 = Polygon(feature.geom, ())
+    val re = RasterExtent( Extent(0, 0, 300, 300), 1, 1, 300, 300)
+    var sum = 0
+    val r = foreachCellByPolygon(p1, re)(
+       new Callback[Polygon,Unit] {
+          def apply(x:Int, y:Int, p:Polygon[Unit]) {
+            sum = sum + 1
+          }
+        })
+
+    println(s"count is $sum")
+  }
+
 }

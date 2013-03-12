@@ -9,7 +9,7 @@ import scala.collection.mutable
 object CatalogJson {
   val parserFactory = new MappingJsonFactory()
 
-  def error(msg:String) = sys.error(s"Invalid json in catalog: $msg")
+  def error(msg:String) = sys.error("Invalid json in catalog: " + msg)
 
   def parse(json:String):CatalogRec = {
     var catalog = ""
@@ -39,7 +39,7 @@ object CatalogJson {
                   }
                   token = parser.nextToken()
                 }
-              case f => error(s"Unknown field name $f.")
+              case f => error("Unknown field name: " + f)
             }
           case END_OBJECT => // Done.
           case _ => 
@@ -72,7 +72,7 @@ object CatalogJson {
                 params(parser.getCurrentName()) = { parser.nextToken() ; parser.getText() }
                 token = parser.nextToken()
               }
-            case f => error(s"Unexpected field name $f") // Unknown name
+            case f => error("Unexpected field name: " + f) // Unknown name
           }
         case _ => 
           error("Expecting a field name.")
@@ -97,7 +97,7 @@ object RasterLayerJson {
 
   val parserFactory = new MappingJsonFactory()
 
-  def error(msg:String) = sys.error(s"Invalid json for arg file: $msg")
+  def error(msg:String) = sys.error("Invalid json for arg file: " + msg)
 
   def parse(json:String):RasterLayerRec = {
     var layer = ""
@@ -151,7 +151,7 @@ object RasterLayerJson {
             }
           }
           case END_OBJECT => // Done
-          case _ => error(s"Unexpected token $token.")
+          case _ => error("Unexpected token: " + token)
         }
         token = parser.nextToken()
       }
@@ -159,8 +159,8 @@ object RasterLayerJson {
 
     requiredFields.values.find(v => !v.hit) match {
       case Some(kv) =>
-        val s = requiredFields.filter(kv => !kv._2.hit).map(kv => kv._1).reduceLeft((a,b) => s"$a, $b")
-        error(s"Required fields not found: $s")
+        val s = requiredFields.filter(kv => !kv._2.hit).map(kv => kv._1).reduceLeft((a,b) => a + ", " + b)
+        error("Required fields not found: " + s)
       case None =>
         RasterLayerRec(layer, ltype, datatype, xmin, xmax, ymin, ymax, 
                        cols, rows, cellheight, cellwidth, 
