@@ -1,3 +1,8 @@
+# Scala 2.9.2 Branch of GeoTrellis 0.8.0
+
+This is a backport of GeoTrellis 0.8.0 to scala-2.9.2.  It is intended as a temporary branch to allow integration with spark until there is a release of spark under scala 2.10.
+If it all possible, you should use the master branch.
+
 # GeoTrellis
 
 *GeoTrellis* is a high performance geoprocessing engine and programming toolkit.  The goal of the project is to transform
