@@ -80,8 +80,9 @@ akka {
 
   def loadInStaticCache(layer:RasterLayer):Unit = {
     val path = layer.rasterPath
-    val bytes = Filesystem.slurp(path)
-    staticCache(layer.name) = bytes
+    if (new File(path).exists) {
+      staticCache(layer.name) = Filesystem.slurp(path)
+    }
   }
 
   def shutdown():Unit = system.shutdown()
