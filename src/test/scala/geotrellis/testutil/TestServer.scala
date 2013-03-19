@@ -55,12 +55,12 @@ trait TestServer extends Suite with BeforeAndAfter with ShouldMatchers {
       for(row <- 0 until r1.rows) {
         if(isFloat) {
           if(r1.getDouble(col,row) - r2.getDouble(col,row) >= threshold) {
-            println(s"Failure at (${col},${row})")
+            println("Failure at (${col},${row})")
             r1.getDouble(col,row) should be (r2.getDouble(col,row))
           }
         } else {
           if(r1.get(col,row) != (r2.get(col,row)))
-            println(s"Failure at (${col},${row})")
+            println("Failure at (${col},${row})")
           r1.get(col,row) should be (r2.get(col,row))
         }
       }

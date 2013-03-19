@@ -127,7 +127,7 @@ trait RasterBuilders {
   def printR(r:Raster) {
     for(row <- 0 until r.rows) {
       for(col <- 0 until r.cols) {
-        print(s"    ${r.get(col,row)}")
+        print("    ${r.get(col,row)}")
       }
       println
     }      

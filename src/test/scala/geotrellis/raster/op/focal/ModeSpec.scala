@@ -30,7 +30,7 @@ class ModeSpec extends FunSpec with FocalOpSpec
       var result = run(Mode(r,Square(1)))
 
       val beIn:Seq[Int]=>Matcher[Int] = seq => Matcher { x => 
-        MatchResult(seq.contains(x), s"${x} was not in ${seq}", s"${x} was in ${seq}") 
+        MatchResult(seq.contains(x), "x was not in seq", "x was in seq") 
       }
 
       result.get(0,0) should equal (4)

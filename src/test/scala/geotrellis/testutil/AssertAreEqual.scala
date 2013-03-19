@@ -9,22 +9,22 @@ import org.scalatest.matchers._
 
 case class AssertAreEqual(r1:Op[Raster], r2:Op[Raster],threshold:Double) extends BinaryLocal {
   def handle(z1:Int, z2:Int) = {
-      println(s"${z1}")
+      println("${z1}")
     if (z1 == NODATA) { 
       if(z2 != NODATA) { 
-        sys.error(s"AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}")
+        sys.error("AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}")
       }
       0
     }
     else if (z2 == NODATA) { 
       if(z1 != NODATA) { 
-        sys.error(s"AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}")
+        sys.error("AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}")
       }
       0
     }
     else { 
       if(abs(z1 - z2) > threshold) {
-        sys.error(s"AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}")        
+        sys.error("AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}")        
       }
       0
     }
@@ -32,16 +32,16 @@ case class AssertAreEqual(r1:Op[Raster], r2:Op[Raster],threshold:Double) extends
 
   def handleDouble(z1:Double, z2:Double) = {
     if (z1.isNaN) {
-      if(!z2.isNaN) { sys.error(s"AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}") }
+      if(!z2.isNaN) { sys.error("AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}") }
       0.0
     }
     else if (z2.isNaN) { 
-      if(!z2.isNaN) { sys.error(s"AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}") }
+      if(!z2.isNaN) { sys.error("AssertEqual failed: MISMATCH z1 = ${z1}  z2 = ${z2}") }
       0.0
     }
     else { 
       if(abs(z1 - z2) > threshold) { 
-        sys.error(s"AssertEqual: MISMATCH z1 = ${z1}  z2 = ${z2}") 
+        sys.error("AssertEqual: MISMATCH z1 = ${z1}  z2 = ${z2}") 
       }
       0.0
     }

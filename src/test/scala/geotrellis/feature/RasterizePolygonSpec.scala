@@ -207,7 +207,6 @@ class RasterizePolygonSpec extends FunSuite {
           }
         })
 
-    println(s"count is $sum")
   }
 
 }

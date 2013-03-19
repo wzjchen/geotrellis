@@ -19,7 +19,7 @@ class CatalogSpec extends FunSpec with MustMatchers with ShouldMatchers {
             }
               """
 
-  val json1 = s"""
+  val json1 = """
               {
                 "catalog": "catalog2",
                 "stores": [
@@ -27,22 +27,22 @@ class CatalogSpec extends FunSpec with MustMatchers with ShouldMatchers {
                     "store": "stroud:fs",
                     "params": {
                         "type": "fs",
-                        "path": "${datapath}"
+                        "path": """ + '"' + datapath + """"
                     }
                   }
                 ]
               }
             """
 
-  val invalidJson1 = s"""
+  val invalidJson1 = """
              {
                "stores" : [
-               { "store": "no!", "params": { "type": "fs", "path" : "${datapath}" } }
+               { "store": "no!", "params": { "type": "fs", "path" : """ + datapath + """" } }
                ]
              }
             """  
 
-  val invalidJson2 = s"""
+  val invalidJson2 = """
              {
                "catalog",
                "stores" : [
