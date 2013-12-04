@@ -19,8 +19,6 @@ case class IDWInterpolate(points:Op[Seq[Point[Int]]],re:Op[RasterExtent],radius:
       Result(Raster(data,re))
     } else {
 
-
-
       val r = radius match {
         case Some(r) =>
           val rr = r*r
@@ -44,7 +42,7 @@ case class IDWInterpolate(points:Op[Seq[Point[Int]]],re:Op[RasterExtent],radius:
                   val dX = (destX - point.x)
                   val dY = (destY - point.y)
                   val d = dX * dX + dY * dY
-                  if (d < r) {
+                  if (d < rr) {
                     val w = 1 / d
                     s += point.data * w
                     ws += w
